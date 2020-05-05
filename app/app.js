@@ -78,12 +78,3 @@ app.run(function($state, $trace, $uiRouter) {
     });
 });
 
-function Scroll_toMitarbeiter() {
-    var elmntToView = document.getElementById("Mitarbeiter");
-    elmntToView.scrollIntoView();
-}
-
-function Scroll_toImpressum() {
-    var elmntToView = document.getElementById("Impressum");
-    elmntToView.scrollIntoView();
-}
