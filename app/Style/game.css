@@ -1,0 +1,17 @@
+.Eigenschaft{
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.hintwrong{
+    transition: transform 0.2s;
+}
+
+.hintwrong:hover {
+    transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+body{
+    background: white;
+}

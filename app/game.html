@@ -6,9 +6,30 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="Style/devices.min.css" type="text/css">
+    <link rel="stylesheet" href="Style/game.css" type="text/css">
+    <script language="javascript" type="text/javascript" src="game.js"></script>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="vendor/roboto/roboto.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="vendor/default-passive-events.js"></script>
+    <script src="vendor/jquery-3.4.1/jquery.min.js"></script>
+    <script src="vendor/moment.js-2.24.0/moment.min.js"></script>
+    <script src="vendor/moment.js-2.24.0/locale/de.js" charset="UTF-8"></script>
+    <script src="vendor/angularjs-1.7.2/angular.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/angular-resource.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/angular-messages.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/angular-sanitize.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/angular-animate.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/angular-aria.min.js"></script>
+    <script src="vendor/angularjs-1.7.2/i18n/angular-locale_de.js"></script>
+    <script src="vendor/angular-ui-router-1.0.22/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <script src="models/seite.js"></script>
+    <script src="components/felix.js"></script>
 
 </head>
 <body>
+<script>fullscreen();</script>
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -31,29 +52,30 @@
                     <div class="camera"></div>
                     <div class="speaker"></div>
                     <div class="screen">
-                        <div class="pure-g>" style="text-align: center">
+                        <div class="pure-g>" style="text-align: center" id="screenicon">
                             <div class="pure-u-11-24">
-                            <img src="images/icons/Felix.png" class="pure-img-responsive icon">
+                            <img src="images/icons/Felix.png" onclick="GoIntoContact(); Felix()" class="pure-img-responsive icon">
                             </div>
                             <div class="pure-u-11-24">
-                                <img src="images/icons/Vanessa.png" class="pure-img-responsive icon">
+                                <img src="images/icons/Vanessa.png" onclick="GoIntoContact()"  class="pure-img-responsive icon">
                             </div>
                             <div class="pure-u-11-24">
-                                <img src="images/icons/Lena.png" class="pure-img-responsive icon">
+                                <img src="images/icons/Lena.png" onclick="GoIntoContact()"  class="pure-img-responsive icon">
                             </div>
                             <div class="pure-u-11-24">
-                                <img src="images/icons/Mathe.png" class="pure-img-responsive icon">
+                                <img src="images/icons/Mathe.png" onclick="GoIntoContact()"  class="pure-img-responsive icon">
                             </div>
                             <div class="pure-u-11-24">
-                                <img src="images/icons/Klassenvorstand.png" class="pure-img-responsive icon">
+                                <img src="images/icons/Klassenvorstand.png" onclick="GoIntoContact()"  class="pure-img-responsive icon">
                             </div>
                             <div class="pure-u-11-24">
-                                <img src="images/icons/Chemie.png" class="pure-img-responsive icon">
+                                <img src="images/icons/Chemie.png" onclick="GoIntoContact()"  class="pure-img-responsive icon">
                             </div>
                         </div>
+                        <div class="pure-g>" style="text-align: center; display: none" id="screencontact"></div>
                     </div>
                     <div class="button">
-                        <div class="square"></div>
+                        <div class="square" onclick="Homebutton()"></div>
                     </div>
                 </div>
             </div>
