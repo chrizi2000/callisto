@@ -109,6 +109,7 @@ body {
     position: absolute;
     top: 12.5%;
     left: 5%;
+    overflow-x: scroll;
 }
 
 .button {
