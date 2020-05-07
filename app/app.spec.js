@@ -1,6 +1,6 @@
 "use strict";
 
-describe("Vorlage", function() {
+describe("Game", function() {
 
     // Wird _vor_ jedem it() ausgeführt
     beforeEach(() => {

@@ -1,15 +1,14 @@
 "use strict";
 
 // Einziges Modul dieser App und seine Abhängigkeiten
-let app = angular.module("Vorlage", [ "ngResource", "ngMessages", "ngLocale", "ngSanitize",
-    "ngAnimate", "ngMaterial", "ui.router" ]);
+let app = angular.module("Game", [ "ngResource", "ngMessages", "ngLocale", "ngSanitize",
+    "ngAnimate", "ui.router"]);
 
 
 // Einstellungen für Debugging
-app.config(function($logProvider, $compileProvider, $mdAriaProvider, $qProvider) {
+app.config(function($logProvider, $compileProvider, $qProvider) {
     $logProvider.debugEnabled(true);
     $compileProvider.debugInfoEnabled(true);
-    $mdAriaProvider.disableWarnings();
     $qProvider.errorOnUnhandledRejections(false);
 });
 
@@ -17,13 +16,9 @@ app.config(function($logProvider, $compileProvider, $mdAriaProvider, $qProvider)
 // Thema einstellen, mögliche Paletten sind:
 // red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green,
 // light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
-app.config(function($mdThemingProvider) {
-    $mdThemingProvider.theme("default")
-        .primaryPalette("pink")
-        .accentPalette("deep-orange");
-});
 
 
+/*
 // Datepicker auf AngularJS-Gebietsschema einstellen
 app.config(function($localeProvider, $mdDateLocaleProvider) {
     let locale = $localeProvider.$get();
@@ -57,7 +52,7 @@ app.config(function($localeProvider, $mdDateLocaleProvider) {
     $mdDateLocaleProvider.msgCalendar = "Kalender";
     $mdDateLocaleProvider.msgOpenCalendar = "Kalender öffnen";
 });
-
+*/
 
 // Data-URIs für Bilder, Audio und Video zulassen
 app.config(function($compileProvider) {
