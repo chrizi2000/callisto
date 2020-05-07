@@ -8,6 +8,9 @@ app.component("felix", {
 
 app.controller("FelixController", function ($log) {
     $log.debug("FelixController()");
+
+    this.hintfelix = [false,false,false];
+
 });
 
 app.config(function($stateProvider) {
