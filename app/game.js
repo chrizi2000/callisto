@@ -31,7 +31,6 @@ function getHints(Name){
         }else{
             hintcode[2] = "<img src=\"images/icons/hint_open.png\" style='width: 80%; height: auto' class=\"pure-img-responsive hintrue\">"
         }
-
     }
     return hintcode;
 }

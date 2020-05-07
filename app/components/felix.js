@@ -9,3 +9,11 @@ app.component("felix", {
 app.controller("FelixController", function ($log) {
     $log.debug("FelixController()");
 });
+
+app.config(function($stateProvider) {
+    $stateProvider.state({
+        name: "FelixKontakt",  // State-Name
+        url: "/felix",       // Fragmentbezeichner ohne '#!'
+        component: "felix"   // Komponenten-Name
+    });
+});

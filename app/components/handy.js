@@ -9,5 +9,4 @@ app.component("handy", {
 app.controller("HandyController", function ($log) {
     $log.debug("HandyController()");
 
-
 });
