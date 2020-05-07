@@ -9,7 +9,8 @@ app.component("felix", {
 app.controller("FelixController", function ($log) {
     $log.debug("FelixController()");
 
-    this.hintfelix = [false,false,false];
+    this.hintfelix = [true,true,true];
+
 
 });
 

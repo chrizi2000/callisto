@@ -8,12 +8,14 @@ app.component("lena", {
 
 app.controller("LenaController", function ($log) {
     $log.debug("LenaController()");
+
+    this.hintlena = [false,false,false];
 });
 
 app.config(function($stateProvider) {
     $stateProvider.state({
         name: "LenaKontakt",  // State-Name
-        url: "/lelix",       // Fragmentbezeichner ohne '#!'
-        component: "lelix"   // Komponenten-Name
+        url: "/lena",       // Fragmentbezeichner ohne '#!'
+        component: "lena"   // Komponenten-Name
     });
 });
