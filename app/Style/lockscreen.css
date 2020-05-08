@@ -5,6 +5,7 @@
 .lockbuttondiv{
     padding-top: 1vw;
     text-align: center;
+    cursor: pointer;
 }
 
 .cleartext{
