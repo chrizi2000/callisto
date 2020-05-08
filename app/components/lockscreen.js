@@ -26,8 +26,12 @@ app.controller("LockscreenController", function ($log) {
             }
         }
     }
-
-
+    this.clear = () => {
+        this.aktpasswort = [];
+    }
+    this.clearoneletter = () => {
+        this.aktpasswort.pop();
+    }
 });
 
 app.config(function($stateProvider,$urlRouterProvider) {
