@@ -2,7 +2,7 @@
 
 app.component("klassenvorstand", {
     templateUrl: "components/klassenvorstand.html",
-    conroller: "KlassenvorstandvController",
+    conroller: "KlassenvorstandController",
     bindings:{}
 });
 

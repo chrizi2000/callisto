@@ -8,11 +8,8 @@ app.component("felix", {
 
 app.controller("FelixController", function ($log) {
     $log.debug("FelixController()");
-this.hintfelix = () => {
-    new Array(true,true,true)
-}
-
-
+    this.hintfelix = new Array(3);
+    this.hintfelix = [true,false,false];
 });
 
 app.config(function($stateProvider) {
