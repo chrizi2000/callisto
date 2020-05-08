@@ -8,14 +8,12 @@ app.component("allcontacts", {
 
 app.controller("allcontactsController", function ($log) {
     $log.debug("allcontactsController()");
-
 });
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider) {
     $stateProvider.state({
         name: "Kontakte",  // State-Name
         url: "/contact",
-        component: "allcontacts"   // Komponenten-Name
+        component: "allcontacts"  // Komponenten-Name
     });
-    $urlRouterProvider.otherwise("/contact");
 });

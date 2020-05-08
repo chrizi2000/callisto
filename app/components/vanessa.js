@@ -8,6 +8,8 @@ app.component("vanessa", {
 
 app.controller("VanessaController", function ($log) {
     $log.debug("VanessaController()");
+
+    this.hintvanessa = [false,false,false];
 });
 
 app.config(function($stateProvider) {

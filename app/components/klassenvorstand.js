@@ -2,18 +2,20 @@
 
 app.component("klassenvorstand", {
     templateUrl: "components/klassenvorstand.html",
-    conroller: "KlassenvorstandvController",
+    conroller: "KlassenvorstandController",
     bindings:{}
 });
 
 app.controller("KlassenvorstandController", function ($log) {
     $log.debug("KlassenvorstandController()");
+
+    this.hintklassenvorstand = [false,false,false];
 });
 
 app.config(function($stateProvider) {
     $stateProvider.state({
         name: "KlassenvorstandKontakt",  // State-Name
-        url: "/Klassenvorstand",       // Fragmentbezeichner ohne '#!'
-        component: "Klassenvorstand"   // Komponenten-Name
+        url: "/klassenvorstand",       // Fragmentbezeichner ohne '#!'
+        component: "klassenvorstand"   // Komponenten-Name
     });
 });

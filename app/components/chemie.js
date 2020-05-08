@@ -8,6 +8,8 @@ app.component("chemie", {
 
 app.controller("ChemieController", function ($log) {
     $log.debug("ChemieController()");
+
+    this.hintchemie = [false,false,false];
 });
 
 app.config(function($stateProvider) {

@@ -24,6 +24,32 @@ body{
 }
 
 
+
+/*
+    Kontakt design Page
+ */
+
+.textcontact{
+    text-align: left;
+    color: white;
+}
+
+.iconcontact{
+    text-align: center;
+    vertical-align: center;
+    padding-top: 0.3vw;
+}
+
+.eigenschafthead{
+color: white;
+}
+
+.eigenschafttext{
+color: white;
+    text-align: left;
+}
+
+
 @-webkit-keyframes buzz-out-on-hover {
     10% {
         -webkit-transform: translateX(3px) rotate(2deg);
