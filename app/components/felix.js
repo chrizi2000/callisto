@@ -2,13 +2,16 @@
 
 app.component("felix", {
     templateUrl: "components/felix.html",
-    conroller: "FelixController",
-    bindings:{}
+    controller: "FelixController",
+    bindings:{
+        trigger: "&"
+    }
 });
 
 app.controller("FelixController", function ($log) {
     $log.debug("FelixController()");
-    this.hintfelix = new Array(3);
+
+    this.test = true;
     this.hintfelix = [true,false,false];
 });
 

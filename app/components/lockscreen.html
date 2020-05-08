@@ -1,35 +1,37 @@
 <div class="pure-g">
-
-    <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+    <div class="pure-u-24-24" ng-show="$ctrl.aktpasswort.length == 0" style="padding-top: 1vw; text-align: center; color: white">
+        <h2>Passwort eingeben</h2>
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=1" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=2" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=3" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=4" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
-        <img src="images/icons/pw_eingeben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=5" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+    </div>
+    <div class="pure-u-4-24 lockbuttondiv">
+        <img src="images/icons/pw_eingeben.png" ng-show="$ctrl.aktpasswort.length>=6" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
 </div>
 
 
 <div class="pure-g">
 
-    <div class="pure-u-8-24 lockbuttondiv">
-        <img src="images/icons/eins.png" ng-click="$ctrl.zahleingegeben(1)" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(1)">
+        <img src="images/icons/eins.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(2)">
         <img src="images/icons/zwei.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(3)">
         <img src="images/icons/drei.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
 </div>
@@ -37,13 +39,13 @@
 
 <div class="pure-g">
 
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(4)">
         <img src="images/icons/vier.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(5)">
         <img src="images/icons/fuenf.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(6)">
         <img src="images/icons/sechs.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
 </div>
@@ -51,13 +53,13 @@
 
 <div class="pure-g">
 
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(7)">
         <img src="images/icons/sieben.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(8)" >
         <img src="images/icons/acht.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(9)">
         <img src="images/icons/neun.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
 </div>
@@ -67,7 +69,7 @@
 
     <div class="pure-u-8-24 lockbuttondiv">
     </div>
-    <div class="pure-u-8-24 lockbuttondiv">
+    <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(0)">
         <img src="images/icons/null.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
     </div>
     <div class="pure-u-8-24 lockbuttondiv">

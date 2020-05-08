@@ -2,7 +2,7 @@
 
 app.component("lockscreen", {
     templateUrl: "components/lockscreen.html",
-    conroller: "LockscreenController",
+    controller: "LockscreenController",
     bindings:{}
 });
 
@@ -11,16 +11,20 @@ app.controller("LockscreenController", function ($log) {
 
     this.password = new Array(6);
     this.password = [2,3,0,3,0,1];
+    this.aktpasswort = [];
 
+    this.zahleingegeben = (pwnumber) => {
+        this.aktpasswort[this.aktpasswort.length] = pwnumber;
+        console.log(this.aktpasswort);
 
-    this.aktpasswort = new Array(6);
-    this.aktpassworteingabe = new Array(6);
-
-    this.zahleingegeben = function (pwnumber) {
-        let index = this.aktpasswort.findIndex(null);
-        this.aktpasswort[index] = pwnumber;
-        this.aktpassworteingabe[index] = true;
-        console.log(this.aktpasswort[0]);
+        if(this.aktpasswort.length === this.password.length){
+            if(angular.equals(this.aktpasswort, this.password)){
+                console.log("RICHTIG");
+            }else{
+                console.log("FALSCH")
+                this.aktpasswort = [];
+            }
+        }
     }
 
 
@@ -32,5 +36,6 @@ app.config(function($stateProvider,$urlRouterProvider) {
         url: "/lockscreen",       // Fragmentbezeichner ohne '#!'
         component: "lockscreen"   // Komponenten-Name
     });
+
     $urlRouterProvider.otherwise("/lockscreen");
 });
