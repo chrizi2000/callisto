@@ -1,5 +1,5 @@
 <div class="pure-g">
-    <div class="pure-u-24-24" ng-show="$ctrl.aktpasswort.length == 0" style="padding-top: 1vw; text-align: center; color: white">
+    <div class="pure-u-24-24" ng-show="$ctrl.aktpasswort.length == 0" style="text-align: center; color: white">
         <h2>Passwort eingeben</h2>
     </div>
     <div class="pure-u-4-24 lockbuttondiv">
@@ -67,8 +67,8 @@
 
 <div class="pure-g">
     <div class="pure-u-8-24 lockbuttondiv">
-        <h4 ng-click="$ctrl.clear()" class="cleartext">Clear</h4>
         <h4 ng-click="$ctrl.clearoneletter()" class="cleartext">Back</h4>
+        <h4 ng-click="$ctrl.clear()" class="cleartext">Clear</h4>
     </div>
     <div class="pure-u-8-24 lockbuttondiv" ng-click="$ctrl.zahleingegeben(0)">
         <img src="images/icons/null.png" style='width: 70%; height: auto' class="pure-img-responsive lockbutton">
