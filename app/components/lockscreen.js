@@ -6,7 +6,7 @@ app.component("lockscreen", {
     bindings:{}
 });
 
-app.controller("LockscreenController", function ($log) {
+app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
     $log.debug("LockscreenController()");
 
     this.password = new Array(6);
@@ -20,6 +20,8 @@ app.controller("LockscreenController", function ($log) {
         if(this.aktpasswort.length === this.password.length){
             if(angular.equals(this.aktpasswort, this.password)){
                 console.log("RICHTIG");
+                AccessKontakt.allow();
+                $state.go("Kontakte");
             }else{
                 console.log("FALSCH")
                 this.aktpasswort = [];
