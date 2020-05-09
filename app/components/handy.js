@@ -2,11 +2,17 @@
 
 app.component("handy", {
     templateUrl: "components/handy.html",
-    conroller: "HandyController",
+    controller: "HandyController",
     bindings:{}
 });
 
-app.controller("HandyController", function ($log) {
+app.controller("HandyController", function ($log, AccessKontakt, $state) {
     $log.debug("HandyController()");
 
+
+    this.HomebuttonAct = () => {
+        if(AccessKontakt.access()){
+            $state.go("Kontakte");
+        }
+    }
 });

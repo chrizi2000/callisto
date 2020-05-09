@@ -2,14 +2,18 @@
 
 app.component("lena", {
     templateUrl: "components/lena.html",
-    conroller: "LenaController",
+    controller: "LenaController",
     bindings:{}
 });
 
-app.controller("LenaController", function ($log) {
+app.controller("LenaController", function ($log, Game) {
     $log.debug("LenaController()");
 
     this.hintlena = [false,false,false];
+
+    this.gametrigger = () =>{
+        Game.startgamelena();
+    }
 });
 
 app.config(function($stateProvider) {

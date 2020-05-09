@@ -2,14 +2,18 @@
 
 app.component("mathe", {
     templateUrl: "components/mathe.html",
-    conroller: "MatheController",
+    controller: "MatheController",
     bindings:{}
 });
 
-app.controller("MatheController", function ($log) {
+app.controller("MatheController", function ($log, Game) {
     $log.debug("MatheController()");
 
     this.hintmathe = [false,false,false];
+
+    this.gametrigger = () =>{
+        Game.startgamemathe();
+    }
 });
 
 app.config(function($stateProvider) {

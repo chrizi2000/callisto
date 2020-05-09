@@ -3,20 +3,20 @@
 app.component("game", {
     templateUrl: "components/game.html",
     controller: "GameController",
-    bindings:{
-    }
+    bindings:{}
 });
 
-app.controller("GameController", function ($log) {
+app.controller("GameController", function ($log, Game) {
     $log.debug("GameController()");
 
-    this.gamebackground = {
-    "default" : false,
-    "chemie" : true,
-    "felix" : false,
-    "klassenvorstand" : false,
-    "lena" : false,
-    "mathe" : false,
-    "vanessa" : false};
+
+    this.statusbackground = (name) => {
+       return Game.getstatus(name);
+    }
+
+    this.statuscharacter = (name) => {
+        return Game.getstatuscharacter(name);
+    }
+
 
 });

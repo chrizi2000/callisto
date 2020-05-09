@@ -152,3 +152,7 @@ color: white;
     animation-iteration-count: 1;
 }
 
+.characters{
+    position: absolute;
+}
+

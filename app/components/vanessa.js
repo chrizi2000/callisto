@@ -2,14 +2,18 @@
 
 app.component("vanessa", {
     templateUrl: "components/vanessa.html",
-    conroller: "VanessaController",
+    controller: "VanessaController",
     bindings:{}
 });
 
-app.controller("VanessaController", function ($log) {
+app.controller("VanessaController", function ($log, Game) {
     $log.debug("VanessaController()");
 
     this.hintvanessa = [false,false,false];
+
+    this.gametrigger = () =>{
+        Game.startgamevanessa();
+    }
 });
 
 app.config(function($stateProvider) {
