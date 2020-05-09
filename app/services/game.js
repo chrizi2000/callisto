@@ -1,12 +1,21 @@
 app.service("Game", function() {
 
     let gamebackground = {
-        "default" : false,
+        "default" : true,
         "chemie" : false,
         "sportplatz" : false,
         "klassenzimmer1" : false,
         "klassenzimmer2" : false,
         "bibliothek" : false};
+
+    let characters = {
+        "felix" : false,
+        "lena" : false,
+        "vanessa" : false,
+        "klassenvorstand" : false,
+        "mathe" : false,
+        "chemie_normal" : false};
+
 
 
     this.getstatus = (name) => {
@@ -26,8 +35,26 @@ app.service("Game", function() {
         }
     }
 
+    this.getstatuscharacter = (name) => {
+        for (let k in characters) {
+            if (k === name) {
+                return characters[k];
+            }
+        }
+    }
+
+    this.changecharacter = (name) => {
+        for (let k in characters) {
+            characters[k] = false;
+            if (k === name) {
+                characters[k] = true;
+            }
+        }
+    }
+
     this.startgamechemie = () => {
         this.changestatus("chemie");
+        this.changecharacter("chemie_normal");
     }
 
     this.startgamefelix = () => {

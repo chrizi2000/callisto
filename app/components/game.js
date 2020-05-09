@@ -14,5 +14,9 @@ app.controller("GameController", function ($log, Game) {
        return Game.getstatus(name);
     }
 
+    this.statuscharacter = (name) => {
+        return Game.getstatuscharacter(name);
+    }
+
 
 });
