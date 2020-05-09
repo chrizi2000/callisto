@@ -4,7 +4,7 @@ app.service("Game", function() {
         "default" : false,
         "chemie" : false,
         "sportplatz" : false,
-        "klasenzimmer1" : false,
+        "klassenzimmer1" : false,
         "klassenzimmer2" : false,
         "bibliothek" : false};
 
@@ -31,17 +31,20 @@ app.service("Game", function() {
     }
 
     this.startgamefelix = () => {
-        this.changestatus("felix");
+        this.changestatus("sportplatz");
     }
 
     this.startgamelena = () => {
-        this.changestatus("lena");
+        this.changestatus("klassenzimmer1");
     }
 
     this.startgamemathe = () => {
-        this.changestatus("mathe");
+        this.changestatus("klassenzimmer2");
     }
     this.startgamevanessa = () => {
-        this.changestatus("vanessa");
+        this.changestatus("bibliothek");
+    }
+    this.startgameklassenvorstand = () => {
+        this.changestatus("klassenzimmer1");
     }
 });

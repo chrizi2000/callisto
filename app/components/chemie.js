@@ -12,7 +12,6 @@ app.controller("ChemieController", function ($log, Game) {
     this.hintchemie = [false,false,false];
 
     this.gametrigger = () =>{
-        console.log("HI");
         Game.startgamechemie();
     }
 });

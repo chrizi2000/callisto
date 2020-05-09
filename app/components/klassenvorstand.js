@@ -2,14 +2,18 @@
 
 app.component("klassenvorstand", {
     templateUrl: "components/klassenvorstand.html",
-    conroller: "KlassenvorstandController",
+    controller: "KlassenvorstandController",
     bindings:{}
 });
 
-app.controller("KlassenvorstandController", function ($log) {
+app.controller("KlassenvorstandController", function ($log, Game) {
     $log.debug("KlassenvorstandController()");
 
     this.hintklassenvorstand = [false,false,false];
+
+    this.gametrigger = () =>{
+        Game.startgameklassenvorstand();
+    }
 });
 
 app.config(function($stateProvider) {

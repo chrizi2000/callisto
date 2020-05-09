@@ -3,16 +3,16 @@
 app.component("felix", {
     templateUrl: "components/felix.html",
     controller: "FelixController",
-    bindings:{
-        trigger: "&"
-    }
+    bindings:{}
 });
 
-app.controller("FelixController", function ($log) {
+app.controller("FelixController", function ($log, Game) {
     $log.debug("FelixController()");
 
-    this.test = true;
-    this.hintfelix = [true,false,false];
+    this.hintfelix = [false,false,false];
+    this.gametrigger = () => {
+        console.log("f");
+    }
 });
 
 app.config(function($stateProvider) {
