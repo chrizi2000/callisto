@@ -2,14 +2,19 @@
 
 app.component("chemie", {
     templateUrl: "components/chemie.html",
-    conroller: "ChemieController",
+    controller: "ChemieController",
     bindings:{}
 });
 
-app.controller("ChemieController", function ($log) {
+app.controller("ChemieController", function ($log, Game) {
     $log.debug("ChemieController()");
 
     this.hintchemie = [false,false,false];
+
+    this.gametrigger = () =>{
+        console.log("HI");
+        Game.startgamechemie();
+    }
 });
 
 app.config(function($stateProvider) {
