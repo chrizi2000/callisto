@@ -20,7 +20,7 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
         if(this.aktpasswort.length === this.password.length){
             if(angular.equals(this.aktpasswort, this.password)){
                 console.log("RICHTIG");
-                AccessKontakt.allow();
+                AccessKontakt.allowbutton();
                 $state.go("Kontakte");
             }else{
                 console.log("FALSCH")
@@ -42,6 +42,4 @@ app.config(function($stateProvider,$urlRouterProvider) {
         url: "/lockscreen",       // Fragmentbezeichner ohne '#!'
         component: "lockscreen"   // Komponenten-Name
     });
-
-    $urlRouterProvider.otherwise("/lockscreen");
 });

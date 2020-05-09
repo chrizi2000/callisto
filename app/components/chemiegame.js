@@ -2,12 +2,21 @@
 
 app.component("chemiegame", {
     templateUrl: "components/chemiegame.html",
-    conroller: "Chemiegame",
+    controller: "Chemiegame",
     bindings:{}
 });
 
-app.controller("Chemiegame", function ($log) {
+app.controller("Chemiegame", function ($log, ChemieGame) {
     $log.debug("Chemiegame()");
+
+    this.statuscharacter = (name) => {
+        return ChemieGame.getstatuscharacter(name);
+    }
+
+    this.dead = () =>{
+
+        ChemieGame.changecharacter('chemie_wütend');
+    }
 
 });
 

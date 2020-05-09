@@ -6,13 +6,13 @@ app.component("chemie", {
     bindings:{}
 });
 
-app.controller("ChemieController", function ($log, Game) {
+app.controller("ChemieController", function ($log, Game, ChemieGame) {
     $log.debug("ChemieController()");
 
     this.hintchemie = [false,false,false];
 
     this.gametrigger = () =>{
-        Game.startgamechemie();
+        ChemieGame.startgamechemie();
     }
 });
 

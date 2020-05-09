@@ -8,15 +8,6 @@ app.service("Game", function() {
         "klassenzimmer2" : false,
         "bibliothek" : false};
 
-    let characters = {
-        "felix" : false,
-        "lena" : false,
-        "vanessa" : false,
-        "klassenvorstand" : false,
-        "mathe" : false,
-        "chemie_normal" : false};
-
-
 
     this.getstatus = (name) => {
         for (let k in gamebackground) {
@@ -35,43 +26,7 @@ app.service("Game", function() {
         }
     }
 
-    this.getstatuscharacter = (name) => {
-        for (let k in characters) {
-            if (k === name) {
-                return characters[k];
-            }
-        }
-    }
 
-    this.changecharacter = (name) => {
-        for (let k in characters) {
-            characters[k] = false;
-            if (k === name) {
-                characters[k] = true;
-            }
-        }
-    }
 
-    this.startgamechemie = () => {
-        this.changestatus("chemie");
-        this.changecharacter("chemie_normal");
-    }
 
-    this.startgamefelix = () => {
-        this.changestatus("sportplatz");
-    }
-
-    this.startgamelena = () => {
-        this.changestatus("klassenzimmer1");
-    }
-
-    this.startgamemathe = () => {
-        this.changestatus("klassenzimmer2");
-    }
-    this.startgamevanessa = () => {
-        this.changestatus("bibliothek");
-    }
-    this.startgameklassenvorstand = () => {
-        this.changestatus("klassenzimmer1");
-    }
 });
