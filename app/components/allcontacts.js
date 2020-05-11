@@ -16,5 +16,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/contact",
         component: "allcontacts"  // Komponenten-Name
     });
-    $urlRouterProvider.otherwise("/contact");
+
 });

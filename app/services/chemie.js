@@ -6,6 +6,7 @@ app.service("ChemieGame", function(Game) {
         "chemie_shocked" : false,
         "chemie_angry" : false};
 
+    let chemiehint = false;
 
     this.getstatuscharacter = (name) => {
         for (let k in chemiecharacter) {
@@ -14,6 +15,14 @@ app.service("ChemieGame", function(Game) {
                 console.log(chemiecharacter[k]);
             }
         }
+    }
+
+    this.gethintstatus = () => {
+        return chemiehint;
+    }
+
+    this.gothint = () => {
+        chemiehint = true;
     }
 
 
@@ -29,7 +38,6 @@ app.service("ChemieGame", function(Game) {
 
     this.startgamechemie = () => {
         Game.changestatus("chemie");
-        console.log("Hintergrund geändert");
         this.changecharacter("chemie_normal");
     }
 });

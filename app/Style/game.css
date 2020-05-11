@@ -1,3 +1,39 @@
+.gamebuttons{
+    width: 1920px;
+    height: 150px;
+    overflow: auto;
+    position: static;
+    text-align: center;
+
+}
+
+
+.button-question {
+    font-size: large;
+    background-color: forestgreen;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.button-div{
+        padding-left: 1%;
+    overflow: scroll;
+    overflow-scrolling: auto;
+    border-collapse: separate;
+}
+
+
+.characters{
+    position: absolute;
+}
+
+.background{
+    padding-bottom: 4%;
+}
+
+
 .Eigenschaft{
     color: white;
     text-align: left;
@@ -14,6 +50,9 @@
 
 body{
     background: white;
+    position: static;
+    overflow: scroll;
+    padding-top: 2.5%;
 }
 
 .content-head{
@@ -152,7 +191,5 @@ color: white;
     animation-iteration-count: 1;
 }
 
-.characters{
-    position: absolute;
-}
+
 
