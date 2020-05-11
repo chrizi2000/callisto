@@ -29,6 +29,10 @@
     position: absolute;
 }
 
+.sprechblase{
+    position: absolute;
+}
+
 .background{
     padding-bottom: 4%;
 }

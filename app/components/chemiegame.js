@@ -13,9 +13,25 @@ app.controller("Chemiegame", function ($log, ChemieGame) {
         return ChemieGame.getstatuscharacter(name);
     }
 
-    this.dead = () =>{
+    this.statusbubble = (name) =>{
+        return ChemieGame.getstatusbubble(name);
+    }
 
+
+
+    this.statusbuttons = (name) =>{
+        return ChemieGame.getstatusbutton(name);
+    }
+
+
+    this.dead = () =>{
         ChemieGame.changecharacter('chemie_wütend');
+    }
+
+    this.answerpressed = (answer, buttons) =>{
+        ChemieGame.changebuttons(buttons)
+        ChemieGame.changebubble(answer);
+
     }
 
 });
