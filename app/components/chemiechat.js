@@ -2,7 +2,7 @@
 
 app.component("chemiechat", {
     templateUrl: "components/chemiechat.html",
-    conroller: "ChemiechatController",
+    controller: "ChemiechatController",
     bindings:{}
 });
 
