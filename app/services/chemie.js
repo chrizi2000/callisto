@@ -17,14 +17,15 @@ app.service("ChemieGame", function(Game) {
         "3_1" : false,
         "4_0" : false,
         "3_2" : false,
-        "death" : false
-    };
+        "death" : false,
+        "death_2" : false};
 
     let buttons = {
         "buttons_1" : false,
         "buttons_2" : false,
         "buttons_3" : false,
         "buttons_4" : false,
+        "buttons_death" : false,
         "buttons_goodbye" : false
     };
 
