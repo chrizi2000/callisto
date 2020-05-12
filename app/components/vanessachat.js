@@ -2,7 +2,7 @@
 
 app.component("vanessachat", {
     templateUrl: "components/vanessachat.html",
-    conroller: "VanessaChatController",
+    controller: "VanessaChatController",
     bindings:{}
 });
 

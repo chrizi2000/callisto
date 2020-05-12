@@ -3,7 +3,7 @@ app.service("AccessKontakt", function() {
     this.access = () => {
         return secret;
     }
-    this.allow = () => {
+    this.allowbutton = () => {
         secret = true;
     }
 });

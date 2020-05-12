@@ -2,12 +2,34 @@
 
 app.component("chemiegame", {
     templateUrl: "components/chemiegame.html",
-    conroller: "Chemiegame",
+    controller: "Chemiegame",
     bindings:{}
 });
 
-app.controller("Chemiegame", function ($log) {
+app.controller("Chemiegame", function ($log, ChemieGame) {
     $log.debug("Chemiegame()");
+
+    this.statuscharacter = (name) => {
+        return ChemieGame.getstatuscharacter(name);
+    }
+
+    this.statusbubble = (name) =>{
+        return ChemieGame.getstatusbubble(name);
+    }
+
+
+
+    this.statusbuttons = (name) =>{
+        return ChemieGame.getstatusbutton(name);
+    }
+
+
+    this.answerpressed = (answer, buttons, emotion) =>{
+        ChemieGame.changebuttons(buttons)
+        ChemieGame.changebubble(answer);
+        ChemieGame.changecharacter(emotion);
+
+    }
 
 });
 
