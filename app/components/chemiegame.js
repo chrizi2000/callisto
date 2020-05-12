@@ -24,13 +24,10 @@ app.controller("Chemiegame", function ($log, ChemieGame) {
     }
 
 
-    this.dead = () =>{
-        ChemieGame.changecharacter('chemie_wütend');
-    }
-
-    this.answerpressed = (answer, buttons) =>{
+    this.answerpressed = (answer, buttons, emotion) =>{
         ChemieGame.changebuttons(buttons)
         ChemieGame.changebubble(answer);
+        ChemieGame.changecharacter(emotion);
 
     }
 

@@ -4,21 +4,29 @@ app.service("ChemieGame", function(Game) {
         "chemie_normal" : false,
         "chemie_verwundert" : false,
         "chemie_shocked" : false,
-        "chemie_angry" : false,
-        "chmie_traurig" : false};
+        "chemie_sauer" : false,
+        "chemie_traurig" : false,
+        "chemie_zwinker" : false
+    };
 
     let bubbles = {
         "1_1" : false,
         "1_2" : false,
         "2_1" : false,
         "2_2" : false,
-        "3_2" : false,};
+        "3_1" : false,
+        "4_0" : false,
+        "3_2" : false,
+        "death" : false
+    };
 
     let buttons = {
         "buttons_1" : false,
         "buttons_2" : false,
         "buttons_3" : false,
-        "buttons_4" : false};
+        "buttons_4" : false,
+        "buttons_goodbye" : false
+    };
 
 
     let chemiehint = false;
@@ -27,7 +35,6 @@ app.service("ChemieGame", function(Game) {
         for (let k in chemiecharacter) {
             if (k === name) {
                 return chemiecharacter[k];
-                console.log(chemiecharacter[k]);
             }
         }
     }
@@ -67,6 +74,12 @@ app.service("ChemieGame", function(Game) {
         }
     }
 
+    this.resetbubble = () =>{
+        for (let k in bubbles) {
+            bubbles[k] = false;
+        }
+    }
+
     this.getstatusbutton = (name) => {
         for (let k in buttons) {
             if (k === name) {
@@ -90,7 +103,9 @@ app.service("ChemieGame", function(Game) {
         }
     }
 
+
     this.startgamechemie = () => {
+        this.resetbubble();
         Game.changestatus("chemie");
         this.changecharacter("chemie_normal");
         this.changebuttons("buttons_1");

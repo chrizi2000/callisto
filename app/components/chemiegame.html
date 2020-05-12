@@ -1,12 +1,12 @@
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
-    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2')">
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'chemie_zwinker')">
         <p class="button-question">Hallo Herr Professor, wie war Ihr Tag heute?<p>
     </div>
     <div class="pure-u-1-3 button-div">
         <p class="button-question">Würden Sie mir bitte verraten was Sie zum Todeszeitpunkt von Emma Engels gemacht haben?<p>
     </div>
-    <div class="pure-u-1-3 button-div">
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('death', 'clear', 'chemie_sauer')">
         <p class="button-question">Sie haben geholfen Emma Engels zu vergiften. Geben Sie es zu.<p>
     </div>
 </div>
@@ -15,12 +15,34 @@
     <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'clear')">
         <p class="button-question">Wie wird eigentlich Blausäure hergestellt?<p>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'clear')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'buttons_3', 'chemie_traurig')">
         <p class="button-question">Ich hätte eine Frage zu dem Tag als Emma gestorben ist<p>
     </div>
+</div>
 
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_3')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'clear')">
+        <p class="button-question">Wo waren Sie denn zum Zeitpunkt an dem Emma ermordet wurde?<p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_1', 'buttons_goodbye', 'chemie_normal')">
+        <p class="button-question">Wie war dieser Tag für Sie?<p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_goodbye')">
+    <div class="pure-u-1-1 button-div" ng-click="$ctrl.answerpressed('4_0', 'clear', 'chemie_zwinker')">
+        <p class="button-question">Danke, Auf Wiedersehen!<p>
+    </div>
 </div>
 
 <img src="images/game/characters/chemie/chemie_normal.png"  ng-show="$ctrl.statuscharacter('chemie_normal')" class="characters">
+<img src="images/game/characters/chemie/chemie_sauer.png"  ng-show="$ctrl.statuscharacter('chemie_sauer')" class="characters">
+<img src="images/game/characters/chemie/chemie_shocked.png"  ng-show="$ctrl.statuscharacter('chemie_shocked')" class="characters">
+<img src="images/game/characters/chemie/chemie_traurig.png"  ng-show="$ctrl.statuscharacter('chemie_traurig')" class="characters">
+<img src="images/game/characters/chemie/chemie_verwundert.png"  ng-show="$ctrl.statuscharacter('chemie_verwundert')" class="characters">
+<img src="images/game/characters/chemie/chemie_zwinker.png"  ng-show="$ctrl.statuscharacter('chemie_zwinker')" class="characters">
 <img src="images/game/textbubbles/chemie/1_1.png"  ng-show="$ctrl.statusbubble('1_1')" class="sprechblase">
 <img src="images/game/textbubbles/chemie/2_2.png"  ng-show="$ctrl.statusbubble('2_2')" class="sprechblase">
+<img src="images/game/textbubbles/chemie/3_1.png"  ng-show="$ctrl.statusbubble('3_1')" class="sprechblase">
+<img src="images/game/textbubbles/chemie/4_0.png"  ng-show="$ctrl.statusbubble('4_0')" class="sprechblase">
+<img src="images/game/textbubbles/chemie/death.png"  ng-show="$ctrl.statusbubble('death')" class="sprechblase">
