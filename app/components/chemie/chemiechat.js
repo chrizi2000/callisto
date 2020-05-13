@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("chemiechat", {
-    templateUrl: "components/chemiechat.html",
+    templateUrl: "components/chemie/chemiechat.html",
     controller: "ChemiechatController",
     bindings:{}
 });

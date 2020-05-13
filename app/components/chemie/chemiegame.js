@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("chemiegame", {
-    templateUrl: "components/chemiegame.html",
+    templateUrl: "components/chemie/chemiegame.html",
     controller: "Chemiegame",
     bindings:{}
 });
