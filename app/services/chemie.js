@@ -16,6 +16,7 @@ app.service("ChemieGame", function(Game) {
         "2_2" : false,
         "3_1" : false,
         "4_0" : false,
+        "4_0_1" : false,
         "3_2" : false,
         "death" : false,
         "death_2" : false};
@@ -25,6 +26,7 @@ app.service("ChemieGame", function(Game) {
         "buttons_2" : false,
         "buttons_3" : false,
         "buttons_4" : false,
+        "buttons_5" : false,
         "buttons_death" : false,
         "buttons_goodbye" : false
     };

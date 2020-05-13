@@ -12,7 +12,7 @@
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_2')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'clear', 'chemie_normal')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'buttons_5', 'chemie_zwinker')">
         <p class="button-question">Wie wird eigentlich Blausäure hergestellt?<p>
     </div>
     <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'buttons_3', 'chemie_traurig')">
@@ -50,11 +50,12 @@
     </div>
 </div>
 
-<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_')">
-    <div class="pure-u-1-1 button-div" ng-click="$ctrl.answerpressed('death', 'clear', 'chemie_sauer')">
-        <p class="button-question">Ja!<p>
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_5')">
+    <div class="pure-u-1-1 button-div" ng-click="$ctrl.answerpressed('4_0_1', 'clear', 'chemie_zwinker')">
+        <p class="button-question">Sehr interessant...<p>
     </div>
 </div>
+
 <img src="images/game/characters/chemie/chemie_normal.png"  ng-show="$ctrl.statuscharacter('chemie_normal')" class="characters images-responsive">
 <img src="images/game/characters/chemie/chemie_sauer.png"  ng-show="$ctrl.statuscharacter('chemie_sauer')" class="characters images-responsive">
 <img src="images/game/characters/chemie/chemie_shocked.png"  ng-show="$ctrl.statuscharacter('chemie_shocked')" class="characters images-responsive">
@@ -68,5 +69,6 @@
 <img src="images/game/textbubbles/chemie/2_2.png"  ng-show="$ctrl.statusbubble('2_3')" class="sprechblase images-responsive">
 <img src="images/game/textbubbles/chemie/3_1.png"  ng-show="$ctrl.statusbubble('3_1')" class="sprechblase images-responsive">
 <img src="images/game/textbubbles/chemie/4_0.png"  ng-show="$ctrl.statusbubble('4_0')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/chemie/4_0_1.png"  ng-show="$ctrl.statusbubble('4_0_1')" class="sprechblase images-responsive">
 <img src="images/game/textbubbles/chemie/death.png"  ng-show="$ctrl.statusbubble('death')" class="sprechblase images-responsive">
 <img src="images/game/textbubbles/chemie/death_2.png"  ng-show="$ctrl.statusbubble('death_2')" class="sprechblase images-responsive">
