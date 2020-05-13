@@ -1,6 +1,7 @@
 .images-responsive{
     max-width: 60vmax;
     height: auto;
+    padding-top: 5px;
 }
 
 .gamebuttons{
