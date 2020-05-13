@@ -28,9 +28,8 @@ app.controller("Chemiegame", function ($log, ChemieGame) {
         ChemieGame.changebuttons(buttons)
         ChemieGame.changebubble(answer);
         ChemieGame.changecharacter(emotion);
-
         if(hint){
-            console.log("hint");
+           ChemieGame.gothint();
         }
 
     }

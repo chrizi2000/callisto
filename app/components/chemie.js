@@ -9,8 +9,9 @@ app.component("chemie", {
 app.controller("ChemieController", function ($log, Game, ChemieGame) {
     $log.debug("ChemieController()");
 
-    this.hintchemie = ChemieGame.gethintstatus();
-
+    this.gethint = () =>{
+        return ChemieGame.gethintstatus();
+    }
     this.gametrigger = () =>{
         ChemieGame.startgamechemie();
     }
