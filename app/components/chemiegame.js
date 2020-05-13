@@ -24,10 +24,14 @@ app.controller("Chemiegame", function ($log, ChemieGame) {
     }
 
 
-    this.answerpressed = (answer, buttons, emotion) =>{
+    this.answerpressed = (answer, buttons, emotion, hint) =>{
         ChemieGame.changebuttons(buttons)
         ChemieGame.changebubble(answer);
         ChemieGame.changecharacter(emotion);
+
+        if(hint){
+            console.log("hint");
+        }
 
     }
 

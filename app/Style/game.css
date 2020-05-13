@@ -1,3 +1,8 @@
+.images-responsive{
+    width: 65vw;
+    height: auto;
+}
+
 .gamebuttons{
     width: 1920px;
     height: 150px;
