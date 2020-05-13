@@ -2,7 +2,7 @@
 
 app.component("klassenvorstandchat", {
     templateUrl: "components/klassenvorstandchat.html",
-    conroller: "ChemiechatController",
+    controller: "ChemiechatController",
     bindings:{}
 });
 

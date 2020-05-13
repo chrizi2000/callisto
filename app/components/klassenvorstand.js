@@ -6,13 +6,14 @@ app.component("klassenvorstand", {
     bindings:{}
 });
 
-app.controller("KlassenvorstandController", function ($log, Game) {
+app.controller("KlassenvorstandController", function ($log, Klassenvorstandgame) {
     $log.debug("KlassenvorstandController()");
 
-    this.hintklassenvorstand = [false,false,false];
-
+    this.gethint = () =>{
+        return Klassenvorstandgame.gethintstatus();
+    }
     this.gametrigger = () =>{
-        Game.startgameklassenvorstand();
+        Klassenvorstandgame.startgameklassenvorstand();
     }
 });
 
