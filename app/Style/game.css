@@ -1,12 +1,11 @@
 .images-responsive{
-    max-width: 65vmax;
+    max-width: 60vmax;
     height: auto;
 }
 
 .gamebuttons{
-    width: 1920px;
-    height: 150px;
-    overflow: auto;
+    width: 60vmax;
+    height: auto;
     position: static;
     text-align: center;
 
@@ -17,10 +16,7 @@
     font-size: large;
     background-color: forestgreen;
     color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-right: 4px;
-    padding-left: 4px;
+   padding: 4px;
 }
 .button-div{
         padding-left: 1%;
