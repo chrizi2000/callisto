@@ -1,5 +1,5 @@
 .images-responsive{
-    width: 65vw;
+    max-width: 65vmax;
     height: auto;
 }
 
