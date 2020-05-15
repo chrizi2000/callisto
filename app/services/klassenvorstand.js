@@ -1,4 +1,4 @@
-app.service("Klassenvorstandgame", function(Game) {
+app.service("Klassenvorstandgame", function(Game, Reseter) {
 
     let klassenvorstandgame = {
         "klassenvorstand_normal" : false,
@@ -106,6 +106,7 @@ app.service("Klassenvorstandgame", function(Game) {
 
 
     this.startgameklassenvorstand = () => {
+        Reseter.reset();
         this.resetbubble();
         Game.changestatus("klassenzimmer1");
         this.changecharacter("klassenvorstand_normal");

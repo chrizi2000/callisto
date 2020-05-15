@@ -106,6 +106,16 @@ app.service("ChemieGame", function(Game) {
         }
     }
 
+    this.seteverythingonfalse = () =>{
+        for (let k in chemiecharacter) {
+            chemiecharacter[k] = false;
+            }
+        this.resetbubble();
+        for (let k in buttons) {
+            buttons[k] = false;
+        }
+    }
+
 
     this.startgamechemie = () => {
         this.resetbubble();
