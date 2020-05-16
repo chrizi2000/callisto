@@ -6,30 +6,30 @@ app.component("chemiegame", {
     bindings:{}
 });
 
-app.controller("Chemiegame", function ($log, ChemieGame) {
+app.controller("Chemiegame", function ($log, Game) {
     $log.debug("Chemiegame()");
 
     this.statuscharacter = (name) => {
-        return ChemieGame.getstatuscharacter(name);
+        return Game.chemiegetstatuscharacter(name);
     }
 
     this.statusbubble = (name) =>{
-        return ChemieGame.getstatusbubble(name);
+        return Game.chemiegetstatusbubble(name);
     }
 
 
 
     this.statusbuttons = (name) =>{
-        return ChemieGame.getstatusbutton(name);
+        return Game.chemiegetstatusbutton(name);
     }
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
-        ChemieGame.changebuttons(buttons)
-        ChemieGame.changebubble(answer);
-        ChemieGame.changecharacter(emotion);
+        Game.chemiechangebuttons(buttons)
+        Game.chemiechangebubble(answer);
+        Game.chemiechangecharacter(emotion);
         if(hint){
-           ChemieGame.gothint();
+            Game.chemiegothint();
         }
 
     }

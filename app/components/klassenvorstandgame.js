@@ -6,35 +6,33 @@ app.component("klassenvorstandgame", {
     bindings:{}
 });
 
-app.controller("Klassenvorstandgame", function ($log, Klassenvorstandgame) {
+app.controller("Klassenvorstandgame", function ($log, Game) {
     $log.debug("Klassenvorstandgame()");
 
     this.statuscharacter = (name) => {
-        return Klassenvorstandgame.getstatuscharacter(name);
+        return Game.klassenvorstandgetstatuscharacter(name);
 
     }
 
     this.statusbubble = (name) =>{
-        return Klassenvorstandgame.getstatusbubble(name);
+        return Game.klassenvorstandgetstatusbubble(name);
     }
 
 
 
     this.statusbuttons = (name) =>{
-        return Klassenvorstandgame.getstatusbutton(name);
+        return Game.klassenvorstandgetstatusbutton(name);
     }
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
-        Klassenvorstandgame.changebuttons(buttons)
-        Klassenvorstandgame.changebubble(answer);
-        Klassenvorstandgame.changecharacter(emotion);
+        Klassenvorstandgame.klassenvorstandchangebuttons(buttons)
+        Klassenvorstandgame.klassenvorstandchangebubble(answer);
+        Klassenvorstandgame.klassenvorstandchangecharacter(emotion);
         if(hint){
-            Klassenvorstandgame.gothint();
+            Klassenvorstandgame.klassenvorstandgothint();
         }
-
     }
-
 });
 
 app.config(function($stateProvider) {
