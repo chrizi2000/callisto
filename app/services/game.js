@@ -214,8 +214,7 @@ app.service("Game", function() {
         "1_2" : false,
         "2_1" : false,
         "3_1" : false,
-        "death" : false,
-        "death_2" : false};
+        "death" : false};
 
     let klassenvorstandbuttons = {
         "buttons_1" : false,
