@@ -26,11 +26,11 @@ app.controller("Klassenvorstandgame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
-        Klassenvorstandgame.klassenvorstandchangebuttons(buttons)
-        Klassenvorstandgame.klassenvorstandchangebubble(answer);
-        Klassenvorstandgame.klassenvorstandchangecharacter(emotion);
+        Game.klassenvorstandchangebuttons(buttons)
+        Game.klassenvorstandchangebubble(answer);
+        Game.klassenvorstandchangecharacter(emotion);
         if(hint){
-            Klassenvorstandgame.klassenvorstandgothint();
+            Game.klassenvorstandgothint();
         }
     }
 });

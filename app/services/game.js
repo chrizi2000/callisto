@@ -280,9 +280,9 @@ app.service("Game", function() {
     }
 
     this.klassenvorstandgetstatusbutton = (name) => {
-        for (let k in buttons) {
+        for (let k in klassenvorstandbuttons) {
             if (k === name) {
-                return buttons[k];
+                return klassenvorstandbuttons[k];
             }
         }
     }

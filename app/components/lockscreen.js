@@ -42,5 +42,5 @@ app.config(function($stateProvider,$urlRouterProvider) {
         url: "/lockscreen",       // Fragmentbezeichner ohne '#!'
         component: "lockscreen"   // Komponenten-Name
     });
-    $urlRouterProvider.otherwise("/lockscreen");
+
 });
