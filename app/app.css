@@ -57,6 +57,11 @@ label {
     height: auto;
 }
 
+.passfoto{
+    width: 600px;
+    height: auto;
+}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
