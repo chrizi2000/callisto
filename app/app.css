@@ -155,7 +155,7 @@ a.pure-button-primary {
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #f2b53a; /*Hover effect menu */
 }
 
 
