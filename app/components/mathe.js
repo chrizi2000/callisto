@@ -12,7 +12,7 @@ app.controller("MatheController", function ($log, Game) {
     this.hintmathe = [false,false,false];
 
     this.gametrigger = () =>{
-        Game.startgamemathe();
+        Game.mathestartgame();
     }
 });
 
