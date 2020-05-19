@@ -455,7 +455,7 @@ app.service("Game", function() {
 
     this.mathestartgame = () => {
         this.reset();
-        this.changestatus("klassenzimmer2");
+        this.changestatus("klassenzimmer1");
         this.chemiechangecharacter("mathe_normal");
         this.chemiechangebuttons("buttons_1");
     }
