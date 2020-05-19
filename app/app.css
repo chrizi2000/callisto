@@ -57,6 +57,11 @@ label {
     height: auto;
 }
 
+.passfoto{
+    width: 600px;
+    height: auto;
+}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -124,7 +129,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #2d3e50;
+    background: #fed65d;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -133,6 +138,11 @@ a.pure-button-primary {
     z-index: 4;
 }
 
+.pure-menu-list{
+    font-size: 130%;
+    padding-top: 0.5vw;
+    position: static;
+}
 .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
@@ -144,13 +154,14 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #2d3e50;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #FFFFFF; /*Hover effect menu */
+    background-color: #2d3e50;
 }
 
 
@@ -318,3 +329,25 @@ a.pure-button-primary {
         font-size: 300%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

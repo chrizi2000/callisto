@@ -9,10 +9,11 @@ app.component("klassenvorstand", {
 app.controller("KlassenvorstandController", function ($log, Game) {
     $log.debug("KlassenvorstandController()");
 
-    this.hintklassenvorstand = [false,false,false];
-
+    this.gethint = () =>{
+        return Game.klassenvorstandgethintstatus();
+    }
     this.gametrigger = () =>{
-        Game.startgameklassenvorstand();
+        Game.klassenvorstandstartgame();
     }
 });
 
