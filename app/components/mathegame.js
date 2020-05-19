@@ -1,13 +1,13 @@
 "use strict";
 
-app.component("Mathegame", {
+app.component("mathegame", {
     templateUrl: "components/mathegame.html",
     controller: "mathegame",
     bindings:{}
 });
 
-app.controller("Mathegame", function ($log, Game) {
-    $log.debug("Mathegame()");
+app.controller("mathegame", function ($log, Game) {
+    $log.debug("mathegame()");
 
     this.statuscharacter = (name) => {
         return Game.mathegetstatuscharacter(name);
@@ -29,9 +29,6 @@ app.controller("Mathegame", function ($log, Game) {
         Game.mathechangebuttons(buttons)
         Game.mathechangebubble(answer);
         Game.mathechangecharacter(emotion);
-        if(hint){
-            Game.klassenvorstandgothint();
-        }
     }
 });
 
