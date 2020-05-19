@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
+<div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'mathe_wuetend')">
+    <p class="button-question">Hallo Herr Professor, ich habe eine Frage an Sie<p>
+</div>
 
-</body>
-</html>
+
+
+<img src="../images/game/characters/mathe/Mathelehrer_Normal.png"  ng-show="$ctrl.statuscharacter('mathelehrer_normal')" class="characters images-responsive">
+<img src="../images/game/characters/mathe/Mathelehrer_Erschtaunt.png"  ng-show="$ctrl.statuscharacter('mathelehrer_erschtaunt')" class="characters images-responsive">
+<img src="../images/game/characters/mathe/Mathelehrer_Verwirrt.png"  ng-show="$ctrl.statuscharacter('mathelehrer_verwirrt')" class="characters images-responsive">
+<img src="../images/game/characters/mathe/Mathelehrer_Wuetend.png"  ng-show="$ctrl.statuscharacter('mathelehrer_wuetend')" class="characters images-responsive">
