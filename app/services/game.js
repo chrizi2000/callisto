@@ -381,9 +381,9 @@ app.service("Game", function() {
     let mathehint = false;
 
     this.mathegetstatuscharacter = (name) => {
-        for (let k in chemiecharacter) {
+        for (let k in mathecharacter) {
             if (k === name) {
-                return chemiecharacter[k];
+                return mathecharacter[k];
             }
         }
     }
@@ -398,55 +398,55 @@ app.service("Game", function() {
 
 
     this.mathechangecharacter = (name) => {
-        for (let k in chemiecharacter) {
-            chemiecharacter[k] = false;
+        for (let k in mathecharacter) {
+            mathecharacter[k] = false;
             if (k === name) {
-                chemiecharacter[k] = true;
+                mathecharacter[k] = true;
             }
         }
     }
 
     this.mathegetstatusbubble = (name) => {
-        for (let k in chemiebubbles) {
+        for (let k in mathebubbles) {
             if (k === name) {
-                return chemiebubbles[k];
+                return mathebubbles[k];
             }
         }
     }
 
     this.mathechangebubble = (name) => {
-        for (let k in chemiebubbles) {
-            chemiebubbles[k] = false;
+        for (let k in mathebubbles) {
+            mathebubbles[k] = false;
             if (k === name) {
-                chemiebubbles[k] = true;
+                mathebubbles[k] = true;
             }
         }
     }
 
     this.matheresetbubble = () =>{
-        for (let k in chemiebubbles) {
-            chemiebubbles[k] = false;
+        for (let k in mathebubbles) {
+            mathebubbles[k] = false;
         }
     }
 
     this.mathegetstatusbutton = (name) => {
-        for (let k in chemiebuttons) {
+        for (let k in mathebuttons) {
             if (k === name) {
-                return chemiebuttons[k];
+                return mathebuttons[k];
             }
         }
     }
 
     this.mathechangebuttons = (name) => {
         if (name === "clear"){
-            for (let k in chemiebuttons) {
-                chemiebuttons[k] = false;
+            for (let k in mathebuttons) {
+                mathebuttons[k] = false;
             }
         }else{
-            for (let k in chemiebuttons) {
-                chemiebuttons[k] = false;
+            for (let k in mathebuttons) {
+                mathebuttons[k] = false;
                 if (k === name) {
-                    chemiebuttons[k] = true;
+                    mathebuttons[k] = true;
                 }
             }
         }
@@ -456,17 +456,17 @@ app.service("Game", function() {
     this.mathestartgame = () => {
         this.reset();
         this.changestatus("klassenzimmer1");
-        this.chemiechangecharacter("mathe_normal");
-        this.chemiechangebuttons("buttons_1");
+        this.mathechangecharacter("mathe_normal");
+        this.mathechangebuttons("buttons_1");
     }
 
     this.matheseteverythingonfalse = () =>{
-        for (let k in chemiecharacter) {
-            chemiecharacter[k] = false;
+        for (let k in mathecharacter) {
+            mathecharacter[k] = false;
         }
         this.matheresetbubble();
-        for (let k in chemiebuttons) {
-            chemiebuttons[k] = false;
+        for (let k in mathebuttons) {
+            mathebuttons[k] = false;
         }
     }
 

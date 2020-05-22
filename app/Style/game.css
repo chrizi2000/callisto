@@ -1,3 +1,7 @@
+body{
+    overflow: hidden;
+}
+
 .images-responsive{
     max-width: 60vmax;
     height: auto;
