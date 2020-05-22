@@ -373,6 +373,16 @@ app.service("Game", function() {
         "buttons_3" : false,
         "buttons_4" : false,
         "buttons_5" : false,
+        "buttons_6" : false,
+        "buttons_7" : false,
+        "buttons_8" : false,
+        "buttons_9" : false,
+        "buttons_10" : false,
+        "buttons_11" : false,
+        "buttons_12" : false,
+        "buttons_13" : false,
+        "buttons_14" : false,
+        "buttons_15" : false,
         "buttons_death" : false,
         "buttons_goodbye" : false
     };
