@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("klassenvorstand", {
-    templateUrl: "components/klassenvorstand.html",
+    templateUrl: "components/klassenvorstand/klassenvorstand.html",
     controller: "KlassenvorstandController",
     bindings:{}
 });

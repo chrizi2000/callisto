@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("mathechat", {
-    templateUrl: "components/mathechat.html",
+    templateUrl: "components/mathe/mathechat.html",
     conroller: "ChemiechatController",
     bindings:{}
 });

@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("klassenvorstandgame", {
-    templateUrl: "components/klassenvorstandgame.html",
+    templateUrl: "components/klassenvorstand/klassenvorstandgame.html",
     controller: "Klassenvorstandgame",
     bindings:{}
 });

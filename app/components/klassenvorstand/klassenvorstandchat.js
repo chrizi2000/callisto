@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("klassenvorstandchat", {
-    templateUrl: "components/klassenvorstandchat.html",
+    templateUrl: "components/klassenvorstand/klassenvorstandchat.html",
     controller: "ChemiechatController",
     bindings:{}
 });

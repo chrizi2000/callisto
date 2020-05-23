@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("mathe", {
-    templateUrl: "components/mathe.html",
+    templateUrl: "components/mathe/mathe.html",
     controller: "MatheController",
     bindings:{}
 });
