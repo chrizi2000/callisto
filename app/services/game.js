@@ -40,8 +40,8 @@ app.service("Game", function() {
     }
 
     this.betaaccess = () => {
-        return access;
-        //return true; //für auserkraftsetzung
+        //return access;
+        return true; //für auserkraftsetzung
     }
 
     this.checkbetaacces = (id) => {
@@ -388,7 +388,8 @@ app.service("Game", function() {
     };
 
 
-    let mathehint = false;
+    let mathehint = [false,false];
+
 
     this.mathegetstatuscharacter = (name) => {
         for (let k in mathecharacter) {
@@ -398,12 +399,12 @@ app.service("Game", function() {
         }
     }
 
-    this.mathegethintstatus = () => {
-        return chemiehint;
+    this.mathegethintstatus = (index) => {
+        return mathehint[index];
     }
 
-    this.mathegothint = () => {
-        chemiehint = true;
+    this.mathegothint = (index) => {
+        mathehint[index] = true;
     }
 
 

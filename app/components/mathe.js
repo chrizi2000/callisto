@@ -9,7 +9,9 @@ app.component("mathe", {
 app.controller("MatheController", function ($log, Game) {
     $log.debug("MatheController()");
 
-    this.hintmathe = [false,false,false];
+    this.hintstatus = (index) =>{
+        return Game.mathegethintstatus(index);
+    }
 
     this.gametrigger = () =>{
         Game.mathestartgame();
