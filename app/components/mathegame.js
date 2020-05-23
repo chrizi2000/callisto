@@ -11,7 +11,6 @@ app.controller("mathegame", function ($log, Game) {
 
     this.statuscharacter = (name) => {
         return Game.mathegetstatuscharacter(name);
-
     }
 
     this.statusbubble = (name) =>{
@@ -26,7 +25,7 @@ app.controller("mathegame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
-        Game.mathechangebuttons(buttons)
+        Game.mathechangebuttons(buttons);
         Game.mathechangebubble(answer);
         Game.mathechangecharacter(emotion);
     }
