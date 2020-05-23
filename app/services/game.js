@@ -40,8 +40,8 @@ app.service("Game", function() {
     }
 
     this.betaaccess = () => {
-        //return access;
-        return true; //für auserkraftsetzung
+        return access;
+        //return true; //für auserkraftsetzung
     }
 
     this.checkbetaacces = (id) => {
