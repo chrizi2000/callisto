@@ -102,6 +102,15 @@ app.service("Game", function() {
 
 
     let chemiehint = false;
+    let chemieaccess = true;
+
+    this.chemiestatusconversation = () => {
+        return chemieaccess;
+    }
+
+    this.chemiedead = () =>{
+        chemieaccess = false;
+    }
 
     this.chemiegetstatuscharacter = (name) => {
         for (let k in chemiecharacter) {
@@ -229,6 +238,16 @@ app.service("Game", function() {
 
 
     let klassenvorstandhint = false;
+
+    let klassenvorstandaccess = true;
+
+    this.klassenvorstandstatusconversation = () => {
+        return klassenvorstandaccess;
+    }
+
+    this.klassenvorstanddead = () =>{
+        klassenvorstandaccess = false;
+    }
 
     this.klassenvorstandgetstatuscharacter = (name) => {
         for (let k in klassenvorstandgame) {
@@ -390,7 +409,15 @@ app.service("Game", function() {
 
     let mathehint = [false,false];
 
+    let matheaccess = true;
 
+    this.mathestatusconversation = () => {
+        return matheaccess;
+    }
+
+    this.mathedead = () =>{
+        matheaccess = false;
+    }
     this.mathegetstatuscharacter = (name) => {
         for (let k in mathecharacter) {
             if (k === name) {

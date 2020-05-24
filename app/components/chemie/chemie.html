@@ -46,7 +46,10 @@
     <div class="pure-u-11-24">
         <img src="images/icons/Chat.svg" ui-sref="ChemieChat" style='width: 70%; height: auto' class="pure-img-responsive icon">
     </div>
-    <div class="pure-u-11-24" ng-click="$ctrl.gametrigger()">
+    <div class="pure-u-11-24" ng-show="$ctrl.allowaccess()" ng-click="$ctrl.gametrigger()">
         <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
+    </div>
+    <div class="pure-u-11-24" ng-hide="$ctrl.allowaccess()">
+        <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
     </div>
 </div>

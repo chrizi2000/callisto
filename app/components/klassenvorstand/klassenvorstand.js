@@ -8,7 +8,9 @@ app.component("klassenvorstand", {
 
 app.controller("KlassenvorstandController", function ($log, Game) {
     $log.debug("KlassenvorstandController()");
-
+    this.allowaccess = () =>{
+        return Game.klassenvorstandstatusconversation();
+    }
     this.gethint = () =>{
         return Game.klassenvorstandgethintstatus();
     }

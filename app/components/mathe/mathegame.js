@@ -32,7 +32,11 @@ app.controller("mathegame", function ($log, Game) {
         Game.mathechangebubble(answer);
         Game.mathechangecharacter(emotion);
         if(hint){
-            Game.mathegothint(hint-1);
+            if(hint === "death"){
+                Game.mathedead();
+            }else{
+                Game.mathegothint(hint);
+            }
         }
     }
 });

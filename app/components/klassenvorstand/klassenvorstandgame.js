@@ -30,7 +30,11 @@ app.controller("Klassenvorstandgame", function ($log, Game) {
         Game.klassenvorstandchangebubble(answer);
         Game.klassenvorstandchangecharacter(emotion);
         if(hint){
-            Game.klassenvorstandgothint();
+            if(hint === "death"){
+                Game.klassenvorstanddead();
+            }else{
+                Game.klassenvorstandgothint();
+            }
         }
     }
 });

@@ -8,7 +8,9 @@ app.component("mathe", {
 
 app.controller("MatheController", function ($log, Game) {
     $log.debug("MatheController()");
-
+    this.allowaccess = () =>{
+        return Game.mathestatusconversation();
+    }
     this.hintstatus = (index) =>{
         return Game.mathegethintstatus(index);
     }
