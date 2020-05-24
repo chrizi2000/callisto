@@ -54,6 +54,7 @@ app.service("Game", function() {
         this.chemieseteverythingonfalse();
         this.klassenvorstandseteverythingonfalse();
         this.matheseteverythingonfalse();
+        this.felixseteverythingonfalse();
     }
 
 
@@ -505,6 +506,511 @@ app.service("Game", function() {
         this.matheresetbubble();
         for (let k in mathebuttons) {
             mathebuttons[k] = false;
+        }
+    }
+
+
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----FELIX------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
+
+
+let felixcharacter = {
+    "felix_normal" : false,
+    "felix_erschtaunt" : false,
+    "felix_wuetend" : false,
+    "felix_verwirrt" : false,
+};
+
+let felixbubbles = {
+    "1_1" : false,
+    "1_2" : false,
+    "2_1" : false,
+    "2_2" : false,
+    "3_1" : false,
+    "4_1" : false,
+    "4_2" : false,
+    "4_3" : false,
+    "5_1" : false,
+    "5_2" : false,
+    "5_3" : false,
+    "6_1" : false,
+    "6_2" : false,
+    "7_1" : false,
+    "7_2" : false,
+    "death_1" : false,
+    "death_2" : false,
+    "death_3" : false,
+    "death_4" : false,
+    "death_5" : false,
+    "death_6" : false,
+    "death_7" : false,
+    "death_8" : false
+};
+
+let felixbuttons = {
+    "buttons_1" : false,
+    "buttons_2" : false,
+    "buttons_3" : false,
+    "buttons_4" : false,
+    "buttons_5" : false,
+    "buttons_6" : false,
+    "buttons_7" : false,
+    "buttons_8" : false,
+    "buttons_9" : false,
+    "buttons_10" : false,
+    "buttons_11" : false,
+    "buttons_12" : false,
+    "buttons_13" : false,
+    "buttons_14" : false,
+    "buttons_15" : false,
+    "buttons_death" : false,
+    "buttons_goodbye" : false
+};
+
+
+let felixhint = [false,false];
+
+let felixaccess = true;
+
+this.felixstatusconversation = () => {
+    return felixaccess;
+}
+
+this.felixdead = () =>{
+    felixaccess = false;
+}
+this.felixgetstatuscharacter = (name) => {
+    for (let k in felixcharacter) {
+        if (k === name) {
+            return felixcharacter[k];
+        }
+    }
+}
+
+this.felixgethintstatus = (index) => {
+    return felixhint[index];
+}
+
+this.felixgothint = (index) => {
+    felixhint[index] = true;
+}
+
+
+this.felixchangecharacter = (name) => {
+    for (let k in felixcharacter) {
+        felixcharacter[k] = false;
+        if (k === name) {
+            felixcharacter[k] = true;
+        }
+    }
+}
+
+this.felixgetstatusbubble = (name) => {
+    for (let k in felixbubbles) {
+        if (k === name) {
+            return felixbubbles[k];
+        }
+    }
+}
+
+this.felixchangebubble = (name) => {
+    for (let k in felixbubbles) {
+        felixbubbles[k] = false;
+        if (k === name) {
+            felixbubbles[k] = true;
+        }
+    }
+}
+
+this.felixresetbubble = () =>{
+    for (let k in felixbubbles) {
+        felixbubbles[k] = false;
+    }
+}
+
+this.felixgetstatusbutton = (name) => {
+    for (let k in felixbuttons) {
+        if (k === name) {
+            return felixbuttons[k];
+        }
+    }
+}
+
+this.felixchangebuttons = (name) => {
+    if (name === "clear"){
+        for (let k in felixbuttons) {
+            felixbuttons[k] = false;
+        }
+    }else{
+        for (let k in felixbuttons) {
+            felixbuttons[k] = false;
+            if (k === name) {
+                felixbuttons[k] = true;
+            }
+        }
+    }
+}
+
+
+this.felixstartgame = () => {
+    this.reset();
+    this.changestatus("sportplatz");
+    this.felixchangecharacter("felix_normal");
+    this.felixchangebuttons("buttons_1");
+}
+
+this.felixseteverythingonfalse = () =>{
+    for (let k in felixcharacter) {
+        felixcharacter[k] = false;
+    }
+    this.felixresetbubble();
+    for (let k in felixbuttons) {
+        felixbuttons[k] = false;
+    }
+}
+
+
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----LENA------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
+
+
+    let lenacharacter = {
+        "lena_normal" : false,
+        "lena_erschtaunt" : false,
+        "lena_wuetend" : false,
+        "lena_verwirrt" : false,
+    };
+
+    let lenabubbles = {
+        "1_1" : false,
+        "1_2" : false,
+        "2_1" : false,
+        "2_2" : false,
+        "3_1" : false,
+        "4_1" : false,
+        "4_2" : false,
+        "4_3" : false,
+        "5_1" : false,
+        "5_2" : false,
+        "5_3" : false,
+        "6_1" : false,
+        "6_2" : false,
+        "7_1" : false,
+        "7_2" : false,
+        "death_1" : false,
+        "death_2" : false,
+        "death_3" : false,
+        "death_4" : false,
+        "death_5" : false,
+        "death_6" : false,
+        "death_7" : false,
+        "death_8" : false
+    };
+
+    let lenabuttons = {
+        "buttons_1" : false,
+        "buttons_2" : false,
+        "buttons_3" : false,
+        "buttons_4" : false,
+        "buttons_5" : false,
+        "buttons_6" : false,
+        "buttons_7" : false,
+        "buttons_8" : false,
+        "buttons_9" : false,
+        "buttons_10" : false,
+        "buttons_11" : false,
+        "buttons_12" : false,
+        "buttons_13" : false,
+        "buttons_14" : false,
+        "buttons_15" : false,
+        "buttons_death" : false,
+        "buttons_goodbye" : false
+    };
+
+
+    let lenahint = [false,false];
+
+    let lenaaccess = true;
+
+    this.lenastatusconversation = () => {
+        return lenaaccess;
+    }
+
+    this.lenadead = () =>{
+        lenaaccess = false;
+    }
+    this.lenagetstatuscharacter = (name) => {
+        for (let k in lenacharacter) {
+            if (k === name) {
+                return lenacharacter[k];
+            }
+        }
+    }
+
+    this.lenagethintstatus = (index) => {
+        return lenahint[index];
+    }
+
+    this.lenagothint = (index) => {
+        lenahint[index] = true;
+    }
+
+
+    this.lenachangecharacter = (name) => {
+        for (let k in lenacharacter) {
+            lenacharacter[k] = false;
+            if (k === name) {
+                lenacharacter[k] = true;
+            }
+        }
+    }
+
+    this.lenagetstatusbubble = (name) => {
+        for (let k in lenabubbles) {
+            if (k === name) {
+                return lenabubbles[k];
+            }
+        }
+    }
+
+    this.lenachangebubble = (name) => {
+        for (let k in lenabubbles) {
+            lenabubbles[k] = false;
+            if (k === name) {
+                lenabubbles[k] = true;
+            }
+        }
+    }
+
+    this.lenaresetbubble = () =>{
+        for (let k in lenabubbles) {
+            lenabubbles[k] = false;
+        }
+    }
+
+    this.lenagetstatusbutton = (name) => {
+        for (let k in lenabuttons) {
+            if (k === name) {
+                return lenabuttons[k];
+            }
+        }
+    }
+
+    this.lenachangebuttons = (name) => {
+        if (name === "clear"){
+            for (let k in lenabuttons) {
+                lenabuttons[k] = false;
+            }
+        }else{
+            for (let k in lenabuttons) {
+                lenabuttons[k] = false;
+                if (k === name) {
+                    lenabuttons[k] = true;
+                }
+            }
+        }
+    }
+
+
+    this.lenastartgame = () => {
+        this.reset();
+        this.changestatus("klassenzimmer2");
+        this.lenachangecharacter("lena_normal");
+        this.lenachangebuttons("buttons_1");
+    }
+
+    this.lenaseteverythingonfalse = () =>{
+        for (let k in lenacharacter) {
+            lenacharacter[k] = false;
+        }
+        this.lenaresetbubble();
+        for (let k in lenabuttons) {
+            lenabuttons[k] = false;
+        }
+    }
+
+
+
+    //----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----vanessa------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
+
+
+    let vanessacharacter = {
+        "vanessa_normal" : false,
+        "vanessa_erschtaunt" : false,
+        "vanessa_wuetend" : false,
+        "vanessa_verwirrt" : false,
+    };
+
+    let vanessabubbles = {
+        "1_1" : false,
+        "1_2" : false,
+        "2_1" : false,
+        "2_2" : false,
+        "3_1" : false,
+        "4_1" : false,
+        "4_2" : false,
+        "4_3" : false,
+        "5_1" : false,
+        "5_2" : false,
+        "5_3" : false,
+        "6_1" : false,
+        "6_2" : false,
+        "7_1" : false,
+        "7_2" : false,
+        "death_1" : false,
+        "death_2" : false,
+        "death_3" : false,
+        "death_4" : false,
+        "death_5" : false,
+        "death_6" : false,
+        "death_7" : false,
+        "death_8" : false
+    };
+
+    let vanessabuttons = {
+        "buttons_1" : false,
+        "buttons_2" : false,
+        "buttons_3" : false,
+        "buttons_4" : false,
+        "buttons_5" : false,
+        "buttons_6" : false,
+        "buttons_7" : false,
+        "buttons_8" : false,
+        "buttons_9" : false,
+        "buttons_10" : false,
+        "buttons_11" : false,
+        "buttons_12" : false,
+        "buttons_13" : false,
+        "buttons_14" : false,
+        "buttons_15" : false,
+        "buttons_death" : false,
+        "buttons_goodbye" : false
+    };
+
+
+    let vanessahint = [false,false];
+
+    let vanessaaccess = true;
+
+    this.vanessastatusconversation = () => {
+        return vanessaaccess;
+    }
+
+    this.vanessadead = () =>{
+        vanessaaccess = false;
+    }
+    this.vanessagetstatuscharacter = (name) => {
+        for (let k in vanessacharacter) {
+            if (k === name) {
+                return vanessacharacter[k];
+            }
+        }
+    }
+
+    this.vanessagethintstatus = (index) => {
+        return vanessahint[index];
+    }
+
+    this.vanessagothint = (index) => {
+        vanessahint[index] = true;
+    }
+
+
+    this.vanessachangecharacter = (name) => {
+        for (let k in vanessacharacter) {
+            vanessacharacter[k] = false;
+            if (k === name) {
+                vanessacharacter[k] = true;
+            }
+        }
+    }
+
+    this.vanessagetstatusbubble = (name) => {
+        for (let k in vanessabubbles) {
+            if (k === name) {
+                return vanessabubbles[k];
+            }
+        }
+    }
+
+    this.vanessachangebubble = (name) => {
+        for (let k in vanessabubbles) {
+            vanessabubbles[k] = false;
+            if (k === name) {
+                vanessabubbles[k] = true;
+            }
+        }
+    }
+
+    this.vanessaresetbubble = () =>{
+        for (let k in vanessabubbles) {
+            vanessabubbles[k] = false;
+        }
+    }
+
+    this.vanessagetstatusbutton = (name) => {
+        for (let k in vanessabuttons) {
+            if (k === name) {
+                return vanessabuttons[k];
+            }
+        }
+    }
+
+    this.vanessachangebuttons = (name) => {
+        if (name === "clear"){
+            for (let k in vanessabuttons) {
+                vanessabuttons[k] = false;
+            }
+        }else{
+            for (let k in vanessabuttons) {
+                vanessabuttons[k] = false;
+                if (k === name) {
+                    vanessabuttons[k] = true;
+                }
+            }
+        }
+    }
+
+
+    this.vanessastartgame = () => {
+        this.reset();
+        this.changestatus("bibliothek");
+        this.vanessachangecharacter("vanessa_normal");
+        this.vanessachangebuttons("buttons_1");
+    }
+
+    this.vanessaseteverythingonfalse = () =>{
+        for (let k in vanessacharacter) {
+            vanessacharacter[k] = false;
+        }
+        this.vanessaresetbubble();
+        for (let k in vanessabuttons) {
+            vanessabuttons[k] = false;
         }
     }
 
