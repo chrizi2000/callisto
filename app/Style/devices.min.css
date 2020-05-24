@@ -110,7 +110,7 @@ body {
     top: 12.5%;
     left: 5%;
     overflow-x: hidden;
-    overflow-y: paged-y-controls;
+    overflow-y: auto;
 }
 
 .button {
