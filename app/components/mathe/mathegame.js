@@ -35,7 +35,7 @@ app.controller("mathegame", function ($log, Game) {
             if(hint === "death"){
                 Game.mathedead();
             }else{
-                Game.mathegothint(hint);
+                Game.mathegothint(hint -1);
             }
         }
     }
