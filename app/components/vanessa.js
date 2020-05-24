@@ -9,10 +9,15 @@ app.component("vanessa", {
 app.controller("VanessaController", function ($log, Game) {
     $log.debug("VanessaController()");
 
-    this.hintvanessa = [false,false,false];
+    this.allowaccess = () =>{
+        return Game.vanessastatusconversation();
+    }
+    this.hintstatus = (index) =>{
+        return Game.vanessagethintstatus(index);
+    }
 
     this.gametrigger = () =>{
-        Game.startgamevanessa();
+        Game.vanessastartgame();
     }
 });
 

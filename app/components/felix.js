@@ -9,9 +9,15 @@ app.component("felix", {
 app.controller("FelixController", function ($log, Game) {
     $log.debug("FelixController()");
 
-    this.hintfelix = [false,false,false];
-    this.gametrigger = () => {
-        console.log("f");
+    this.allowaccess = () =>{
+        return Game.felixstatusconversation();
+    }
+    this.hintstatus = (index) =>{
+        return Game.felixgethintstatus(index);
+    }
+
+    this.gametrigger = () =>{
+        Game.felixstartgame();
     }
 });
 

@@ -9,10 +9,15 @@ app.component("lena", {
 app.controller("LenaController", function ($log, Game) {
     $log.debug("LenaController()");
 
-    this.hintlena = [false,false,false];
+    this.allowaccess = () =>{
+        return Game.lenastatusconversation();
+    }
+    this.hintstatus = (index) =>{
+        return Game.lenagethintstatus(index);
+    }
 
     this.gametrigger = () =>{
-        Game.startgamelena();
+        Game.lenastartgame();
     }
 });
 
