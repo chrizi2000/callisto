@@ -25,7 +25,7 @@ body{
 }
 .button-div{
         padding-left: 1%;
-    overflow: scroll;
+    overflow: auto;
     overflow-scrolling: auto;
     border-collapse: separate;
 }
@@ -61,15 +61,8 @@ body{
 body{
     background: white;
     position: static;
-    overflow: scroll;
-    padding-top: 2.5%;
-}
-
-.content-head{
-    width: 1920px;
-    height: 1080px;
-    min-width: 1920px;
-    min-height: 1080px;
+    overflow: auto;
+    /*padding-top: 2.5%;*/
 }
 
 

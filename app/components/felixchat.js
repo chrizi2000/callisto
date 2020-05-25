@@ -2,12 +2,12 @@
 
 app.component("felixchat", {
     templateUrl: "components/felixchat.html",
-    conroller: "FelixController",
+    controller: "FelixchatController",
     bindings:{}
 });
 
-app.controller("FelixController", function ($log) {
-    $log.debug("FelixController()");
+app.controller("FelixchatController", function ($log) {
+    $log.debug("FelixchatController()");
 
 });
 

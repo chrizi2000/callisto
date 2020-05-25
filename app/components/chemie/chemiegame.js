@@ -29,10 +29,14 @@ app.controller("Chemiegame", function ($log, Game) {
         Game.chemiechangebubble(answer);
         Game.chemiechangecharacter(emotion);
         if(hint){
-            Game.chemiegothint();
-        }
+                if(hint === "death"){
+                    Game.chemiedead();
+                }else{
+                    Game.chemiegothint();
+                }
+            }
 
-    }
+        }
 
 });
 

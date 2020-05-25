@@ -2,7 +2,7 @@
 
 app.component("allcontacts", {
     templateUrl: "components/allcontacts.html",
-    conroller: "allcontactsController",
+    controller: "allcontactsController",
     bindings:{}
 });
 

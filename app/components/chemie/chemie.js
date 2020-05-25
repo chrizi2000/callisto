@@ -8,7 +8,9 @@ app.component("chemie", {
 
 app.controller("ChemieController", function ($log, Game) {
     $log.debug("ChemieController()");
-
+    this.allowaccess = () =>{
+     return Game.chemiestatusconversation();
+    }
     this.gethint = () =>{
         return Game.chemiegethintstatus();
     }
