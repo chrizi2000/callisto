@@ -9,6 +9,12 @@ app.component("felix", {
 app.controller("FelixController", function ($log, Game) {
     $log.debug("FelixController()");
 
+    this.test = "test";
+
+    this.test2 = () => {
+        console.log(this.test);
+    }
+
     this.allowaccess = () =>{
         return Game.felixstatusconversation();
     }
@@ -19,6 +25,8 @@ app.controller("FelixController", function ($log, Game) {
     this.gametrigger = () =>{
         Game.felixstartgame();
     }
+
+
 });
 
 app.config(function($stateProvider) {
