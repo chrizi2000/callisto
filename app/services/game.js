@@ -526,9 +526,10 @@ app.service("Game", function() {
 
 let felixcharacter = {
     "felix_normal" : false,
-    "felix_erschtaunt" : false,
+    "felix_erstaunt" : false,
     "felix_wuetend" : false,
     "felix_verwirrt" : false,
+    "felix_traurig" : false,
 };
 
 let felixbubbles = {
@@ -536,25 +537,21 @@ let felixbubbles = {
     "1_2" : false,
     "2_1" : false,
     "2_2" : false,
+    "2_3" : false,
     "3_1" : false,
+    "3_2" : false,
+    "3_3" : false,
     "4_1" : false,
     "4_2" : false,
     "4_3" : false,
     "5_1" : false,
-    "5_2" : false,
-    "5_3" : false,
-    "6_1" : false,
-    "6_2" : false,
-    "7_1" : false,
-    "7_2" : false,
     "death_1" : false,
     "death_2" : false,
     "death_3" : false,
     "death_4" : false,
     "death_5" : false,
     "death_6" : false,
-    "death_7" : false,
-    "death_8" : false
+    "death_7" : false
 };
 
 let felixbuttons = {
@@ -569,12 +566,7 @@ let felixbuttons = {
     "buttons_9" : false,
     "buttons_10" : false,
     "buttons_11" : false,
-    "buttons_12" : false,
-    "buttons_13" : false,
-    "buttons_14" : false,
-    "buttons_15" : false,
-    "buttons_death" : false,
-    "buttons_goodbye" : false
+    "buttons_12" : false
 };
 
 
