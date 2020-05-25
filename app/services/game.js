@@ -55,6 +55,8 @@ app.service("Game", function() {
         this.klassenvorstandseteverythingonfalse();
         this.matheseteverythingonfalse();
         this.felixseteverythingonfalse();
+        this.lenaseteverythingonfalse();
+        this.vanessaseteverythingonfalse();
     }
 
 
@@ -576,7 +578,7 @@ let felixbuttons = {
 };
 
 
-let felixhint = [false,false];
+let felixhint = [true,false];
 
 let felixaccess = true;
 
@@ -587,6 +589,7 @@ this.felixstatusconversation = () => {
 this.felixdead = () =>{
     felixaccess = false;
 }
+
 this.felixgetstatuscharacter = (name) => {
     for (let k in felixcharacter) {
         if (k === name) {
@@ -662,11 +665,14 @@ this.felixchangebuttons = (name) => {
 
 this.felixstartgame = () => {
     this.reset();
+    console.log("felixstartgane");
     this.changestatus("sportplatz");
+    console.log(gamebackground);
     this.felixchangecharacter("felix_normal");
     this.felixchangebuttons("buttons_1");
 }
 
+console.log(felixaccess);
 this.felixseteverythingonfalse = () =>{
     for (let k in felixcharacter) {
         felixcharacter[k] = false;

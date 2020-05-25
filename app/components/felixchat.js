@@ -2,7 +2,7 @@
 
 app.component("felixchat", {
     templateUrl: "components/felixchat.html",
-    conroller: "FelixController",
+    controller: "FelixController",
     bindings:{}
 });
 

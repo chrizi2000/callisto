@@ -7,7 +7,6 @@
     <h1>Felix Fuhrmann</h1>
 </div>
 </div>
-
 <div class="pure-g">
     <br>
     <div class="pure-u-12-24 iconcontact">
@@ -30,26 +29,31 @@
     </div>
 </div>
 <div class="pure-g hints" style="text-align: center">
-<div class="pure-u-8-24">
-    <img src="images/icons/hint_closed.png" ng-hide = "$ctrl.hintfelix[0]" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-    <img src="images/icons/hint_open.png" ng-show = "$ctrl.hintfelix[0]" style='width: 70%; height: auto' class="pure-img-responsive icon">
-</div>
-<div class="pure-u-8-24">
-    <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintfelix[1]" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-    <img src="images/icons/hint_open.png"  ng-show="$ctrl.hintfelix[1]" style='width: 70%; height: auto' class="pure-img-responsive icon">
-</div>
-<div class="pure-u-8-24">
-    <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintfelix[2]" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-    <img src="images/icons/hint_open.png" ng-show="$ctrl.hintfelix[2]" style='width: 70%; height: auto' class="pure-img-responsive icon">
-</div>
-</div>
+    <div class="pure-u-12-24">
+        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div class="tooltip icon">
+            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(0)" style='width: 50%; height: auto' class="pure-img-responsive">
+            <span class="tooltiptext">Sex war freiwillig, er hat sie nicht gezwungen</span>
+        </div>
+    </div>
 
+    <div class="pure-u-12-24">
+        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div class="tooltip icon">
+            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(1)" style='width: 50%; height: auto' class="pure-img-responsive">
+            <span class="tooltiptext">Lena wollte auch mit dem Professor schlafen</span>
+        </div>
+    </div>
+</div>
 <br>
 <div style="text-align: center">
 <div class="pure-u-11-24">
     <img src="images/icons/Chat.svg" ui-sref="FelixChat" style='width: 70%; height: auto' class="pure-img-responsive icon">
-    </div>
-<div class="pure-u-11-24" >
-    <img src="images/icons/Map.svg" ng-click="$ctrl.gametrigger()" style='width: 70%; height: auto' class="pure-img-responsive icon">
+</div>
+<div class="pure-u-11-24" ng-show="$ctrl.allowaccess()" ng-click="$ctrl.gametrigger()">
+    <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
+</div>
+<div class="pure-u-11-24" ng-hide="$ctrl.allowaccess()">
+    <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
 </div>
 </div>
