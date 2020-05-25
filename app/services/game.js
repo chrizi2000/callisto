@@ -578,7 +578,7 @@ let felixbuttons = {
 };
 
 
-let felixhint = [true,false];
+let felixhint = [false,false];
 
 let felixaccess = true;
 
