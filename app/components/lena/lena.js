@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("lena", {
-    templateUrl: "components/lena.html",
+    templateUrl: "components/lena/lena.html",
     controller: "LenaController",
     bindings:{}
 });
