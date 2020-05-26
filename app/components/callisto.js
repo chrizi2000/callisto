@@ -6,12 +6,15 @@ app.component("callisto", {
     bindings:{}
 });
 
-app.controller("callistoController", function ($log, Game) {
+app.controller("callistoController", function ($log, Game ) {
     $log.debug("callistoController()");
+
 
     this.ifbetaaccess = () =>{
         return Game.betaaccess();
     }
+
+
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {

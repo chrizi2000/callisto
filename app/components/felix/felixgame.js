@@ -1,7 +1,7 @@
 "use strict";
 
 app.component("felixgame", {
-    templateUrl: "components/felixgame.html",
+    templateUrl: "components/felix/felixgame.html",
     controller: "felixgame",
     bindings:{}
 });

@@ -27,7 +27,7 @@ app.service("Game", function() {
     };
 
     this.playAudiodead = () => {
-        var audio = new Audio('sounds/dead.mp3');
+        var audio = new Audio('sounds/death.mp3');
         audio.play();
     };
 
@@ -717,6 +717,7 @@ this.felixseteverythingonfalse = () =>{
         "1_2" : false,
         "2_1" : false,
         "2_2" : false,
+        "2_3" : false,
         "3_1" : false,
         "4_1" : false,
         "4_2" : false,
@@ -728,6 +729,14 @@ this.felixseteverythingonfalse = () =>{
         "6_2" : false,
         "7_1" : false,
         "7_2" : false,
+        "7_3" : false,
+        "8_1" : false,
+        "9_1" : false,
+        "10_1" : false,
+        "11_1" : false,
+        "11_2" : false,
+        "12_1" : false,
+        "12_2" : false,
         "death_1" : false,
         "death_2" : false,
         "death_3" : false,
@@ -735,7 +744,9 @@ this.felixseteverythingonfalse = () =>{
         "death_5" : false,
         "death_6" : false,
         "death_7" : false,
-        "death_8" : false
+        "death_8" : false,
+        "death_9" : false,
+        "death_10" : false
     };
 
     let lenabuttons = {
@@ -754,6 +765,8 @@ this.felixseteverythingonfalse = () =>{
         "buttons_13" : false,
         "buttons_14" : false,
         "buttons_15" : false,
+        "buttons_16" : false,
+        "buttons_17" : false,
         "buttons_death" : false,
         "buttons_goodbye" : false
     };
