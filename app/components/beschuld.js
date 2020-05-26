@@ -24,4 +24,5 @@ app.controller("BeschuldController", function ($log, Game) {
 
 
 
+
 });

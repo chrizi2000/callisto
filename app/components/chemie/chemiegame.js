@@ -25,6 +25,7 @@ app.controller("Chemiegame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.chemiechangebuttons(buttons)
         Game.chemiechangebubble(answer);
         Game.chemiechangecharacter(emotion);
