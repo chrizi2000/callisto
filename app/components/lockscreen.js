@@ -14,6 +14,7 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
     this.aktpasswort = [];
 
     this.zahleingegeben = (pwnumber) => {
+        AccessKontakt.playAudioclick();
         this.aktpasswort[this.aktpasswort.length] = pwnumber;
         if(this.aktpasswort.length === this.password.length){
             if(angular.equals(this.aktpasswort, this.password)){
