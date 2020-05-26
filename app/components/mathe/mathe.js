@@ -17,6 +17,10 @@ app.controller("MatheController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.mathestartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

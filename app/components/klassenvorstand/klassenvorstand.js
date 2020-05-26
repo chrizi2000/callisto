@@ -16,6 +16,10 @@ app.controller("KlassenvorstandController", function ($log, Game) {
     }
     this.gametrigger = () =>{
         Game.klassenvorstandstartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

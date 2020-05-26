@@ -18,6 +18,10 @@ app.controller("LenaController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.lenastartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

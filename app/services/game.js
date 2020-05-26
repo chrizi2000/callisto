@@ -31,6 +31,11 @@ app.service("Game", function() {
         audio.play();
     };
 
+    this.playAudioMenuClick = () => {
+        var audio = new Audio('sounds/menu_click.wav');
+        audio.play();
+    };
+
     this.getstatus = (name) => {
         for (let k in gamebackground) {
             if (k === name) {

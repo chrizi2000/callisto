@@ -6,7 +6,7 @@ app.component("handy", {
     bindings:{}
 });
 
-app.controller("HandyController", function ($log, AccessKontakt, $state) {
+app.controller("HandyController", function ($log, AccessKontakt, $state, Game) {
     $log.debug("HandyController()");
 
 
@@ -15,4 +15,9 @@ app.controller("HandyController", function ($log, AccessKontakt, $state) {
             $state.go("Kontakte");
         }
     }
+
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
+    }
+
 });

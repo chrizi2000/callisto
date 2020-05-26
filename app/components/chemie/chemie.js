@@ -16,6 +16,10 @@ app.controller("ChemieController", function ($log, Game) {
     }
     this.gametrigger = () =>{
         Game.chemiestartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

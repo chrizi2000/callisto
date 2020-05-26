@@ -18,6 +18,10 @@ app.controller("FelixController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.felixstartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 
 
