@@ -65,7 +65,9 @@ body{
     /*padding-top: 2.5%;*/
 }
 
-
+.clickit{
+    cursor: pointer;
+}
 
 /*
     Kontakt design Page

@@ -1,0 +1,58 @@
+<div ng-show="$ctrl.button">
+    <a class="btn clickit" ng-click="$ctrl.pressed()">Beschuldigen</a>
+</div>
+<div class="pure-g" ng-show="$ctrl.icons" style="padding-bottom: 2vw;text-align: center; padding-left: 2vw; padding-right: 2vw">
+    <div class="pure-u-1">
+        <h1 class="überschrift">Wer hat Emma getötet?</h1>
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Felix.png" class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Vanessa.png"class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Lena.png"class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Mathe.png"class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Klassenvorstand.png"class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1-6">
+        <img src="images/icons/Chemie.png" class="pure-img-responsive icon clickit">
+    </div>
+    <div class="pure-u-1">
+        <img src="images/icons/close.png" ng-click="$ctrl.undo()" class="pure-img-responsive clickit" style="width: 4vw">
+    </div>
+</div>
+
+<style>
+.überschrift{
+    text-align: center;
+    letter-spacing: normal;
+}
+
+    .btn {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        padding: 10px 45px;
+        color: #fff;
+        background: #880000;
+        transition: all 0.35s ease;
+    }
+    .btn:hover {
+        background: #aa0000;
+        box-shadow: 0px 9px 20px 3px rgba(0, 0, 0, 0.12);
+    }
+    .btn:active {
+        box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.14);
+    }
+
+</style>
