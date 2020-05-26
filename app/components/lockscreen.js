@@ -21,6 +21,7 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
                 AccessKontakt.allowbutton();
                 $state.go("Kontakte");
             }else{
+                AccessKontakt.playAudioaccessdenied();
                 this.aktpasswort = [];
             }
         }

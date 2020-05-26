@@ -11,4 +11,9 @@ app.service("AccessKontakt", function() {
         var audio = new Audio('sounds/click.wav');
         audio.play();
     };
+
+    this.playAudioaccessdenied = () => {
+        var audio = new Audio('sounds/access_denied.wav');
+        audio.play();
+    };
 });
