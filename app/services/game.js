@@ -21,7 +21,15 @@ app.service("Game", function() {
 
     let access = false;
 
+    this.playAudiohint = () => {
+        var audio = new Audio('sounds/hint.mp3');
+        audio.play();
+    };
 
+    this.playAudiodead = () => {
+        var audio = new Audio('sounds/dead.mp3');
+        audio.play();
+    };
 
     this.getstatus = (name) => {
         for (let k in gamebackground) {
@@ -113,6 +121,7 @@ app.service("Game", function() {
     }
 
     this.chemiedead = () =>{
+        this.playAudiodead();
         chemieaccess = false;
     }
 
@@ -129,6 +138,7 @@ app.service("Game", function() {
     }
 
     this.chemiegothint = () => {
+        this.playAudiohint();
         chemiehint = true;
     }
 
@@ -250,6 +260,7 @@ app.service("Game", function() {
     }
 
     this.klassenvorstanddead = () =>{
+        this.playAudiodead();
         klassenvorstandaccess = false;
     }
 
@@ -266,6 +277,7 @@ app.service("Game", function() {
     }
 
     this.klassenvorstandgothint = () => {
+        this.playAudiohint();
         klassenvorstandhint = true;
     }
 
@@ -420,6 +432,7 @@ app.service("Game", function() {
     }
 
     this.mathedead = () =>{
+        this.playAudiodead();
         matheaccess = false;
     }
     this.mathegetstatuscharacter = (name) => {
@@ -435,6 +448,7 @@ app.service("Game", function() {
     }
 
     this.mathegothint = (index) => {
+        this.playAudiohint();
         mathehint[index] = true;
     }
 
@@ -580,6 +594,7 @@ this.felixstatusconversation = () => {
 }
 
 this.felixdead = () =>{
+    this.playAudiodead();
     felixaccess = false;
 }
 
@@ -596,6 +611,7 @@ this.felixgethintstatus = (index) => {
 }
 
 this.felixgothint = (index) => {
+    this.playAudiohint();
     felixhint[index] = true;
 }
 
@@ -752,6 +768,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.lenadead = () =>{
+        this.playAudiodead();
         lenaaccess = false;
     }
     this.lenagetstatuscharacter = (name) => {
@@ -767,6 +784,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.lenagothint = (index) => {
+        this.playAudiohint();
         lenahint[index] = true;
     }
 
@@ -921,6 +939,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.vanessadead = () =>{
+        this.playAudiodead();
         vanessaaccess = false;
     }
     this.vanessagetstatuscharacter = (name) => {
@@ -936,6 +955,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.vanessagothint = (index) => {
+        this.playAudiohint();
         vanessahint[index] = true;
     }
 

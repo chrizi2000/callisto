@@ -16,6 +16,13 @@ body{
 
 }
 
+.button-div {
+    padding-right: 1%;
+    overflow: auto;
+    overflow-scrolling: auto;
+    border-collapse: separate;
+    height: 100%;
+}
 
 .button-question {
     font-size: large;
@@ -23,12 +30,13 @@ body{
     color: white;
    padding: 4px;
 }
-.button-div{
-        padding-left: 1%;
-    overflow: auto;
-    overflow-scrolling: auto;
-    border-collapse: separate;
-}
+
+
+
+
+
+
+
 
 
 .characters{
@@ -68,6 +76,35 @@ body{
 .clickit{
     cursor: pointer;
 }
+
+/*
+BUTTON
+ */
+
+
+
+.btn {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 45px;
+    color: #fff;
+    background: #880000;
+    transition: all 0.35s ease;
+}
+.btn:hover {
+    background: #aa0000;
+    box-shadow: 0px 9px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.btn:active {
+    box-shadow: 0px 5px 20px 3px rgba(0, 0, 0, 0.14);
+}
+
+
 
 /*
     Kontakt design Page
