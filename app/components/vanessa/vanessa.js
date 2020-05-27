@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("vanessa", {
-    templateUrl: "components/vanessa.html",
+    templateUrl: "components/vanessa/vanessa.html",
     controller: "VanessaController",
     bindings:{}
 });
