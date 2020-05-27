@@ -19,6 +19,10 @@ app.controller("BeschuldController", function ($log, Game) {
         this.button = true;
     }
 
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
+    }
+
 
 
 

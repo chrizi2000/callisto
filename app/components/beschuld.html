@@ -1,5 +1,5 @@
 <div ng-show="$ctrl.button">
-    <a class="btn clickit" ng-click="$ctrl.pressed()">Beschuldigen</a>
+    <a class="btn clickit" ng-click="$ctrl.pressed(); $ctrl.clicksound();">Beschuldigen</a>
 </div>
 <div class="pure-g" ng-show="$ctrl.icons" style="padding-bottom: 2vw;text-align: center; padding-left: 2vw; padding-right: 2vw">
     <div class="pure-u-1">
@@ -24,7 +24,7 @@
         <img src="images/icons/Chemie.png" class="pure-img-responsive icon clickit">
     </div>
     <div class="pure-u-1">
-        <img src="images/icons/close.png" ng-click="$ctrl.undo()" class="pure-img-responsive clickit" style="width: 4vw">
+        <img src="images/icons/close.png" ng-click="$ctrl.undo();$ctrl.clicksound();" class="pure-img-responsive clickit" style="width: 4vw">
     </div>
 </div>
 
