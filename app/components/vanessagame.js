@@ -25,6 +25,7 @@ app.controller("vanessagame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.vanessachangebuttons(buttons);
         Game.vanessachangebubble(answer);
         Game.vanessachangecharacter(emotion);

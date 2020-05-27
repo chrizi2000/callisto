@@ -896,9 +896,9 @@ this.felixseteverythingonfalse = () =>{
 
     let vanessacharacter = {
         "vanessa_normal" : false,
-        "vanessa_erschtaunt" : false,
+        "vanessa_gluecklich" : false,
         "vanessa_wuetend" : false,
-        "vanessa_verwirrt" : false,
+        "vanessa_nachdenklich" : false,
     };
 
     let vanessabubbles = {
@@ -906,17 +906,18 @@ this.felixseteverythingonfalse = () =>{
         "1_2" : false,
         "2_1" : false,
         "2_2" : false,
+        "2_3" : false,
         "3_1" : false,
+        "3_2" : false,
+        "3_3" : false,
+        "3_4" : false,
         "4_1" : false,
         "4_2" : false,
         "4_3" : false,
         "5_1" : false,
-        "5_2" : false,
-        "5_3" : false,
         "6_1" : false,
-        "6_2" : false,
         "7_1" : false,
-        "7_2" : false,
+        "8_1" : false,
         "death_1" : false,
         "death_2" : false,
         "death_3" : false,

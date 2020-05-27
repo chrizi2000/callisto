@@ -18,6 +18,10 @@ app.controller("VanessaController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.vanessastartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

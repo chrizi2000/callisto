@@ -22,11 +22,4 @@ app.controller("BeschuldController", function ($log, Game) {
     this.clicksound = () =>{
         Game.playAudioMenuClick();
     }
-
-
-
-
-
-
-
 });
