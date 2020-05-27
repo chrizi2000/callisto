@@ -1,4 +1,4 @@
-app.service("Game", function() {
+app.service("Game", function(AccessKontakt) {
 
     let gamebackground = {
         "default" : true,
@@ -19,7 +19,9 @@ app.service("Game", function() {
         "X5QU-AX96-ZQ2C-M49T",
     ];
 
-    let access = false;
+    this.returnaccesssmartphone = () =>{
+        return AccessKontakt.access();
+    }
 
     this.playAudiohint = () => {
         var audio = new Audio('sounds/hint.mp3');
@@ -53,15 +55,36 @@ app.service("Game", function() {
         }
     }
 
-    this.betaaccess = () => {
-        //return access;
-        return true; //für auserkraftsetzung
+    let beschuldigter = "";
+    let isbeschuldigt = false;
+    let mordgelöst = false;
+    this.jmdwurdebeschuldigt = () =>{
+        return isbeschuldigt;
     }
 
-    this.checkbetaacces = (id) => {
-            if(accesscodes.includes(id)) {
-                access = true;
-            }
+    this.setnamebeschuldigter = (name) =>{
+        beschuldigter = name;
+    }
+
+    this.returnbeschuldigtername = () =>{
+        return beschuldigter;
+    }
+
+    this.wurdebeschuldigt = (name) =>{
+        isbeschuldigt = true;
+        this.setnamebeschuldigter(name);
+        this.jmdwurdebeschuldigt();
+
+        if(name !== "Lena"){
+            return mordgelöst;
+        }else{
+            mordgelöst = true;
+            return mordgelöst;
+        }
+    }
+
+    this.returnmordstatus = () =>{
+        return mordgelöst;
     }
 
     this.reset = () =>{
@@ -1051,5 +1074,4 @@ this.felixseteverythingonfalse = () =>{
             vanessabuttons[k] = false;
         }
     }
-
 });

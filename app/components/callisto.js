@@ -9,9 +9,12 @@ app.component("callisto", {
 app.controller("callistoController", function ($log, Game ) {
     $log.debug("callistoController()");
 
+    this.beschuldigt = () =>{
+        return Game.jmdwurdebeschuldigt();
+    }
 
-    this.ifbetaaccess = () =>{
-        return Game.betaaccess();
+    this.returnaccess = () => {
+        return Game.returnaccesssmartphone();
     }
 
 

@@ -18,8 +18,13 @@ app.controller("BeschuldController", function ($log, Game) {
         this.icons = false;
         this.button = true;
     }
-
     this.clicksound = () =>{
         Game.playAudioMenuClick();
     }
+
+    this.beschuldige = (name) =>{
+        Game.wurdebeschuldigt(name);
+    }
+
+
 });
