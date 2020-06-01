@@ -9,7 +9,7 @@
 body {
     font-size: 5px;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 2%;
+    /*padding-top: 2%;*/
 }
 
 .wrapper {
@@ -109,7 +109,8 @@ body {
     position: absolute;
     top: 12.5%;
     left: 5%;
-    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .button {

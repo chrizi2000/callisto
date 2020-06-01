@@ -14,16 +14,14 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
     this.aktpasswort = [];
 
     this.zahleingegeben = (pwnumber) => {
+        AccessKontakt.playAudioclick();
         this.aktpasswort[this.aktpasswort.length] = pwnumber;
-        console.log(this.aktpasswort);
-
         if(this.aktpasswort.length === this.password.length){
             if(angular.equals(this.aktpasswort, this.password)){
-                console.log("RICHTIG");
                 AccessKontakt.allowbutton();
                 $state.go("Kontakte");
             }else{
-                console.log("FALSCH")
+                AccessKontakt.playAudioaccessdenied();
                 this.aktpasswort = [];
             }
         }
@@ -42,5 +40,5 @@ app.config(function($stateProvider,$urlRouterProvider) {
         url: "/lockscreen",       // Fragmentbezeichner ohne '#!'
         component: "lockscreen"   // Komponenten-Name
     });
-    $urlRouterProvider.otherwise("/lockscreen");
+
 });

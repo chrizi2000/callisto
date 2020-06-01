@@ -1,0 +1,67 @@
+<div class="pure-g">
+    <div class="pure-u-9-24 iconcontact">
+        <img src="images/icons/Vanessa.png" style='width: 70%; height: auto' class="pure-img-responsive icon kontakticon">
+    </div>
+
+    <div class="pure-u-1-24 textcontact">
+        <h1>Vanessa Vogel</h1>
+    </div>
+</div>
+
+<div class="pure-g">
+    <br>
+    <div class="pure-u-12-24 iconcontact">
+        <h3 class="eigenschafthead">Eigenschaften:</h3>
+        <br>
+    </div>
+    <div class="pure-u-24-24 iconcontact">
+        <h3 class="eigenschafttext"> - Streber</h3>
+    </div>
+    <div class="pure-u-24-24 iconcontact">
+        <h3 class="eigenschafttext"> - lästert gerne</h3>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-24-24">
+        <br>
+    </div>
+</div>
+<div class="pure-g hints" style="text-align: center">
+    <div class="pure-u-8-24">
+        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div class="tooltip_left icon">
+            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive">
+            <span class="tooltiptext">Emma war vielleicht doch noch so toll, wie alle denken</span>
+        </div>
+    </div>
+
+    <div class="pure-u-8-24">
+        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div class="tooltip icon">
+            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive">
+            <span class="tooltiptext">Lena scheint gerrne über Vanessa zu lästern</span>
+        </div>
+    </div>
+
+    <div class="pure-u-8-24">
+        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div class="tooltip_right icon">
+            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive">
+            <span class="tooltiptext">Vanessa und Lena haben sich angefreundet</span>
+        </div>
+    </div>
+</div>
+
+
+<br>
+<div style="text-align: center">
+    <div class="pure-u-11-24">
+        <img src="images/icons/Chat.svg" ng-click="$ctrl.clicksound();"  ui-sref="VanessaChat" style='width: 70%; height: auto' class="pure-img-responsive icon">
+    </div>
+    <div class="pure-u-11-24" ng-show="$ctrl.allowaccess()" ng-click="$ctrl.gametrigger()">
+        <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
+    </div>
+    <div class="pure-u-11-24" ng-hide="$ctrl.allowaccess()">
+        <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+    </div>
+</div>

@@ -10,6 +10,9 @@
 }
 
 
+
+
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -55,6 +58,38 @@ label {
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
+}
+
+.passfoto{
+    width: 600px;
+    height: auto;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.email {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.emailicon{
+    width: 100%;
+}
+.employee{
+    position: relative;
+}
+.employee:hover .passfoto{
+    opacity: 0.25;
+}
+.employee:hover .email{
+    opacity: 1;
 }
 
 /*
@@ -124,7 +159,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #2d3e50;
+    background: #fed65d;
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -133,6 +168,11 @@ a.pure-button-primary {
     z-index: 4;
 }
 
+.pure-menu-list{
+    font-size: 130%;
+    padding-top: 0.5vw;
+    position: static;
+}
 .home-menu .pure-menu-heading {
     color: white;
     font-weight: 400;
@@ -144,13 +184,14 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #2d3e50;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: #FFFFFF; /*Hover effect menu */
+    background-color: #2d3e50;
 }
 
 
@@ -317,4 +358,9 @@ a.pure-button-primary {
     .splash-head {
         font-size: 300%;
     }
+}
+
+#impressum{
+    padding-left: 15px;
+    padding-right: 15px;
 }

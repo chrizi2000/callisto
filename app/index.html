@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
     <title>Callisto</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/icons/Logo-Quadrat.png">
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="vendor/roboto/roboto.css">
     <link rel="stylesheet" href="app.css">
-    <script language="javascript" type="text/javascript" src="game.js"></script>
+
     <script src="vendor/default-passive-events.js"></script>
     <script src="vendor/jquery-3.4.1/jquery.min.js"></script>
     <script src="vendor/moment.js-2.24.0/moment.min.js"></script>
@@ -29,29 +29,24 @@
   </head>
 
   <body>
+
   <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-      <a class="pure-menu-heading" href="">Callisto</a>
-
+      <img class="pure-menu-heading" style="width: auto; height: 70px" src="images/icons/logo_header.JPG">
       <ul class="pure-menu-list">
         <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
         <li class="pure-menu-item"><a href="#Mitarbeiter" class="pure-menu-link">Das Team</a></li>
-        <li class="pure-menu-item"><a href="#Impressum" class="pure-menu-link">Impressum</a></li>
+        <li class="pure-menu-item"><a href="#Sponsoren" class="pure-menu-link">Sponsoren</a></li>
+        <li class="pure-menu-item"><a href="#Contact" class="pure-menu-link">Kontakt</a></li>
+        <li class="pure-menu-item"><a href="impressum.html" class="pure-menu-link">Impressum</a></li>
         <li class="pure-menu-item"><a href="game.html" class="pure-menu-link">Spiel starten</a></li>
       </ul>
     </div>
   </div>
 
-  <div class="splash-container">
-    <div class="splash">
 
-      <h1 class="splash-head" >
-        CALLISTO
-      </h1>
-      <p>
-        <a href="game.html" class="pure-button pure-button-primary" target="_blank">SPIEL STARTEN</a>
-      </p>
-    </div>
+  <div class="splash-container">
+
   </div>
 
 
@@ -66,7 +61,11 @@
            Was ist Callisto?
           </h3>
           <p>
-            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+            Callisto ist ein Spiel, in dem ein Mord gelöst werden muss.
+            Wer hat sie getötet? Ihre Affäre? Ihr Ex? Oder ihre Erzfeindin?
+            Hier musst du mit deinen Sozialkompetenzen die richtigen Fragen stellen,
+            um den Mörder von Emma zu finden.
+            Kannst <b>du</b> den Mord lösen?
           </p>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -75,7 +74,9 @@
            Wie kann ich spielen?
           </h3>
           <p>
-            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+            Du findest, ein Jahr nach Emmas Tod, ihr Handy.
+            Lies die Chats durch und befrage ihre Kontakte.
+            Drücke einfach auf dem "Spiel starten" Knopf tauche in die Welt von Callisto ein.
           </p>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -84,7 +85,9 @@
             Warum dieses Projekt?
           </h3>
           <p>
-            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+            Da die österreichische Filmkultur hauptächlich von Krimis geprägt ist, wollten wir
+            diese Kultur weiterführen und ein interaktives Krimi-Spiel programmieren.
+            Aufgrund der COVID-19 Situation wurde aus unseren geplanten Filmszenen, handgefertigte Animationen.
           </p>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
@@ -93,71 +96,120 @@
             Wie lange hat Planung und Umsetzung gedauert?
           </h3>
           <p>
-            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+            Angefangen hat alles Anfang Februar im zweiten Semester der vierten Klasse im Rahmen eines
+            Projektmanagment Projektes.
+            Geplant wurde bis Ende März und im April haben wir angefangen das Spiel für euch umzusetzen.
+            Mitte Juni wurde das Projekt erfolgreich abgeschlossen und wir sind stolz
+            darauf euch unser Spiel präsentieren zu dürfen.
+            <b>Viel Spaß!!</b>
           </p>
         </div>
       </div>
     </div>
+
     <div class="ribbon l-box-lrg pure-g" id="Mitarbeiter">
       <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
         <h2 class="content-head content-head-ribbon">Das Team hinter Callisto:</h2>
       </div>
     <div class="pure-g>">
-      <div class="pure-u-1-5 l-box">
-      <img class="pure-img-responsive" src="images/buttons_logos/passbild_example.jpg">
+      <div class="pure-u-1-5 l-box employee">
+      <img class="pure-img-responsive passfoto" src="images/buttons_logos/Matthias.jpg">
+        <div class="email">
+          <a href="mailto:matthias.metz@callisto.co.at">
+            <img class="emailicon" src="images/buttons_logos/mail.png"></a>
+        </div>
         <p class="passfoto_unterschrift">Product Owner</p>
         <p class="passfoto_unterschrift">Matthias Metz</p>
       </div>
-
-      <div class="pure-u-1-5 l-box">
-        <img class="pure-img-responsive" src="images/buttons_logos/passbild_example.jpg">
+      <div class="pure-u-1-5 l-box employee">
+        <img class="pure-img-responsive passfoto" src="images/buttons_logos/Kraljevic.jpg">
+        <div class="email">
+          <a href="mailto:kristian.kraljevic@callisto.co.at">
+          <img class="emailicon" src="images/buttons_logos/mail.png"></a>
+        </div>
         <p class="passfoto_unterschrift">Scrum Master</p>
         <p class="passfoto_unterschrift">Kristian Kraljevic</p>
       </div>
 
-      <div class="pure-u-1-5 l-box">
-        <img class="pure-img-responsive" src="images/buttons_logos/passbild_example.jpg">
+      <div class="pure-u-1-5 l-box employee">
+        <img class="pure-img-responsive passfoto" src="images/buttons_logos/Schluttner.jpg">
+        <div class="email">
+          <a href="mailto:christoph.schluttner@callisto.co.at">
+            <img class="emailicon" src="images/buttons_logos/mail.png"></a>
+        </div>
         <p class="passfoto_unterschrift">Mitarbeiter</p>
         <p class="passfoto_unterschrift">Christoph Schluttner</p>
       </div>
 
-      <div class="pure-u-1-5 l-box">
-        <img class="pure-img-responsive" src="images/buttons_logos/passbild_example.jpg">
+      <div class="pure-u-1-5 l-box employee">
+        <img class="pure-img-responsive passfoto" src="images/buttons_logos/Marco.jpg">
+        <div class="email">
+          <a href="mailto:marco.rudnick@callisto.co.at">
+            <img class="emailicon" src="images/buttons_logos/mail.png"></a>
+        </div>
         <p class="passfoto_unterschrift">Mitarbeiter</p>
         <p class="passfoto_unterschrift">Marco Rudnick</p>
       </div>
 
-      <div class="pure-u-1-5 l-box">
-        <img class="pure-img-responsive" src="images/buttons_logos/passbild_example.jpg">
+      <div class="pure-u-1-5 l-box employee">
+        <img class="pure-img-responsive passfoto" src="images/buttons_logos/Parth.jpg">
+        <div class="email">
+          <a href="mailto:christof.parth@callisto.co.at">
+            <img class="emailicon" src="images/buttons_logos/mail.png"></a>
+        </div>
         <p class="passfoto_unterschrift">Mitarbeiter</p>
         <p class="passfoto_unterschrift">Christof Parth</p>
       </div>
 
       </div>
     </div>
-    <div class="content" id="Impressum">
-      <h2 class="content-head is-center">Großen Dank an unsere Sponsoren!</h2>
+
+      <div class="content l-box-lrg pure-g" id="Sponsoren">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+          <h2 class="content-head is-center">Großen Dank an unsere Sponsoren!</h2>
+        </div>
+
+          <div class="pure-u-1-2 l-box">
+            <a href="https://www.easyname.at">
+            <div style="width: 75%">  <img class="pure-img-responsive" src="images/buttons_logos/EasyName.jpg"> </div>
+            </a>
+          </div>
+
+          <div class="pure-u-1-2 l-box" style="text-align: center; padding-top:4%;">
+            <a href="https://www.gigantic.store">
+             <img class="pure-img-responsive" src="images/buttons_logos/Bildschirmfoto%202020-05-19%20um%2011.27.17.png">
+            </a>
+          </div>
+
+
+        </div>
+
+
+    <div class="content ribbon" id="Contact">
+
+      <h2 class="content-head is-center">Kontakt</h2>
 
       <div class="pure-g">
 
 
         <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-          <h4>Contact Us</h4>
+          <h4 class="content-head-ribbon">Contact Us</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            E-Mail: support@callisto.co.at
+            <br>
+            Wir bemühen uns deine Anfrage so schnell wie möglich zu beantworten! Rechne mit einer Antwortzeit von bis zu 3 Werktagen. Unter "Das Team", findest du auch die Mail-Adressen der einzelnen Mitarbeiter, falls du direkt eine Nachricht an sie hast!
           </p>
 
-          <h4>More Information</h4>
+          <h4 class="content-head-ribbon">More Information</h4>
           <p>
             Callisto wurde im Rahmen eines Projekts an der HTL Rennweg geplant und entwickelt
           </p>
         </div>
       </div>
 
-    </div>
+
+</div>
+
     <div class="footer l-box is-center">
       © 2020 Copyright: Callisto Team
     </div>

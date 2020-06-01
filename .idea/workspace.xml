@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9d7b2c3-aa43-472c-8c6b-d29cbf58b109" name="Default Changelist" comment="" />
+    <list default="true" id="80e88d91-4a59-4b90-a99f-edb91a5d517f" name="Default Changelist" comment="Impressum geht jetzt hoffentlich">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/mathe.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/mathe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/mathegame.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/mathegame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/mathegame.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/mathegame.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1c7o2fOnO0HZvVcEf47HkVhaxBr" />
+  <component name="ProjectId" id="1c80ora7vNyQTtDhJ2IUfBsWj26" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,6 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
@@ -30,21 +36,44 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a9d7b2c3-aa43-472c-8c6b-d29cbf58b109" name="Default Changelist" comment="" />
-      <created>1589888786473</created>
+      <changelist id="80e88d91-4a59-4b90-a99f-edb91a5d517f" name="Default Changelist" comment="" />
+      <created>1589895090676</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1589888786473</updated>
-      <workItem from="1589888790806" duration="2025000" />
+      <updated>1589895090676</updated>
+      <workItem from="1589895093291" duration="33000" />
+      <workItem from="1589895127582" duration="1602000" />
+      <workItem from="1589896741134" duration="4264000" />
     </task>
-    <task id="LOCAL-00001" summary="impressum update">
-      <created>1589890854789</created>
+    <task id="LOCAL-00001" summary="Impressum geht jetzt hoffentlich">
+      <created>1589895421952</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1589890854789</updated>
+      <updated>1589895421952</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Impressum geht jetzt hoffentlich">
+      <created>1589895820370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589895820370</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Impressum fertig!">
+      <created>1589896289476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589896289476</updated>
+    </task>
+    <task id="LOCAL-00004" summary=".gitignore file angelegt">
+      <created>1589897818012</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589897818012</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,20 +84,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="impressum update" />
-    <option name="LAST_COMMIT_MESSAGE" value="impressum update" />
+    <MESSAGE value="Impressum geht jetzt hoffentlich" />
+    <MESSAGE value="Impressum fertig!" />
+    <MESSAGE value=".gitignore file angelegt" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore file angelegt" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589890853709">
+    <state x="343" y="0" key="CommitChangelistDialog2" timestamp="1589897817357">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1589890853709" />
+    <state x="343" y="0" key="CommitChangelistDialog2/0.0.1440.920@0.0.1440.920" timestamp="1589897817357" />
   </component>
 </project>
