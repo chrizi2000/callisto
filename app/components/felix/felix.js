@@ -9,8 +9,8 @@ app.component("felix", {
 app.controller("FelixController", function ($log, Game) {
     $log.debug("FelixController()");
 
-    this.allowaccess = () =>{
-        return Game.felixstatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.felixstatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.felixgethintstatus(index);

@@ -8,15 +8,15 @@ app.component("chemie", {
 
 app.controller("ChemieController", function ($log, Game) {
     $log.debug("ChemieController()");
-    this.allowaccess = () =>{
-     return Game.chemiestatusconversation();
+    this.allowaccess = (index) =>{
+     return Game.chemiestatusconversation(index);
     }
     this.gethint = () =>{
         return Game.chemiegethintstatus();
     }
     this.gametrigger = () =>{
-        Game.chemiestartgame();
         this.clicksound();
+        Game.chemiestartgame();
     }
     this.clicksound = () =>{
         Game.playAudioMenuClick();

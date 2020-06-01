@@ -9,8 +9,8 @@ app.component("vanessa", {
 app.controller("VanessaController", function ($log, Game) {
     $log.debug("VanessaController()");
 
-    this.allowaccess = () =>{
-        return Game.vanessastatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.vanessastatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.vanessagethintstatus(index);

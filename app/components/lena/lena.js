@@ -9,8 +9,8 @@ app.component("lena", {
 app.controller("LenaController", function ($log, Game) {
     $log.debug("LenaController()");
 
-    this.allowaccess = () =>{
-        return Game.lenastatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.lenastatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.lenagethintstatus(index);
