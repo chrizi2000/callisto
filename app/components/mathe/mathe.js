@@ -8,8 +8,8 @@ app.component("mathe", {
 
 app.controller("MatheController", function ($log, Game) {
     $log.debug("MatheController()");
-    this.allowaccess = () =>{
-        return Game.mathestatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.mathestatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.mathegethintstatus(index);
@@ -17,6 +17,10 @@ app.controller("MatheController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.mathestartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

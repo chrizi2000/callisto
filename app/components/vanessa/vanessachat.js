@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("vanessachat", {
-    templateUrl: "components/vanessachat.html",
+    templateUrl: "components/vanessa/vanessachat.html",
     controller: "VanessaChatController",
     bindings:{}
 });

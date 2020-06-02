@@ -8,14 +8,18 @@ app.component("klassenvorstand", {
 
 app.controller("KlassenvorstandController", function ($log, Game) {
     $log.debug("KlassenvorstandController()");
-    this.allowaccess = () =>{
-        return Game.klassenvorstandstatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.klassenvorstandstatusconversation(index);
     }
     this.gethint = () =>{
         return Game.klassenvorstandgethintstatus();
     }
     this.gametrigger = () =>{
         Game.klassenvorstandstartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

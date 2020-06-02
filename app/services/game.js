@@ -1,4 +1,4 @@
-app.service("Game", function() {
+app.service("Game", function(AccessKontakt) {
 
     let gamebackground = {
         "default" : true,
@@ -8,19 +8,24 @@ app.service("Game", function() {
         "klassenzimmer2" : false,
         "bibliothek" : false};
 
-    let accesscodes = [
-        "TB76-KS4N-FPRY-HZAN",
-        "GMKE-FQ5Z-NM6K-8HV9",
-        "TS8Y-TH4Q-VA64-7UMT",
-        "EF4K-PV9K-YX7R-44Q5",
-        "V6M4-5NJ7-GDG4-Q6X7",
-        "MUC7-3FDR-5FC5-TFUC",
-        "PTD6-RJW3-SFKN-M7HE",
-        "X5QU-AX96-ZQ2C-M49T"];
+    this.returnaccesssmartphone = () =>{
+        return AccessKontakt.access();
+    }
 
-    let access = false;
+    this.playAudiohint = () => {
+        var audio = new Audio('sounds/hint.mp3');
+        audio.play();
+    };
 
+    this.playAudiodead = () => {
+        var audio = new Audio('sounds/death.mp3');
+        audio.play();
+    };
 
+    this.playAudioMenuClick = () => {
+        var audio = new Audio('sounds/menu_click.wav');
+        audio.play();
+    };
 
     this.getstatus = (name) => {
         for (let k in gamebackground) {
@@ -39,15 +44,36 @@ app.service("Game", function() {
         }
     }
 
-    this.betaaccess = () => {
-        // return access;
-        return true; //für auserkraftsetzung
+    let beschuldigter = "";
+    let isbeschuldigt = false;
+    let mordgelöst = false;
+    this.jmdwurdebeschuldigt = () =>{
+        return isbeschuldigt;
     }
 
-    this.checkbetaacces = (id) => {
-            if(accesscodes.includes(id)) {
-                access = true;
-            }
+    this.setnamebeschuldigter = (name) =>{
+        beschuldigter = name;
+    }
+
+    this.returnbeschuldigtername = () =>{
+        return beschuldigter;
+    }
+
+    this.wurdebeschuldigt = (name) =>{
+        isbeschuldigt = true;
+        this.setnamebeschuldigter(name);
+        this.jmdwurdebeschuldigt();
+
+        if(name !== "Lena"){
+            return mordgelöst;
+        }else{
+            mordgelöst = true;
+            return mordgelöst;
+        }
+    }
+
+    this.returnmordstatus = () =>{
+        return mordgelöst;
     }
 
     this.reset = () =>{
@@ -105,14 +131,22 @@ app.service("Game", function() {
 
 
     let chemiehint = false;
-    let chemieaccess = true;
+    let chemieaccess = [true,false,false];
 
-    this.chemiestatusconversation = () => {
-        return chemieaccess;
+    this.chemiestatusconversation = (index) => {
+        return chemieaccess[index];
+    }
+
+    this.changechemieaccess = (index) =>{
+        chemieaccess[0] = false;
+        chemieaccess[1] = false;
+        chemieaccess[2] = false;
+        chemieaccess[index] = true;
     }
 
     this.chemiedead = () =>{
-        chemieaccess = false;
+        this.playAudiodead();
+        this.changechemieaccess(1);
     }
 
     this.chemiegetstatuscharacter = (name) => {
@@ -128,7 +162,9 @@ app.service("Game", function() {
     }
 
     this.chemiegothint = () => {
+        this.playAudiohint();
         chemiehint = true;
+        this.changechemieaccess(2);
     }
 
 
@@ -242,14 +278,22 @@ app.service("Game", function() {
 
     let klassenvorstandhint = false;
 
-    let klassenvorstandaccess = true;
+    let klassenvorstandaccess = [true,false,false];
 
-    this.klassenvorstandstatusconversation = () => {
-        return klassenvorstandaccess;
+    this.klassenvorstandstatusconversation = (index) => {
+        return klassenvorstandaccess[index];
+    }
+
+    this.changeklassenvorstandaccess = (index) =>{
+        klassenvorstandaccess[0] = false;
+        klassenvorstandaccess[1] = false;
+        klassenvorstandaccess[2] = false;
+        klassenvorstandaccess[index] = true;
     }
 
     this.klassenvorstanddead = () =>{
-        klassenvorstandaccess = false;
+        this.playAudiodead();
+        this.changeklassenvorstandaccess(1);
     }
 
     this.klassenvorstandgetstatuscharacter = (name) => {
@@ -265,7 +309,9 @@ app.service("Game", function() {
     }
 
     this.klassenvorstandgothint = () => {
+        this.playAudiohint();
         klassenvorstandhint = true;
+        this.changeklassenvorstandaccess(2);
     }
 
 
@@ -412,14 +458,22 @@ app.service("Game", function() {
 
     let mathehint = [false,false];
 
-    let matheaccess = true;
+    let matheaccess = [true,false,false];
 
-    this.mathestatusconversation = () => {
-        return matheaccess;
+    this.mathestatusconversation = (index) => {
+        return matheaccess[index];
+    }
+
+    this.changematheaccess = (index) =>{
+        matheaccess[0] = false;
+        matheaccess[1] = false;
+        matheaccess[2] = false;
+        matheaccess[index] = true;
     }
 
     this.mathedead = () =>{
-        matheaccess = false;
+        this.playAudiodead();
+        this.changematheaccess(1);
     }
     this.mathegetstatuscharacter = (name) => {
         for (let k in mathecharacter) {
@@ -434,7 +488,12 @@ app.service("Game", function() {
     }
 
     this.mathegothint = (index) => {
+        this.playAudiohint();
         mathehint[index] = true;
+
+        if(mathehint[0] && mathehint[1]){
+            this.changematheaccess(2);
+        }
     }
 
 
@@ -572,14 +631,22 @@ let felixbuttons = {
 
 let felixhint = [false,false];
 
-let felixaccess = true;
+let felixaccess = [true,false,false];
 
-this.felixstatusconversation = () => {
-    return felixaccess;
-}
+    this.felixstatusconversation = (index) => {
+        return felixaccess[index];
+    }
+
+    this.changefelixaccess = (index) =>{
+        felixaccess[0] = false;
+        felixaccess[1] = false;
+        felixaccess[2] = false;
+        felixaccess[index] = true;
+    }
 
 this.felixdead = () =>{
-    felixaccess = false;
+    this.playAudiodead();
+    this.changefelixaccess(1);
 }
 
 this.felixgetstatuscharacter = (name) => {
@@ -595,7 +662,12 @@ this.felixgethintstatus = (index) => {
 }
 
 this.felixgothint = (index) => {
+    this.playAudiohint();
     felixhint[index] = true;
+
+    if(felixhint[0] && felixhint[1]){
+        this.changefelixaccess(2);
+    }
 }
 
 
@@ -657,14 +729,11 @@ this.felixchangebuttons = (name) => {
 
 this.felixstartgame = () => {
     this.reset();
-    console.log("felixstartgane");
     this.changestatus("sportplatz");
-    console.log(gamebackground);
     this.felixchangecharacter("felix_normal");
     this.felixchangebuttons("buttons_1");
 }
 
-console.log(felixaccess);
 this.felixseteverythingonfalse = () =>{
     for (let k in felixcharacter) {
         felixcharacter[k] = false;
@@ -700,6 +769,7 @@ this.felixseteverythingonfalse = () =>{
         "1_2" : false,
         "2_1" : false,
         "2_2" : false,
+        "2_3" : false,
         "3_1" : false,
         "4_1" : false,
         "4_2" : false,
@@ -711,6 +781,14 @@ this.felixseteverythingonfalse = () =>{
         "6_2" : false,
         "7_1" : false,
         "7_2" : false,
+        "7_3" : false,
+        "8_1" : false,
+        "9_1" : false,
+        "10_1" : false,
+        "11_1" : false,
+        "11_2" : false,
+        "12_1" : false,
+        "12_2" : false,
         "death_1" : false,
         "death_2" : false,
         "death_3" : false,
@@ -718,7 +796,9 @@ this.felixseteverythingonfalse = () =>{
         "death_5" : false,
         "death_6" : false,
         "death_7" : false,
-        "death_8" : false
+        "death_8" : false,
+        "death_9" : false,
+        "death_10" : false
     };
 
     let lenabuttons = {
@@ -737,6 +817,8 @@ this.felixseteverythingonfalse = () =>{
         "buttons_13" : false,
         "buttons_14" : false,
         "buttons_15" : false,
+        "buttons_16" : false,
+        "buttons_17" : false,
         "buttons_death" : false,
         "buttons_goodbye" : false
     };
@@ -744,14 +826,22 @@ this.felixseteverythingonfalse = () =>{
 
     let lenahint = [false,false];
 
-    let lenaaccess = true;
+    let lenaaccess = [true,false,false];
 
-    this.lenastatusconversation = () => {
-        return lenaaccess;
+    this.lenastatusconversation = (index) => {
+        return lenaaccess[index];
+    }
+
+    this.changelenaaccess = (index) =>{
+        lenaaccess[0] = false;
+        lenaaccess[1] = false;
+        lenaaccess[2] = false;
+        lenaaccess[index] = true;
     }
 
     this.lenadead = () =>{
-        lenaaccess = false;
+        this.playAudiodead();
+        this.changelenaaccess(1);
     }
     this.lenagetstatuscharacter = (name) => {
         for (let k in lenacharacter) {
@@ -766,6 +856,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.lenagothint = (index) => {
+        this.playAudiohint();
         lenahint[index] = true;
     }
 
@@ -859,9 +950,9 @@ this.felixseteverythingonfalse = () =>{
 
     let vanessacharacter = {
         "vanessa_normal" : false,
-        "vanessa_erschtaunt" : false,
+        "vanessa_gluecklich" : false,
         "vanessa_wuetend" : false,
-        "vanessa_verwirrt" : false,
+        "vanessa_nachdenklich" : false,
     };
 
     let vanessabubbles = {
@@ -869,17 +960,18 @@ this.felixseteverythingonfalse = () =>{
         "1_2" : false,
         "2_1" : false,
         "2_2" : false,
+        "2_3" : false,
         "3_1" : false,
+        "3_2" : false,
+        "3_3" : false,
+        "3_4" : false,
         "4_1" : false,
         "4_2" : false,
         "4_3" : false,
         "5_1" : false,
-        "5_2" : false,
-        "5_3" : false,
         "6_1" : false,
-        "6_2" : false,
         "7_1" : false,
-        "7_2" : false,
+        "8_1" : false,
         "death_1" : false,
         "death_2" : false,
         "death_3" : false,
@@ -913,14 +1005,22 @@ this.felixseteverythingonfalse = () =>{
 
     let vanessahint = [false,false];
 
-    let vanessaaccess = true;
+    let vanessaaccess = [true,false,false];
 
-    this.vanessastatusconversation = () => {
-        return vanessaaccess;
+    this.vanessastatusconversation = (index) => {
+        return vanessaaccess[index];
+    }
+
+    this.changevanessaaccess = (index) =>{
+        vanessaaccess[0] = false;
+        vanessaaccess[1] = false;
+        vanessaaccess[2] = false;
+        vanessaaccess[index] = true;
     }
 
     this.vanessadead = () =>{
-        vanessaaccess = false;
+        this.playAudiodead();
+        this.changevanessaaccess(1);
     }
     this.vanessagetstatuscharacter = (name) => {
         for (let k in vanessacharacter) {
@@ -935,6 +1035,7 @@ this.felixseteverythingonfalse = () =>{
     }
 
     this.vanessagothint = (index) => {
+        this.playAudiohint();
         vanessahint[index] = true;
     }
 
@@ -1011,5 +1112,4 @@ this.felixseteverythingonfalse = () =>{
             vanessabuttons[k] = false;
         }
     }
-
 });

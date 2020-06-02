@@ -1,0 +1,235 @@
+<!-- Lena 1 beginnt ab hier -->
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('death_1', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Hey Lena. Hattest du etwas mit Emmas Tod zu tun? Du wirkst nämlich sehr verdächtig.
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'lena_normal')">
+        <p class="button-question">Hallo, wie geht´s dir?
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_2', 'buttons_3', 'lena_normal')">
+        <p class="button-question">Hey, kann ich Mathe von dir abschreiben?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_2')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'buttons_4', 'lena_normal')">
+        <p class="button-question">Verständlich, bei Prof. Ebner ist es nicht leicht, eine gute Note zu bekommen.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'buttons_5', 'lena_verwirrt')">
+        <p class="button-question">Tja, hättest du mal besser aufgepasst! Herr Ebner hat es doch gefühlte hundert mal erklärt.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_3')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_3', 'clear', 'lena_verwirrt')">
+        <p class="button-question">Dann frag ich jemand anderen.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_2', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Du bist anscheinend wirklich so blöd wie ich dachte.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_4')">
+    <div class="pure-u-1 button-div" ng-click="$ctrl.answerpressed('3_1', 'buttons_6', 'lena_verwirrt')">
+        <p class="button-question">Es ist schon komisch, dass man immer noch nicht weiß, wer Emma umgebracht hat, oder?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_5')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'buttons_4', 'lena_normal')">
+        <p class="button-question">Tut mir leid, war nicht böse gemeint.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_2', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ich kann ja nichts dafür, dass du zu dumm für Mathe bist!
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_6')">
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('4_1', 'buttons_7', 'lena_normal', 1)">
+        <p class="button-question">Wieso glaubst du, dass es Felix war?
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('death_3', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Du bist doch einfach noch sauer auf Felix, weil er nie was von dir, sondern von Emma wollte!
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('1_2', 'buttons_3', 'lena_normal')">
+        <p class="button-question">Ja aber wir können auch nichts daran ändern. Aber wegen Mathe, kann ich von dir abschreiben?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_7')">
+    <div class="pure-u-1 button-div" ng-click="$ctrl.answerpressed('5_1', 'buttons_8', 'lena_normal')">
+        <p class="button-question">Das ist ein sehr gutes Argument, Danke!
+        <p>
+    </div>
+</div>
+
+<!-- Lena 2 beginnt ab hier -->
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_8')">
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('6_1', 'buttons_9', 'lena_normal')">
+        <p class="button-question">Können wir uns weiter unterhalten, hast du Zeit?
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('death_4', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Hallo nochmal. Um aufs Thema zurück zu kommen. Hast du Emma getötet?
+        <p>
+    </div>
+    <div class="pure-u-1-3 button-div" ng-click="$ctrl.answerpressed('6_2', 'buttons_10', 'lena_normal')">
+        <p class="button-question">Ist deine Mathe Hausübung jetzt richtig ?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_9')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('7_1', 'buttons_10', 'lena_normal')">
+        <p class="button-question">War Emma eigentlich nur in Mathe so gut, oder in allen Fächern?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('7_2', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ist Emma wegen ihrer guten Noten gestorben?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_10')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('7_3', 'buttons_11', 'lena_verwirrt')">
+        <p class="button-question">Ich frage mich immer noch, wie sie so gut sein konnte.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_5', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Wenn Emma doch so gut war, hättest du doch mehr aufpassen können, oder?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_11')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('8_1', 'buttons_12', 'lena_verwirrt')">
+        <p class="button-question">Ach wirklich? Kannst du mir mehr darüber erzählen?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_6', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Achso, ja vielleicht hat sie ja doch mehr als du gelernt.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_12')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('9_1', 'buttons_13', 'lena_verwirrt')">
+        <p class="button-question">Ich glaube ich weiß, worum es geht. Ich habe Emmas Handy gefunden und habe ein paar Nachrichten gelesen.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_7', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ja dann rede ich mit jemand anderem!
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_13')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_8', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">So einfach glaube ich dir nicht! Lüg mich nicht an!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('10_1', 'buttons_14', 'lena_normal', 2)">
+        <p class="button-question">Warum sagst du das so, als wärst du eifersüchtig auf Emma gewesen?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_14')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('11_1', 'buttons_15', 'lena_normal')">
+        <p class="button-question">So wie es aussieht, hat sie deswegen so gute Noten bekommen.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('11_2', 'buttons_16', 'lena_wuetend')">
+        <p class="button-question">Also warst du eifersüchtig auf Emma oder was?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_15')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('12_1', 'clear', 'lena_normal', 3)">
+        <p class="button-question">Was soll das? Wieso stört dich das so?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_9', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ja, dann lassen wir das Gespräch!
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_16')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('12_2', 'buttons_17', 'lena_normal')">
+        <p class="button-question">Ja aber deswegen muss man nicht gleich so schlecht über Emma reden.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_9', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ok. Dann beende ich das Gespräch an dieser Stelle!
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_17')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_10', 'buttons_death', 'lena_wuetend', 'death')">
+        <p class="button-question">Ok. Das ist der Beweis! Du warst es!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('12_1', 'clear', 'lena_normal', 3)">
+        <p class="button-question">Ah jetzt auf einmal? Ich dachte, dass ich dir sowas nicht unterstellen soll?
+        <p>
+    </div>
+</div>
+
+
+<!--Face expressions -->
+<img src="images/game/characters/lena/lena_normal.png" ng-show="$ctrl.statuscharacter('lena_normal')" class="characters images-responsive">
+<img src="images/game/characters/lena/lena_verwirrt.png" ng-show="$ctrl.statuscharacter('lena_verwirrt')" class="characters images-responsive">
+<img src="images/game/characters/lena/lena_wuetend.png" ng-show="$ctrl.statuscharacter('lena_wuetend')" class="characters images-responsive">
+
+<!-- Sprechblasen -->
+<img src="images/game/textbubbles/lena/1_1.png" ng-show="$ctrl.statusbubble('1_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/1_2.png" ng-show="$ctrl.statusbubble('1_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/2_1.png" ng-show="$ctrl.statusbubble('2_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/2_2.png" ng-show="$ctrl.statusbubble('2_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/2_3.png" ng-show="$ctrl.statusbubble('2_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/3_1.png" ng-show="$ctrl.statusbubble('3_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/4_1.png" ng-show="$ctrl.statusbubble('4_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/5_1.png" ng-show="$ctrl.statusbubble('5_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/6_1.png" ng-show="$ctrl.statusbubble('6_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/6_2.png" ng-show="$ctrl.statusbubble('6_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/7_1.png" ng-show="$ctrl.statusbubble('7_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/7_2.png" ng-show="$ctrl.statusbubble('7_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/7_3.png" ng-show="$ctrl.statusbubble('7_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/8_1.png" ng-show="$ctrl.statusbubble('8_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/9_1.png" ng-show="$ctrl.statusbubble('9_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/10_1.png" ng-show="$ctrl.statusbubble('10_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/11_1.png" ng-show="$ctrl.statusbubble('11_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/11_2.png" ng-show="$ctrl.statusbubble('11_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/12_1.png" ng-show="$ctrl.statusbubble('12_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/12_2.png" ng-show="$ctrl.statusbubble('12_2')" class="sprechblase images-responsive">
+
+<!-- Death Blasen -->
+<img src="images/game/textbubbles/lena/death_1.png" ng-show="$ctrl.statusbubble('death_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_2.png" ng-show="$ctrl.statusbubble('death_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_3.png" ng-show="$ctrl.statusbubble('death_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_4.png" ng-show="$ctrl.statusbubble('death_4')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_5.png" ng-show="$ctrl.statusbubble('death_5')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_6.png" ng-show="$ctrl.statusbubble('death_6')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_7.png" ng-show="$ctrl.statusbubble('death_7')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_8.png" ng-show="$ctrl.statusbubble('death_8')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_9.png" ng-show="$ctrl.statusbubble('death_9')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/lena/death_10.png" ng-show="$ctrl.statusbubble('death_10')" class="sprechblase images-responsive">
+

@@ -1,7 +1,7 @@
 "use strict";
 
 app.component("vanessagame", {
-    templateUrl: "components/vanessagame.html",
+    templateUrl: "components/vanessa/vanessagame.html",
     controller: "vanessagame",
     bindings:{}
 });
@@ -25,6 +25,7 @@ app.controller("vanessagame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.vanessachangebuttons(buttons);
         Game.vanessachangebubble(answer);
         Game.vanessachangecharacter(emotion);

@@ -1,0 +1,170 @@
+
+<!-- Ab hier beginnt Vanessa 1 -->
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'vanessa_normal')">
+        <p class="button-question">Hey Vanessa, wie läuft Mathe bei dir?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('1_2', 'buttons_4', 'vanessa_nachdenklich')">
+        <p class="button-question">Vanessa, kann ich dir eine wichtige Frage stellen?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_2')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'buttons_3', 'vanessa_nachdenklich')">
+        <p class="button-question">Ja, ich frage mich, wie andere Schüler eine Eins bei ihm haben.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'clear', 'vanessa_gluecklich')">
+        <p class="button-question">Letztendlich muss man einfach mehr Mühe reinstecken, dann würde es auch bei dir funktionieren.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_3')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_1', 'buttons_7', 'vanessa_nachdenklich', 1)">
+        <p class="button-question">Emma?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_2', 'clear', 'vanessa_gluecklich')">
+        <p class="button-question">Nein, ich glaube sie haben es echt verdient.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_4')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_1', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Wieso hast du es getan? Emma musste doch nicht sterben!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_3', 'buttons_5', 'vanessa_nachdenklich')">
+        <p class="button-question">Ich weiß nicht warum, aber ich denke, dass Emma ermordet wurde.
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_5')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_3', 'buttons_6' , 'vanessa_wuetend')">
+        <p class="button-question">Du hast sie nie wirklich gemocht. Natürlich frage ich dich!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_4', 'clear', 'vanessa_nachdenklich')">
+        <p class="button-question">Nein. Du hast sie nie gemocht und dementsprechen einen schlechten Ruf bekommen. Weißt du etwas?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_6')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_2', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Ja! Ich habe Beweise.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_4', 'clear', 'vanessa_nachdenklich')">
+        <p class="button-question">Nein. Du hast sie nie gemocht und dementsprechen einen schlechten Ruf bekommen. Weißt du etwas?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_7')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_1', 'buttons_8' , 'vanessa_gluecklich')">
+        <p class="button-question">Ich habe gehört du hast jetzt auch eine Eins.
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_2', 'buttons_9', 'vanessa_gluecklich')">
+        <p class="button-question">Kann ich dir vielleicht noch eine Frage stellen?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_8')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_5', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Lena? Wieso hat sie etwas mit dir zu tun? Steckt ihr unter einer Decke?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('5_1', 'buttons_10', 'vanessa_nachdenklich')">
+        <p class="button-question">War sie nicht Emmas beste Freundin?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_9')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_4', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Hattest du etwas mit dem Mord zu tun? Sag es mir!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_3', 'buttons_8', 'vanessa_normal', 2)">
+        <p class="button-question">Ich habe dir ja gesagt, dass sie wahrscheinlich ermordet wurde. Weißt du etwas darüber?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_10')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('6_1', 'buttons_11' , 'vanessa_gluecklich', 3)">
+        <p class="button-question">Das heißt?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_6', 'buttons_death', 'vanessa_wuetend', 'death')">
+        <p class="button-question">Sie würde nie mit dir reden. Lüg nicht!
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_11')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_7', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Bist du dir sicher, dass sie auch gelästert hat?
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('7_1', 'buttons_12', 'vanessa_normal')">
+        <p class="button-question">Und worüber habt ihr geredet?
+        <p>
+    </div>
+</div>
+
+<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_12')">
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_8', 'buttons_death' , 'vanessa_wuetend', 'death')">
+        <p class="button-question">Oh. Sagst du die Wahrheit? Ich habe euch noch nie zusammen gesehen! Lüg nicht!
+        <p>
+    </div>
+    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('8_1', 'clear', 'vanessa_nachdenklich', 'death')">
+        <p class="button-question">Ich sehe Felix eigentlich nur selten in der Schule
+        <p>
+    </div>
+</div>
+
+
+
+<!--Face expressions -->
+<img src="images/game/characters/vanessa/vanessa_normal.png" ng-show="$ctrl.statuscharacter('vanessa_normal')" class="characters images-responsive">
+<img src="images/game/characters/vanessa/vanessa_gluecklich.png" ng-show="$ctrl.statuscharacter('vanessa_gluecklich')" class="characters images-responsive">
+<img src="images/game/characters/vanessa/vanessa_wuetend.png" ng-show="$ctrl.statuscharacter('vanessa_wuetend')" class="characters images-responsive">
+<img src="images/game/characters/vanessa/vanessa_nachdenklich.png" ng-show="$ctrl.statuscharacter('vanessa_nachdenklich')" class="characters images-responsive">
+
+<!-- Sprechblasen -->
+<img src="images/game/textbubbles/vanessa/1_1.png" ng-show="$ctrl.statusbubble('1_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/1_2.png" ng-show="$ctrl.statusbubble('1_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/2_1.png" ng-show="$ctrl.statusbubble('2_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/2_2.png" ng-show="$ctrl.statusbubble('2_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/2_3.png" ng-show="$ctrl.statusbubble('2_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/3_1.png" ng-show="$ctrl.statusbubble('3_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/3_1.png" ng-show="$ctrl.statusbubble('3_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/3_3.png" ng-show="$ctrl.statusbubble('3_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/3_4.png" ng-show="$ctrl.statusbubble('3_4')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/4_1.png" ng-show="$ctrl.statusbubble('4_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/4_2.png" ng-show="$ctrl.statusbubble('4_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/4_3.png" ng-show="$ctrl.statusbubble('4_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/5_1.png" ng-show="$ctrl.statusbubble('5_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/6_1.png" ng-show="$ctrl.statusbubble('6_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/7_1.png" ng-show="$ctrl.statusbubble('7_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/8_1.png" ng-show="$ctrl.statusbubble('8_1')" class="sprechblase images-responsive">
+
+<!-- Death Blasen -->
+<img src="images/game/textbubbles/vanessa/death_1.png" ng-show="$ctrl.statusbubble('death_1')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_2.png" ng-show="$ctrl.statusbubble('death_2')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_3.png" ng-show="$ctrl.statusbubble('death_3')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_4.png" ng-show="$ctrl.statusbubble('death_4')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_5.png" ng-show="$ctrl.statusbubble('death_5')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_6.png" ng-show="$ctrl.statusbubble('death_6')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_7.png" ng-show="$ctrl.statusbubble('death_7')" class="sprechblase images-responsive">
+<img src="images/game/textbubbles/vanessa/death_8.png" ng-show="$ctrl.statusbubble('death_8')" class="sprechblase images-responsive">

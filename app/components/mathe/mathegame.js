@@ -28,6 +28,7 @@ app.controller("mathegame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.mathechangebuttons(buttons);
         Game.mathechangebubble(answer);
         Game.mathechangecharacter(emotion);

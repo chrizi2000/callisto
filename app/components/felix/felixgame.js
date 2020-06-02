@@ -1,7 +1,7 @@
 "use strict";
 
 app.component("felixgame", {
-    templateUrl: "components/felixgame.html",
+    templateUrl: "components/felix/felixgame.html",
     controller: "felixgame",
     bindings:{}
 });
@@ -25,6 +25,7 @@ app.controller("felixgame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.felixchangebuttons(buttons);
         Game.felixchangebubble(answer);
         Game.felixchangecharacter(emotion);

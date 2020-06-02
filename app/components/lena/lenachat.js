@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("lenachat", {
-    templateUrl: "components/lenachat.html",
+    templateUrl: "components/lena/lenachat.html",
     conroller: "LenachatController",
     bindings:{}
 });

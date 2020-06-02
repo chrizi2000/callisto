@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("vanessa", {
-    templateUrl: "components/vanessa.html",
+    templateUrl: "components/vanessa/vanessa.html",
     controller: "VanessaController",
     bindings:{}
 });
@@ -9,8 +9,8 @@ app.component("vanessa", {
 app.controller("VanessaController", function ($log, Game) {
     $log.debug("VanessaController()");
 
-    this.allowaccess = () =>{
-        return Game.vanessastatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.vanessastatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.vanessagethintstatus(index);
@@ -18,6 +18,10 @@ app.controller("VanessaController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.vanessastartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

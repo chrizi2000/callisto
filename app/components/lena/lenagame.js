@@ -1,7 +1,7 @@
 "use strict";
 
 app.component("lenagame", {
-    templateUrl: "components/lenagame.html",
+    templateUrl: "components/lena/lenagame.html",
     controller: "lenagame",
     bindings:{}
 });
@@ -25,6 +25,7 @@ app.controller("lenagame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.lenachangebuttons(buttons);
         Game.lenachangebubble(answer);
         Game.lenachangecharacter(emotion);

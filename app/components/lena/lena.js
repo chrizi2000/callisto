@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("lena", {
-    templateUrl: "components/lena.html",
+    templateUrl: "components/lena/lena.html",
     controller: "LenaController",
     bindings:{}
 });
@@ -9,8 +9,8 @@ app.component("lena", {
 app.controller("LenaController", function ($log, Game) {
     $log.debug("LenaController()");
 
-    this.allowaccess = () =>{
-        return Game.lenastatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.lenastatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.lenagethintstatus(index);
@@ -18,6 +18,10 @@ app.controller("LenaController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.lenastartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 });
 

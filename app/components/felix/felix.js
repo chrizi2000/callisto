@@ -1,7 +1,7 @@
 "use strict"
 
 app.component("felix", {
-    templateUrl: "components/felix.html",
+    templateUrl: "components/felix/felix.html",
     controller: "FelixController",
     bindings:{}
 });
@@ -9,14 +9,8 @@ app.component("felix", {
 app.controller("FelixController", function ($log, Game) {
     $log.debug("FelixController()");
 
-    this.test = "test";
-
-    this.test2 = () => {
-        console.log(this.test);
-    }
-
-    this.allowaccess = () =>{
-        return Game.felixstatusconversation();
+    this.allowaccess = (index) =>{
+        return Game.felixstatusconversation(index);
     }
     this.hintstatus = (index) =>{
         return Game.felixgethintstatus(index);
@@ -24,6 +18,10 @@ app.controller("FelixController", function ($log, Game) {
 
     this.gametrigger = () =>{
         Game.felixstartgame();
+        this.clicksound();
+    }
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
     }
 
 

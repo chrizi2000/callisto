@@ -26,6 +26,7 @@ app.controller("Klassenvorstandgame", function ($log, Game) {
 
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
+        Game.playAudioMenuClick();
         Game.klassenvorstandchangebuttons(buttons)
         Game.klassenvorstandchangebubble(answer);
         Game.klassenvorstandchangecharacter(emotion);
