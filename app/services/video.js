@@ -10,4 +10,8 @@ app.service("Video", function() {
         showvideo = false;
     }
 
+    this.showvideoagain = () =>{
+        showvideo = true;
+    }
+
 });

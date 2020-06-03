@@ -21,6 +21,10 @@ app.controller("callistoController", function ($log, Game, Video) {
         return Video.returnshowvideo();
     }
 
+    this.backtovideo = () =>{
+        Video.showvideoagain();
+    }
+
 
 });
 

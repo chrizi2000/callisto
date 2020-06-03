@@ -16,5 +16,4 @@ app.controller("VideointroController", function ($log, Video) {
     this.videofinished = () =>{
         Video.showgame();
     }
-
 });
