@@ -1,13 +1,13 @@
 "use strict";
 
-app.component("vanessagame", {
-    templateUrl: "components/vanessa/vanessagame.html",
-    controller: "vanessagame",
+app.component("police", {
+    templateUrl: "components/police/police.html",
+    controller: "police",
     bindings:{}
 });
 
-app.controller("vanessagame", function ($log, Game) {
-    $log.debug("vanessagame()");
+app.controller("police", function ($log, Game) {
+    $log.debug("police()");
 
     this.statuscharacter = (name) => {
         return Game.policegetstatuscharacter(name);
@@ -16,13 +16,6 @@ app.controller("vanessagame", function ($log, Game) {
     this.statusbubble = (name) =>{
         return Game.policegetstatusbubble(name);
     }
-
-
-
-    this.statusbuttons = (name) =>{
-        return Game.policegetstatusbutton(name);
-    }
-
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
         Game.playAudioMenuClick();
