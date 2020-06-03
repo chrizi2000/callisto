@@ -1137,7 +1137,7 @@ this.felixseteverythingonfalse = () =>{
         "mathe_ende" : false,
         "vanessa_ende" : false,
         "lena_ende" : false,
-        "klassenvostand_ende" : false
+        "klassenvorstand_ende" : false
     };
 
 
