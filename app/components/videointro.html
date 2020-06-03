@@ -1,5 +1,11 @@
-<video id="video" controls onended="$ctrl.videofinished()" autoplay="true">
+<video id="video" controls autoplay="true" style="width: 75%">
     <source src=video/Callisto_INTRO_komprimiert.mp4 type=video/mp4>
 </video>
+
+<div style="padding-top: 2%">
+    <a class="btngamestart clickit" ng-click="$ctrl.videofinished(); $ctrl.clicksound();">Spiel starten</a>
+</div>
+
+
 
 
