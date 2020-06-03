@@ -752,10 +752,10 @@ this.felixseteverythingonfalse = () =>{
 
     let lenacharacter = {
         "lena_normal" : false,
-        "lena_erschtaunt" : false,
         "lena_wuetend" : false,
         "lena_verwirrt" : false,
-        "lena-zwinkernd" : false,
+        "lena_zwinkernd" : false,
+        "lena_traurig" : false,
     };
 
     let lenabubbles = {
