@@ -6,6 +6,7 @@ app.service("Game", function(AccessKontakt) {
         "sportplatz" : false,
         "klassenzimmer1" : false,
         "klassenzimmer2" : false,
+        "bibliothek" : false,
         "verhorraum_chemie" : false,
         "verhorraum_felix" : false,
         "verhorraum_klassenvorstand" : false,
