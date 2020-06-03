@@ -1132,11 +1132,12 @@ this.felixseteverythingonfalse = () =>{
     };
 
     let policebubbles = {
-        "1_1" : false,
-        "1_2" : false,
-        "2_1" : false,
-        "2_2" : false,
-        "2_3" : false,
+        "chemie_ende" : false,
+        "felix_ende" : false,
+        "mathe_ende" : false,
+        "vanessa_ende" : false,
+        "lena_ende" : false,
+        "klassenvostand_ende" : false
     };
 
 
@@ -1186,36 +1187,42 @@ this.felixseteverythingonfalse = () =>{
         this.reset();
         this.changestatus("verhorraum_felix");
         this.policechangecharacter("police_wuetend");
+        this.policechangebubble("felix_ende");
     }
 
     this.policestartgameklassenvorstand = () => {
         this.reset();
         this.changestatus("verhorraum_klassenvorstand");
         this.policechangecharacter("police_wuetend");
+        this.policechangebubble("klassenvorstand_ende");
     }
 
     this.policestartgamevanessa = () => {
         this.reset();
         this.changestatus("verhorraum_vanessa");
         this.policechangecharacter("police_wuetend");
+        this.policechangebubble("vanessa_ende");
     }
 
     this.policestartgamechemie = () => {
         this.reset();
         this.changestatus("verhorraum_chemie");
         this.policechangecharacter("police_wuetend");
+        this.policechangebubble("chemie_ende");
     }
 
     this.policestartgamemathe = () => {
         this.reset();
         this.changestatus("verhorraum_mathelehrer");
         this.policechangecharacter("police_wuetend");
+        this.policechangebubble("mathe_ende");
     }
 
     this.policestartgamelena = () => {
         this.reset();
         this.changestatus("verhorraum_lena");
         this.policechangecharacter("police_gluecklich");
+        this.policechangebubble("lena_ende");
     }
 
     this.policeseteverythingonfalse = () =>{
