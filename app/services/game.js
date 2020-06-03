@@ -753,6 +753,7 @@ this.felixseteverythingonfalse = () =>{
         "lena_erschtaunt" : false,
         "lena_wuetend" : false,
         "lena_verwirrt" : false,
+        "lena-zwinkernd" : false,
     };
 
     let lenabubbles = {
@@ -1184,6 +1185,36 @@ this.felixseteverythingonfalse = () =>{
         this.reset();
         this.changestatus("verhorraum_felix");
         this.policechangecharacter("police_wuetend");
+    }
+
+    this.policestartgameklassenvorstand = () => {
+        this.reset();
+        this.changestatus("verhorraum_klassenvorstand");
+        this.policechangecharacter("police_wuetend");
+    }
+
+    this.policestartgamevanessa = () => {
+        this.reset();
+        this.changestatus("verhorraum_vanessa");
+        this.policechangecharacter("police_wuetend");
+    }
+
+    this.policestartgamechemie = () => {
+        this.reset();
+        this.changestatus("verhorraum_chemie");
+        this.policechangecharacter("police_wuetend");
+    }
+
+    this.policestartgamemathe = () => {
+        this.reset();
+        this.changestatus("verhorraum_mathelehrer");
+        this.policechangecharacter("police_wuetend");
+    }
+
+    this.policestartgamelena = () => {
+        this.reset();
+        this.changestatus("verhorraum_lena");
+        this.policechangecharacter("police_gluecklich");
     }
 
     this.policeseteverythingonfalse = () =>{

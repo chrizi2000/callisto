@@ -29,27 +29,27 @@ app.controller("BeschuldController", function ($log, Game) {
 
     this.beschuldigechemie = () =>{
         Game.wurdebeschuldigt();
-        Game.policestartgamefelix();
+        Game.policestartgamechemie();
     }
 
     this.beschuldigelena = () =>{
         Game.wurdebeschuldigt();
-        Game.policestartgamefelix();
+        Game.policestartgamelena();
     }
 
     this.beschuldigevanessa = () =>{
         Game.wurdebeschuldigt();
-        Game.policestartgamefelix();
+        Game.policestartgamevanessa();
     }
 
     this.beschuldigemathelehrer = () =>{
         Game.wurdebeschuldigt();
-        Game.policestartgamefelix();
+        Game.policestartgamemathe();
     }
 
     this.beschuldigeklassenvorstand = () =>{
         Game.wurdebeschuldigt();
-        Game.policestartgamefelix();
+        Game.policestartgameklassenvorstand();
     }
 
 });
