@@ -9,6 +9,7 @@ app.component("videointro", {
 app.controller("VideointroController", function ($log, Video) {
     $log.debug("VideointroController()");
 
+
     this.showvideo = () =>{
         return Video.returnshowvideo();
     }

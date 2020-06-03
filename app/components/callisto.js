@@ -9,6 +9,9 @@ app.component("callisto", {
 app.controller("callistoController", function ($log, Game, Video) {
     $log.debug("callistoController()");
 
+
+
+
     this.beschuldigt = () =>{
         return Game.jmdwurdebeschuldigt();
     }

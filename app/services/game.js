@@ -490,7 +490,6 @@ app.service("Game", function(AccessKontakt) {
     this.mathegothint = (index) => {
         this.playAudiohint();
         mathehint[index] = true;
-
         if(mathehint[0] && mathehint[1]){
             this.changematheaccess(2);
         }
@@ -824,7 +823,7 @@ this.felixseteverythingonfalse = () =>{
     };
 
 
-    let lenahint = [false,false];
+    let lenahint = [false,false,false];
 
     let lenaaccess = [true,false,false];
 
@@ -858,6 +857,10 @@ this.felixseteverythingonfalse = () =>{
     this.lenagothint = (index) => {
         this.playAudiohint();
         lenahint[index] = true;
+        if(lenahint[0] && lenahint[1] && lenahint[2]){
+            this.changelenaaccess(2);
+        }
+
     }
 
 
@@ -1003,7 +1006,7 @@ this.felixseteverythingonfalse = () =>{
     };
 
 
-    let vanessahint = [false,false];
+    let vanessahint = [false,false,false];
 
     let vanessaaccess = [true,false,false];
 
@@ -1037,6 +1040,9 @@ this.felixseteverythingonfalse = () =>{
     this.vanessagothint = (index) => {
         this.playAudiohint();
         vanessahint[index] = true;
+        if(vanessahint[0] && vanessahint[1] && vanessahint[2]){
+            this.changevanessaaccess(2);
+        }
     }
 
 
