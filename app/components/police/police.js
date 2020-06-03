@@ -19,15 +19,7 @@ app.controller("police", function ($log, Game) {
 
     this.answerpressed = (answer, buttons, emotion, hint) =>{
         Game.playAudioMenuClick();
-        Game.policechangebuttons(buttons);
         Game.policechangebubble(answer);
         Game.policechangecharacter(emotion);
-        if(hint){
-            if(hint === "death"){
-                Game.policedead();
-            }else{
-                Game.policegothint(hint -1);
-            }
-        }
     }
 });

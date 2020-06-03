@@ -9,9 +9,6 @@ app.component("mathegame", {
 app.controller("mathegame", function ($log, Game) {
     $log.debug("mathegame()");
 
-    this.test = () =>{
-        console.log("hint müsste jetzt freigeschalten sein");
-    }
     this.statuscharacter = (name) => {
         return Game.mathegetstatuscharacter(name);
     }
