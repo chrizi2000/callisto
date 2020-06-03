@@ -555,7 +555,7 @@ app.service("Game", function(AccessKontakt) {
 
     this.mathestartgame = () => {
         this.reset();
-        this.changestatus("klassenzimmer1");
+        this.changestatus("klassenzimmer2");
         this.mathechangecharacter("mathe_normal");
         this.mathechangebuttons("buttons_1");
     }
@@ -919,7 +919,7 @@ this.felixseteverythingonfalse = () =>{
 
     this.lenastartgame = () => {
         this.reset();
-        this.changestatus("klassenzimmer2");
+        this.changestatus("klassenzimmer1");
         this.lenachangecharacter("lena_normal");
         this.lenachangebuttons("buttons_1");
     }
