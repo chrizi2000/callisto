@@ -11,6 +11,7 @@ app.service("Game", function(AccessKontakt) {
         "verhorraum_klassenvorstand" : false,
         "verhorraum_vanessa" : false,
         "verhorraum_mathelehrer" : false,
+        "verhorraum_lena" : false,
 
 
 
