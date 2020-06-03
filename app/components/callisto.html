@@ -17,6 +17,12 @@
         <div class="pure-u-1" style="text-align: center; width: 100%">
             <beschuld ng-show="$ctrl.returnaccess()"></beschuld>
         </div>
+
+        <div class="pure-u-1" style="text-align: center; width: 100%">
+            <div ng-hide="$ctrl.returnaccess()">
+                <a class="btngamestart clickit" ng-click="$ctrl.videofinished(); $ctrl.clicksound();">Intro wiederholen</a>
+            </div>
+        </div>
     </div>
 </div>
 
