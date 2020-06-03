@@ -30,7 +30,7 @@ body{
     height: 60px;
     line-height: 30px;
     text-align: center;
-    font-size: 1.35vw;
+    font-size: 1em;
     border-radius: 20px;
     position: relative;
     cursor: pointer;
@@ -41,14 +41,6 @@ body{
     color: #2e3e50;
     background-color: #Fed55d;
 }
-
-
-
-
-
-
-
-
 
 .characters{
     position: absolute;
