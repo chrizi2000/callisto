@@ -25,10 +25,21 @@ body{
 }
 
 .button-question {
-    font-size: large;
-    background-color: forestgreen;
+    background-color: #2e3e50;
     color: white;
-   padding: 4px;
+    height: 60px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1.35vw;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.button-question:hover {
+    color: #2e3e50;
+    background-color: #Fed55d;
 }
 
 
