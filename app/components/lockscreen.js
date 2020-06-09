@@ -13,16 +13,16 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt, $t
     this.password = [2,3,0,3,0,1];
     this.aktpasswort = [];
 
-    document.onkeypress = (event) =>{
-        console.log(event);
-        this.zahleingegeben(Number(event.key));
-
-        if(event.key === "Delete"){
-            console.log("Delete KEy");
+    document.addEventListener("keydown",   (event) =>{
+        if(event.key != "Meta" && event.key != "Shift" && event.key != "CapsLock" && event.key != "Tab" && event.key != "Control"){
+            if(event.key === "Backspace"){
+                this.clearoneletter();
+            }else {
+                this.zahleingegeben(Number(event.key));
+            }
         }
-
         $timeout();
-    }
+    });
 
     this.zahleingegeben = (pwnumber) => {
         AccessKontakt.playAudioclick();
