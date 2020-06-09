@@ -29,25 +29,22 @@
 <div class="pure-g hints" style="text-align: center">
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip_left icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Emma war vielleicht doch noch so toll, wie alle denken</span>
+        <div ng-show="$ctrl.hintstatus(0)" class="hint--bottom-right hint--small hint--success hint--bounce" data-hint="Emma war vielleicht doch noch so toll, wie alle denken">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Lena scheint gerrne über Vanessa zu lästern</span>
+        <div ng-show="$ctrl.hintstatus(1)" class="hint--bottom hint--small hint--success hint--bounce" data-hint="Lena scheint gerrne über Emma zu lästern">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip_right icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Vanessa und Lena haben sich angefreundet</span>
+        <div ng-show="$ctrl.hintstatus(2)" class="hint--bottom-left hint--small hint--success hint--bounce" data-hint="Vanessa und Lena haben sich angefreundet">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 </div>
