@@ -17,6 +17,10 @@ app.controller("endController", function ($log, Game) {
         return Game.returnmordstatus();
     }
 
+    this.clicksound = () =>{
+        Game.playAudioMenuClick();
+    }
+
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
