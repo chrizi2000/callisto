@@ -31,14 +31,18 @@
 </div>
 <div class="pure-g hints" style="text-align: center">
     <div class="pure-u-12-24">
-        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div ng-hide="$ctrl.hintstatus(0)" class="hint--bottom-right hint--small hint--warning hint--bounce" data-hint="Hinweis noch nicht freigeschalten">
+            <img src="images/icons/hint_closed.png" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        </div>
         <div ng-show="$ctrl.hintstatus(0)" class="hint--bottom-right hint--small hint--info hint--bounce" data-hint="Sex war freiwillig, er hat sie nicht gezwungen">
             <img src="images/icons/hint_open.png" style='width: 50%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-12-24">
-        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div ng-hide="$ctrl.hintstatus(1)" class="hint--bottom-left hint--small hint--warning hint--bounce" data-hint="Hinweis noch nicht freigeschalten">
+            <img src="images/icons/hint_closed.png" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        </div>
         <div ng-show="$ctrl.hintstatus(1)" class="hint--bottom-left hint--small hint--info hint--bounce" data-hint="Lena wollte auch mit dem Professor schlafen">
             <img src="images/icons/hint_open.png" style='width: 50%; height: auto' class="pure-img-responsive">
         </div>

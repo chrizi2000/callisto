@@ -23,31 +23,37 @@ app.controller("BeschuldController", function ($log, Game) {
     }
 
     this.beschuldigefelix = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgamefelix();
     }
 
     this.beschuldigechemie = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgamechemie();
     }
 
     this.beschuldigelena = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgamelena();
     }
 
     this.beschuldigevanessa = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgamevanessa();
     }
 
     this.beschuldigemathelehrer = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgamemathe();
     }
 
     this.beschuldigeklassenvorstand = () =>{
+        Game.playAudioMenuClick();
         Game.wurdebeschuldigt();
         Game.policestartgameklassenvorstand();
     }

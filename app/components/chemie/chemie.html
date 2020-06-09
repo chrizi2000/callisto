@@ -32,7 +32,9 @@
 
 <div class="pure-g hints" style="text-align: center">
     <div class="pure-u-24-24">
-        <img src="images/icons/hint_closed.png" ng-hide="$ctrl.gethint()" style='width: 30%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        <div ng-hide="$ctrl.gethint()" class="hint--bottom hint--small hint--warning hint--bounce" data-hint="Hinweis noch nicht freigeschalten">
+        <img src="images/icons/hint_closed.png" style='width: 30%; height: auto' class="pure-img-responsive buzz-out-on-hover">
+        </div>
         <div ng-show="$ctrl.gethint()" class="hint--bottom hint--small hint--info hint--bounce" data-hint="War zum Zeitpunkt des Mordes nicht in der Schule">
             <img src="images/icons/hint_open.png" style='width: 30%; height: auto' class="pure-img-responsive">
         </div>
