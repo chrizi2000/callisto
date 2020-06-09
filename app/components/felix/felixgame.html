@@ -1,128 +1,105 @@
-<div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'felix_normal')">
-        <p class="button-question">Hallo, Felix.
-        <p>
-    </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('1_2', 'buttons_3', 'felix_verwirrt')">
-        <p class="button-question">Hey Felix. Sorry, aber ich hab ne komische Frage an dich.
-        <p>
-    </div>
+  <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_1')">
+      <div class="pure-u-1-2">
+          <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('1_1', 'buttons_2', 'felix_normal')">Hallo, Felix.</button>
+      </div>
+      <div class="pure-u-1-2">
+          <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('1_2', 'buttons_3', 'felix_verwirrt')">Hey Felix. Sorry, aber ich hab ne komische Frage an dich.</button>
+      </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_2')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_1', 'buttons_4', 'felix_wuetend')">
-        <p class="button-question">Ich suche nach Emmas Mörder. Hilfst du mir?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('2_1', 'buttons_4', 'felix_wuetend')">Ich suche nach Emmas Mörder. Hilfst du mir?</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_2', 'buttons_6', 'felix_verwirrt')">
-        <p class="button-question">Äh ich hätte da eine Frage an dich.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('2_2', 'buttons_6', 'felix_verwirrt')">Äh ich hätte da eine Frage an dich.</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_3')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('2_3', 'buttons_5', 'felix_erstaunt')">
-        <p class="button-question">Hast du dich, als ihr noch zusammen wart, gut mit Emma vertragen?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('2_3', 'buttons_5', 'felix_erstaunt')">Hast du dich, als ihr noch zusammen wart, gut mit Emma vertragen?</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_1', 'clear', 'felix_wuetend', 'death')">
-        <p class="button-question">Hast du Emma damals umgebracht?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_1', 'clear', 'felix_wuetend', 'death')">Hast du Emma damals umgebracht?</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_4')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_2', 'clear', 'felix_wuetend', 'death')">
-        <p class="button-question">Wer könnte Emma umgebracht haben? Sag es mir!
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_2', 'clear', 'felix_wuetend', 'death')">Wer könnte Emma umgebracht haben? Sag es mir!</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_1', 'buttons_7', 'felix_traurig')">
-        <p class="button-question">Sorry, ich will eigentlich kein Salz in deine Wunden streuen.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('3_1', 'buttons_7', 'felix_traurig')">Sorry, ich will eigentlich kein Salz in deine Wunden streuen.</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_5')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_2', 'buttons_8', 'felix_traurig')">
-        <p class="button-question">Emma und du haben doch Schluss gemacht oder? Warum?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('3_2', 'buttons_8', 'felix_traurig')">Emma und du haben doch Schluss gemacht oder? Warum?</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_3', 'buttons_9', 'felix_wuetend')">
-        <p class="button-question">Du hast sie also getötet, weil sie dir nicht gepasst hat.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('3_3', 'buttons_9', 'felix_wuetend')">Du hast sie also getötet, weil sie dir nicht gepasst hat.</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_6')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">
-        <p class="button-question">Hast du eine Ahnung wer was mit dem Mord zu tun hatte?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">Hast du eine Ahnung wer was mit dem Mord zu tun hatte?</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('3_2', 'buttons_8', 'felix_wuetend')">
-        <p class="button-question">Emma und du haben doch Schluss gemacht oder? Warum?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('3_2', 'buttons_8', 'felix_wuetend')">Emma und du haben doch Schluss gemacht oder? Warum?</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_7')">
-    <div class="pure-u-1-1 button-div" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">
-        <p class="button-question">Hast du eine Ahnung wer was mit dem Mord zu tun hatte?
-        <p>
+    <div class="pure-u-1-1">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">Hast du eine Ahnung wer was mit dem Mord zu tun hatte?</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_8')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_3', 'clear', 'felix_wuetend', 'death')">
-        <p class="button-question">Das heißt also du hattest etwas gegen sie, weil sie es dir nie gesagt hat. Ziemlich verdächtig.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_3', 'clear', 'felix_wuetend', 'death')">Das heißt also du hattest etwas gegen sie, weil sie es dir nie gesagt hat. Ziemlich verdächtig.</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_2', 'buttons_11', 'felix_traurig', 2)">
-        <p class="button-question">Du hast keine Ahnung warum du mit ihr Schluss gemacht hast?
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_2', 'buttons_11', 'felix_traurig', 2)">Du hast keine Ahnung warum du mit ihr Schluss gemacht hast?</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_9')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_3', 'buttons_10', 'felix_verwirrt')">
-        <p class="button-question">Entschuldige, das war bisschen übertrieben.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_3', 'buttons_10', 'felix_verwirrt')">Entschuldige, das war bisschen übertrieben.</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_6', 'clear', 'felix_wuetend', 'death')">
-        <p class="button-question">Gib es zu!
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_6', 'clear', 'felix_wuetend', 'death')">Gib es zu!</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_10')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_2', 'buttons_11', 'felix_traurig', 2)">
-        <p class="button-question">Ich will wissen ob du mit ihr Schluss gemacht hast.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_2', 'buttons_11', 'felix_traurig', 2)">Ich will wissen ob du mit ihr Schluss gemacht hast.</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_5', 'buttons_death', 'felix_wuetend', 'death')">
-        <p class="button-question">Ich weiß es ganz genau, ich hab Beweise.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_5', 'buttons_death', 'felix_wuetend', 'death')">Ich weiß es ganz genau, ich hab Beweise.</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_11')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_6', 'clear', 'felix_wuetend', 'death')">
-        <p class="button-question">Kein Wunder, dass man mit dir Schluss macht.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_6', 'clear', 'felix_wuetend', 'death')">Kein Wunder, dass man mit dir Schluss macht.</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('5_1', 'buttons_12', 'felix_normal')">
-        <p class="button-question">Oh, sorry für die Anschuldigungen. Ich wollte einfach nur sicher gehen.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('5_1', 'buttons_12', 'felix_normal')">Oh, sorry für die Anschuldigungen. Ich wollte einfach nur sicher gehen.</button>
     </div>
 </div>
 
 <div class="gamebuttons pure-g" ng-show="$ctrl.statusbuttons('buttons_12')">
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">
-        <p class="button-question">Ich verspreche, nichts zu sagen. Jedoch muss ich noch mehr wissen.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('4_1', 'clear', 'felix_traurig', 1)">Ich verspreche, nichts zu sagen. Jedoch muss ich noch mehr wissen.</button>
     </div>
-    <div class="pure-u-1-2 button-div" ng-click="$ctrl.answerpressed('death_7', 'clear', 'felix_normal')">
-        <p class="button-question">Ja sorry, wollte nicht stören. Bis morgen.
-        <p>
+    <div class="pure-u-1-2">
+        <button class="bttn-fill bttn-md bttn-primary style" ng-click="$ctrl.answerpressed('death_7', 'clear', 'felix_normal')">Ja sorry, wollte nicht stören. Bis morgen.</button>
     </div>
 </div>
 

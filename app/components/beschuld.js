@@ -22,9 +22,34 @@ app.controller("BeschuldController", function ($log, Game) {
         Game.playAudioMenuClick();
     }
 
-    this.beschuldige = (name) =>{
-        Game.wurdebeschuldigt(name);
+    this.beschuldigefelix = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgamefelix();
     }
 
+    this.beschuldigechemie = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgamechemie();
+    }
+
+    this.beschuldigelena = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgamelena();
+    }
+
+    this.beschuldigevanessa = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgamevanessa();
+    }
+
+    this.beschuldigemathelehrer = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgamemathe();
+    }
+
+    this.beschuldigeklassenvorstand = () =>{
+        Game.wurdebeschuldigt();
+        Game.policestartgameklassenvorstand();
+    }
 
 });

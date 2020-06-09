@@ -6,8 +6,11 @@ app.component("callisto", {
     bindings:{}
 });
 
-app.controller("callistoController", function ($log, Game ) {
+app.controller("callistoController", function ($log, Game, Video) {
     $log.debug("callistoController()");
+
+
+
 
     this.beschuldigt = () =>{
         return Game.jmdwurdebeschuldigt();
@@ -15,6 +18,14 @@ app.controller("callistoController", function ($log, Game ) {
 
     this.returnaccess = () => {
         return Game.returnaccesssmartphone();
+    }
+
+    this.showvideo = () =>{
+        return Video.returnshowvideo();
+    }
+
+    this.backtovideo = () =>{
+        Video.showvideoagain();
     }
 
 

@@ -6,7 +6,7 @@ app.component("end", {
     bindings:{}
 });
 
-app.controller("endController", function ($log, Game ) {
+app.controller("endController", function ($log, Game) {
     $log.debug("endController()");
 
     this.beschuldigtername = () =>{

@@ -1,12 +1,7 @@
-<div id="falsch" ng-hide="$ctrl.mordstatus()">
-<h1>{{$ctrl.beschuldigtername();}} war nicht der Mörder</h1>
+<div id="richtig" ng-hide="$ctrl.mordstatus()" style="text-align: center; padding-top: 3%">
+    <game></game>
 </div>
 
-<div id="richtig" ng-show="$ctrl.mordstatus()">
-    <h1>Herzlichen Glückwunsch</h1>
+<div style="padding-top: 2%;padding-bottom: 6%; text-align: center">
+    <a class="btngamestart clickit" ng-click="$ctrl.clicksound();" href="index.html">Kehre zurück zum Home-Bildschirm</a>
 </div>
-
-<style>
-
-
-</style>

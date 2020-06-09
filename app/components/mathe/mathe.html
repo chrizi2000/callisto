@@ -4,7 +4,7 @@
     </div>
 
     <div class="pure-u-1-24 textcontact">
-        <h1>Mathe Lehrer</h1>
+        <h1>Professor Ebner</h1>
     </div>
 </div>
 
@@ -13,6 +13,9 @@
     <div class="pure-u-12-24 iconcontact">
         <h3 class="eigenschafthead">Eigenschaften:</h3>
         <br>
+    </div>
+    <div class="pure-u-24-24 iconcontact">
+        <h3 class="eigenschafttext"> - Mathe Professor</h3>
     </div>
     <div class="pure-u-24-24 iconcontact">
         <h3 class="eigenschafttext"> - ängstlich</h3>
@@ -29,17 +32,15 @@
 <div class="pure-g hints" style="text-align: center">
     <div class="pure-u-12-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(0)" style='width: 50%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Sex war freiwillig, er hat sie nicht gezwungen</span>
+        <div ng-show="$ctrl.hintstatus(0)" class="hint--bottom-right hint--small hint--info hint--bounce" data-hint="Sex war freiwillig, er hat sie nicht gezwungen">
+            <img src="images/icons/hint_open.png" style='width: 50%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-12-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 50%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(1)" style='width: 50%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Lena wollte auch mit dem Professor schlafen</span>
+        <div ng-show="$ctrl.hintstatus(1)" class="hint--bottom-left hint--small hint--info hint--bounce" data-hint="Lena wollte auch mit dem Professor schlafen">
+            <img src="images/icons/hint_open.png" style='width: 50%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 </div>
@@ -53,7 +54,7 @@
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(0)" ng-click="$ctrl.gametrigger()">
         <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
     </div>
-    <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(1)">
+    <div class="pure-u-11-24 hint--top hint--small hint--error hint--bounce hint--no-shadow" ng-show="$ctrl.allowaccess(1)" data-hint="Herr Ebner will nicht mehr mit dir reden ">
         <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
     </div>
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(2)">

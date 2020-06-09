@@ -32,25 +32,22 @@
 <div class="pure-g hints" style="text-align: center">
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip_left icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(0)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Felix war am Tag des Mordes in der Schule & hat sich komisch verhalten</span>
+        <div ng-show="$ctrl.hintstatus(0)" class="hint--bottom-right hint--small hint--info hint--bounce" data-hint="Felix war am Tag des Mordes in der Schule & hat sich komisch verhalten">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(1)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Lena scheint eifersüchtig auf Emmas Affäre zu sein!</span>
+        <div ng-show="$ctrl.hintstatus(1)" class="hint--bottom hint--small hint--info hint--bounce" data-hint="Lena scheint eifersüchtig auf Emmas Affäre zu sein!">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 
     <div class="pure-u-8-24">
         <img src="images/icons/hint_closed.png" ng-hide="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive buzz-out-on-hover">
-        <div class="tooltip_right icon">
-            <img src="images/icons/hint_open.png" ng-show="$ctrl.hintstatus(2)" style='width: 80%; height: auto' class="pure-img-responsive">
-            <span class="tooltiptext">Lena war in den Mathe-Lehrer verliebt!</span>
+        <div ng-show="$ctrl.hintstatus(2)" class="hint--bottom-left hint--small hint--info hint--bounce" data-hint="Lena war in den Mathe-Lehrer verliebt!">
+            <img src="images/icons/hint_open.png" style='width: 80%; height: auto' class="pure-img-responsive">
         </div>
     </div>
 </div>
@@ -64,7 +61,7 @@
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(0)" ng-click="$ctrl.gametrigger()">
         <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
     </div>
-    <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(1)">
+    <div class="pure-u-11-24 hint--top hint--small hint--error hint--bounce hint--no-shadow" ng-show="$ctrl.allowaccess(1)" data-hint="Lena will nicht mehr mit dir reden ">
         <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
     </div>
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(2)">

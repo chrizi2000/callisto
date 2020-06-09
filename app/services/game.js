@@ -6,7 +6,14 @@ app.service("Game", function(AccessKontakt) {
         "sportplatz" : false,
         "klassenzimmer1" : false,
         "klassenzimmer2" : false,
-        "bibliothek" : false};
+        "bibliothek" : false,
+        "verhorraum_chemie" : false,
+        "verhorraum_felix" : false,
+        "verhorraum_klassenvorstand" : false,
+        "verhorraum_vanessa" : false,
+        "verhorraum_mathelehrer" : false,
+        "verhorraum_lena" : false,
+    };
 
     this.returnaccesssmartphone = () =>{
         return AccessKontakt.access();
@@ -44,32 +51,15 @@ app.service("Game", function(AccessKontakt) {
         }
     }
 
-    let beschuldigter = "";
     let isbeschuldigt = false;
     let mordgelöst = false;
     this.jmdwurdebeschuldigt = () =>{
         return isbeschuldigt;
     }
 
-    this.setnamebeschuldigter = (name) =>{
-        beschuldigter = name;
-    }
-
-    this.returnbeschuldigtername = () =>{
-        return beschuldigter;
-    }
-
-    this.wurdebeschuldigt = (name) =>{
+    this.wurdebeschuldigt = () =>{
         isbeschuldigt = true;
-        this.setnamebeschuldigter(name);
         this.jmdwurdebeschuldigt();
-
-        if(name !== "Lena"){
-            return mordgelöst;
-        }else{
-            mordgelöst = true;
-            return mordgelöst;
-        }
     }
 
     this.returnmordstatus = () =>{
@@ -83,6 +73,7 @@ app.service("Game", function(AccessKontakt) {
         this.felixseteverythingonfalse();
         this.lenaseteverythingonfalse();
         this.vanessaseteverythingonfalse();
+        this.policeseteverythingonfalse();
     }
 
 
@@ -241,15 +232,15 @@ app.service("Game", function(AccessKontakt) {
         }
     }
 
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //-----KLASSENVORSTAND--------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----KLASSENVORSTAND--------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
     let klassenvorstandgame = {
         "klassenvorstand_normal" : false,
@@ -390,15 +381,15 @@ app.service("Game", function(AccessKontakt) {
         }
     }
 
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //-----Mathe-----------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
-    //----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----Mathe-----------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
 
 
 
@@ -490,7 +481,6 @@ app.service("Game", function(AccessKontakt) {
     this.mathegothint = (index) => {
         this.playAudiohint();
         mathehint[index] = true;
-
         if(mathehint[0] && mathehint[1]){
             this.changematheaccess(2);
         }
@@ -555,7 +545,7 @@ app.service("Game", function(AccessKontakt) {
 
     this.mathestartgame = () => {
         this.reset();
-        this.changestatus("klassenzimmer1");
+        this.changestatus("klassenzimmer2");
         this.mathechangecharacter("mathe_normal");
         this.mathechangebuttons("buttons_1");
     }
@@ -749,7 +739,7 @@ this.felixseteverythingonfalse = () =>{
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
-//-----LENA------------------------------------------------------------------------
+//-----LENA-------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
@@ -759,9 +749,10 @@ this.felixseteverythingonfalse = () =>{
 
     let lenacharacter = {
         "lena_normal" : false,
-        "lena_erschtaunt" : false,
         "lena_wuetend" : false,
         "lena_verwirrt" : false,
+        "lena_zwinkernd" : false,
+        "lena_traurig" : false,
     };
 
     let lenabubbles = {
@@ -824,7 +815,7 @@ this.felixseteverythingonfalse = () =>{
     };
 
 
-    let lenahint = [false,false];
+    let lenahint = [false,false,false];
 
     let lenaaccess = [true,false,false];
 
@@ -858,6 +849,10 @@ this.felixseteverythingonfalse = () =>{
     this.lenagothint = (index) => {
         this.playAudiohint();
         lenahint[index] = true;
+        if(lenahint[0] && lenahint[1] && lenahint[2]){
+            this.changelenaaccess(2);
+        }
+
     }
 
 
@@ -919,7 +914,7 @@ this.felixseteverythingonfalse = () =>{
 
     this.lenastartgame = () => {
         this.reset();
-        this.changestatus("klassenzimmer2");
+        this.changestatus("klassenzimmer1");
         this.lenachangecharacter("lena_normal");
         this.lenachangebuttons("buttons_1");
     }
@@ -936,11 +931,11 @@ this.felixseteverythingonfalse = () =>{
 
 
 
-    //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
-//-----vanessa------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----vanessa----------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------
@@ -1003,7 +998,7 @@ this.felixseteverythingonfalse = () =>{
     };
 
 
-    let vanessahint = [false,false];
+    let vanessahint = [false,false,false];
 
     let vanessaaccess = [true,false,false];
 
@@ -1037,6 +1032,9 @@ this.felixseteverythingonfalse = () =>{
     this.vanessagothint = (index) => {
         this.playAudiohint();
         vanessahint[index] = true;
+        if(vanessahint[0] && vanessahint[1] && vanessahint[2]){
+            this.changevanessaaccess(2);
+        }
     }
 
 
@@ -1111,5 +1109,124 @@ this.felixseteverythingonfalse = () =>{
         for (let k in vanessabuttons) {
             vanessabuttons[k] = false;
         }
+    }
+
+
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//-----police-----------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------
+
+
+
+    let policecharacter = {
+        "police_gluecklich" : false,
+        "police_wuetend" : false
+    };
+
+    let policebubbles = {
+        "chemie_ende" : false,
+        "felix_ende" : false,
+        "mathe_ende" : false,
+        "vanessa_ende" : false,
+        "lena_ende" : false,
+        "klassenvorstand_ende" : false
+    };
+
+
+    this.policegetstatuscharacter = (name) => {
+        for (let k in policecharacter) {
+            if (k === name) {
+                return policecharacter[k];
+            }
+        }
+    }
+
+    this.policechangecharacter = (name) => {
+        for (let k in policecharacter) {
+            policecharacter[k] = false;
+            if (k === name) {
+                policecharacter[k] = true;
+            }
+        }
+    }
+
+    this.policegetstatusbubble = (name) => {
+        for (let k in policebubbles) {
+            if (k === name) {
+                return policebubbles[k];
+            }
+        }
+    }
+
+    this.policechangebubble = (name) => {
+        for (let k in policebubbles) {
+            policebubbles[k] = false;
+            if (k === name) {
+                policebubbles[k] = true;
+            }
+        }
+    }
+
+    this.policeresetbubble = () => {
+        for (let k in policebubbles) {
+            policebubbles[k] = false;
+        }
+    }
+
+
+
+    this.policestartgamefelix = () => {
+        this.reset();
+        this.changestatus("verhorraum_felix");
+        this.policechangecharacter("police_wuetend");
+        this.policechangebubble("felix_ende");
+    }
+
+    this.policestartgameklassenvorstand = () => {
+        this.reset();
+        this.changestatus("verhorraum_klassenvorstand");
+        this.policechangecharacter("police_wuetend");
+        this.policechangebubble("klassenvorstand_ende");
+    }
+
+    this.policestartgamevanessa = () => {
+        this.reset();
+        this.changestatus("verhorraum_vanessa");
+        this.policechangecharacter("police_wuetend");
+        this.policechangebubble("vanessa_ende");
+    }
+
+    this.policestartgamechemie = () => {
+        this.reset();
+        this.changestatus("verhorraum_chemie");
+        this.policechangecharacter("police_wuetend");
+        this.policechangebubble("chemie_ende");
+    }
+
+    this.policestartgamemathe = () => {
+        this.reset();
+        this.changestatus("verhorraum_mathelehrer");
+        this.policechangecharacter("police_wuetend");
+        this.policechangebubble("mathe_ende");
+    }
+
+    this.policestartgamelena = () => {
+        this.reset();
+        this.changestatus("verhorraum_lena");
+        this.policechangecharacter("police_gluecklich");
+        this.policechangebubble("lena_ende");
+    }
+
+    this.policeseteverythingonfalse = () =>{
+        for (let k in policecharacter) {
+            policecharacter[k] = false;
+        }
+        this.policeresetbubble();
     }
 });
