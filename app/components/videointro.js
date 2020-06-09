@@ -15,6 +15,9 @@ app.controller("VideointroController", function ($log, Video) {
     }
 
     this.videofinished = () =>{
+        let video = document.getElementById("video");
+        video.pause();
+
         Video.showgame();
     }
 });
