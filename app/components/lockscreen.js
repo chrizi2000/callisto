@@ -13,6 +13,10 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt) {
     this.password = [2,3,0,3,0,1];
     this.aktpasswort = [];
 
+    this.keypress = () =>{
+        console.log("KEYPRESSED");
+    }
+
     this.zahleingegeben = (pwnumber) => {
         AccessKontakt.playAudioclick();
         this.aktpasswort[this.aktpasswort.length] = pwnumber;

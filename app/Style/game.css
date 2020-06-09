@@ -6,18 +6,16 @@
 }
 
 .gamebuttons{
-    width: 60vmax;
+    width: 90%;
     height: auto;
     position: static;
     text-align: center;
 
 }
 
-.button-div {
-    padding-right: 1%;
-    overflow: hidden;
-    border-collapse: separate;
-    height: 100%;
+.style {
+    width: 95%;
+    height: 95%;
 }
 
 .button-question {
