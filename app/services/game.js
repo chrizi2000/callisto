@@ -13,9 +13,6 @@ app.service("Game", function(AccessKontakt) {
         "verhorraum_vanessa" : false,
         "verhorraum_mathelehrer" : false,
         "verhorraum_lena" : false,
-
-
-
     };
 
     this.returnaccesssmartphone = () =>{

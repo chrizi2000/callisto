@@ -54,9 +54,10 @@
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(0)" ng-click="$ctrl.gametrigger()">
         <img src="images/icons/Map.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
     </div>
-    <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(1)">
+    <div class="pure-u-11-24 hint--bottom-left hint--small hint--error hint--bounce hint--no-shadow" ng-show="$ctrl.allowaccess(1)" data-hint="Felix will nicht mehr mit dir reden ">
         <img src="images/icons/Map_closed.svg" style='width: 70%; height: auto' class="pure-img-responsive buzz-out-on-hover">
     </div>
+
     <div class="pure-u-11-24" ng-show="$ctrl.allowaccess(2)">
         <img src="images/icons/Map_finished.svg" style='width: 70%; height: auto' class="pure-img-responsive icon">
     </div>
