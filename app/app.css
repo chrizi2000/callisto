@@ -33,6 +33,10 @@ For Game Page
  * Most of these are inherited from Base, but I want to change a few.
  */
 
+@font-face {
+    font-family: "Nexa Light";
+    src: url("font/Nexa_Light.otf") format('opentype');
+}
 html{
     scroll-behavior: smooth;
     font-family: "Nexa Light";
