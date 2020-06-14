@@ -25,20 +25,21 @@ app.controller("LockscreenController", function ($log, $state, AccessKontakt, $t
     });
 
     this.zahleingegeben = (pwnumber) => {
-        AccessKontakt.playAudioclick();
-        this.aktpasswort[this.aktpasswort.length] = pwnumber;
-        console.log("akt passwort" , this.aktpasswort);
-        console.log("passwort" , this.password);
-        if(this.aktpasswort.length === this.password.length){
-            if(angular.equals(this.aktpasswort, this.password)){
-                AccessKontakt.allowbutton();
-                $state.go("Kontakte");
-            }else{
-                AccessKontakt.playAudioaccessdenied();
-                this.aktpasswort = [];
+            AccessKontakt.playAudioclick();
+            this.aktpasswort[this.aktpasswort.length] = pwnumber;
+            console.log("akt passwort" , this.aktpasswort);
+            console.log("passwort" , this.password);
+            if(this.aktpasswort.length === this.password.length){
+                if(angular.equals(this.aktpasswort, this.password)){
+                    AccessKontakt.allowbutton();
+                    $state.go("Kontakte");
+                }else{
+                    AccessKontakt.playAudioaccessdenied();
+                    this.aktpasswort = [];
+                }
             }
         }
-    }
+
     this.clear = () => {
         this.aktpasswort = [];
     }
