@@ -9,10 +9,6 @@
     text-align: center;
 }
 
-
-
-
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -39,12 +35,12 @@ For Game Page
 
 html{
     scroll-behavior: smooth;
+    font-family: "Nexa Light";
 }
 body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
-
 }
 
 h3,

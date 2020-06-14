@@ -7,9 +7,6 @@
 }
 
 body {
-    font-size: 5px;
-    font-family: 'Open Sans', sans-serif;
-    /*padding-top: 2%;*/
 }
 
 .wrapper {
@@ -134,21 +131,4 @@ body {
     width: 45%;
     height: 45%;
 }
-
-@media screen and (min-width: 28em ) {
-    body{ font-size: 8px; }
-}
-
-@media screen and (min-width: 34em ) {
-    body{ font-size: 10px; }
-}
-
-@media screen and (min-width: 48em ) {
-    body{ font-size: 14px; }
-}
-
-
-
-
-
 Resources
