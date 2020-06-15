@@ -145,8 +145,8 @@ BUTTON
 
 .iconcontact{
     text-align: center;
-    vertical-align: center;
-    padding-top: 0.3vw;
+    vertical-align: middle;
+    padding-top: 0.4vw;
 }
 
 .eigenschafthead{
