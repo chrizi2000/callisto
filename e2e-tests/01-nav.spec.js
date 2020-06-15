@@ -3,12 +3,17 @@
 import { Selector } from "testcafe";
 
 
-fixture("Vorlage")
-    .page("http://localhost:63342/angularjs-vorlage/app/index.html");
+fixture("Callisto Tests")
+    .page("http://localhost:63342/callisto/app/game.html");
 
 
-test("wird geladen und hat die richtige Überschrift", async t => {
+test("Intro wird übersprungen", async t => {
     await t
-        .expect(Selector("md-content h1").innerText)
-        .contains("AngularJS Material-Projekt");
+        .click(Selector('#GameStartButton').withText('Spiel starten'))
+        .pressKey('2')
+        .pressKey('3')
+        .pressKey('0')
+        .pressKey('3')
+        .pressKey('0')
+        .pressKey('1')
 });
