@@ -152,48 +152,178 @@ a.pure-button-primary {
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
  */
+#hamnav {
+    width: 100%;
+    background: #000;
+    /* Optional */
+    position: sticky;
+    top: 5px;
+}
 
-.home-menu {
-    padding: 0.5em;
+/* Hide Hamburger */
+#hamnav label, #hamburger {
+    display: none;
+}
+
+/* Horizontal Menu Items */
+#hamitems {
+    display: flex;
+}
+
+#hamitems a {
+    width: 20%; /* 100% / 5 tabs = 20% */
+    padding: 10px;
+    color: white;
+    text-decoration: none;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-}
-.home-menu {
-    background: #fed65d;
-}
-.pure-menu.pure-menu-fixed {
-    /* Fixed menus normally have a border at the bottom. */
-    border-bottom: none;
-    /* I need a higher z-index here because of the scroll-over effect. */
-    z-index: 4;
 }
 
-.pure-menu-list{
-    font-size: 130%;
-    padding-top: 0.5vw;
-    position: static;
-}
-.home-menu .pure-menu-heading {
-    color: white;
-    font-weight: 400;
-    font-size: 120%;
+#hamitems a:hover {
+    background: #401408;
 }
 
-.home-menu .pure-menu-selected a {
-    color: white;
+.header {
+    background-color: #fed55d;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 
-.home-menu a {
+.header ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+    display: block;
     color: #2d3e50;
-}
-.home-menu li a:hover,
-.home-menu li a:focus {
-    background: none;
-    border: none;
-    color: #FFFFFF; /*Hover effect menu */
-    background-color: #2d3e50;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 1.3em;
 }
 
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.header .logo{
+    float: left;
+    text-decoration: none;
+    size: 500px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 40px 10px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 5px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 40px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 13px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -13px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 340px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media only screen and (max-width: 900px){
+    .header ul{
+        background-color: white;
+    }
+    .header li a {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .menu-wrapper{
+        background: #414141;
+        height: 55px;
+        line-height: 55px;
+        width: 50%;
+    }
+    .header li {
+        float: left;
+    }
+    .header .logo{
+        line-height: 1;
+    }
+    .header li a {
+        color: #2d3e50;
+        padding: 0px 30px;
+
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
 
 /*
  * -- SPLASH STYLES --
