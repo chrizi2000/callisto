@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebShop</title>
+    <link rel="icon" href="images/icons/Logo-Quadrat.png">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="Style/webshop.css">
+</head>
+<body>
+
+<div class="menu-wrapper">
+    <header class="header">
+        <img class="logo" style="width: auto; height: 70px" src="images/icons/Logo-60px.png">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html">Main-Page</a></li>
+            <li><a href="#!/">Home</a></li>
+            <li><a class="sprd-nav-link customHighlight customFilterItem sprd-c-s3 sprd-bc-m2" href="#!/all">Alle Produkte</a></li>
+            <li><a id="sprd-department-filter__department-D1" class="sprd-nav-link customHighlight customFilterItem sprd-c-s3 sprd-bc-m2" href="#!/männer?q=D1">Männer</a></li>
+            <li><a id="sprd-department-filter__department-D3" class="sprd-nav-link customHighlight customFilterItem sprd-c-s3 sprd-bc-m2" href="#!/frauen?q=D3">Frauen</a></li>
+            <li><a id="sprd-department-filter__department-D4" class="sprd-nav-link customHighlight customFilterItem sprd-c-s3 sprd-bc-m2" href="#!/kinder+%26+babys?q=D4">Kinder &amp; Babys</a></li>
+            <li><a id="sprd-basket-button_2" class="sprd-basket-indicator__button sprd-basket-indicator__button--open sprd-bc-m2" href="#!/basket"><div class="sprd-basket-indicator__icon-count-wrapper"><svg class="sprd-basket-indicator__icon"><use xlink:href="#sprd-icon-cart"></use></svg><span id="sprd-basket-count" class="sprd-basket-indicator__count sprd-bg-m2 sprd-c-cta" aria-hidden="true">1</span></div><span class="sprd-sr-only"></span></a></li>
+           </ul>
+    </header>
+</div>
+
+<div id="myShop">
+    <a href="https://shop.spreadshirt.at/callisto">callisto</a>
+</div>
+
+<script>
+    var spread_shop_config = {
+        shopName: 'callisto',
+        locale: 'de_AT',
+        prefix: 'https://shop.spreadshirt.at',
+        baseId: 'myShop'
+    };
+</script>
+
+<script type="text/javascript"
+        src="https://shop.spreadshirt.at/shopfiles/shopclient/shopclient.nocache.js">
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+#sprd-navigation {
+    display: none;
+}
+
+.sprd-header__title{
+    display: none;
+}
+
+.sprd-basket-indicator__icon{
+    width: 2em;
+    height: 1.7em;
+    vertical-align: middle;
+}
+
+#sprd-basket-button_2{
+
+}
+
+#sprd-basket-button,
+#sprd-basket-count{
+    display: none;
+}
+
+
+
