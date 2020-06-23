@@ -157,7 +157,7 @@ a.pure-button-primary {
     background: #000;
     /* Optional */
     position: sticky;
-    top: 5px;
+    top: 1.2em;
 }
 
 /* Hide Hamburger */

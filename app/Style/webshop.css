@@ -29,7 +29,15 @@ Ausgeblendete Inhalte:
 .sprd-basket-notification{
     left: 0;
 }
+.sprd-promo-header__center{
+    padding-top: 1.5%;
+}
+.sprd-promo__toggle__text{
+    display: none;
+}
 
-
+.sprd-promo-caret{
+    display: none;
+}
 
 
