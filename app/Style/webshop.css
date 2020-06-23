@@ -1,6 +1,3 @@
-#sprd-navigation {
-    display: none;
-}
 
 .sprd-header__title{
     display: none;
@@ -15,11 +12,24 @@
 #sprd-basket-button_2{
 
 }
-
+/**
+Ausgeblendete Inhalte:
+ */
 #sprd-basket-button,
-#sprd-basket-count{
+#sprd-basket-count,
+#sprd-navigation{
     display: none;
 }
+
+#sprd-social-bar__about-link{
+    display: none;
+ }
+
+
+.sprd-basket-notification{
+    left: 0;
+}
+
 
 
 
